@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – HomeKeys Real Estate UAE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E05A2B',
+            'primary-dark': '#C44A1F',
+            navy: '#1E2D5A',
+            'navy-light': '#2B3875',
+            'navy-dark': '#141E3C',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Raleway', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="font-body bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center">
+          <img id="logo-transparent" src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate"
+            style="height:60px;width:auto;object-fit:contain;transition:all 0.4s ease;display:block;" />
+          <img id="logo-scrolled" src="assets/HomeKeys logo-1 PNG.png" alt="HomeKeys Real Estate"
+            style="height:105px;width:auto;object-fit:contain;transition:all 0.4s ease;display:none;" />
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="./index.html" class="nav-link">Home</a>
+          <a href="./sproperties.html" class="nav-link">Properties</a>
+          <a href="./developers.html" class="nav-link">Developers</a>
+          <a href="./blog.html" class="nav-link">Blog</a>
+          <a href="./about.html" class="nav-link">About Us</a>
+          <a href="./contact.html" class="nav-link active-page">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="tel:+97145693313" class="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+            <i class="fa fa-phone-alt text-xs"></i> Call Now
+          </a>
+          <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line w-4"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden hidden">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="./index.html" class="mobile-nav-link">Home</a>
+        <a href="./sproperties.html" class="mobile-nav-link">Properties</a>
+        <a href="./developers.html" class="mobile-nav-link">Developers</a>
+        <a href="./blog.html" class="mobile-nav-link">Blog</a>
+        <a href="./about.html" class="mobile-nav-link">About Us</a>
+        <a href="./contact.html" class="mobile-nav-link active-page">Contact</a>
+        <a href="tel:+971521110944" class="btn-primary text-center mt-2">Call Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="contact-hero">
+    <div class="contact-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80')"></div>
+    <div class="contact-hero-overlay"></div>
+    <!-- Animated diagonal lines -->
+    <div class="contact-hero-lines"></div>
+    <div class="contact-hero-content">
+      <div class="contact-breadcrumb">
+        <a href="./index.html"><i class="fa fa-home mr-1"></i>Home</a>
+        <i class="fa fa-chevron-right"></i>
+        <span>Contact Us</span>
+      </div>
+      <h1 class="contact-hero-title">Get In <span class="text-primary">Touch</span></h1>
+      <p class="contact-hero-desc">Our team of expert property consultants is ready to help you find your perfect property in UAE. Reach out today.</p>
+      <!-- Quick contact pills -->
+      <div class="contact-quick-pills">
+        <a href="tel:+971521110944" class="contact-pill">
+          <i class="fa fa-phone"></i>
+          <span>+971 52 111 0944</span>
+        </a>
+        <a href="mailto:info@homekeys.ae" class="contact-pill">
+          <i class="fa fa-envelope"></i>
+          <span>info@homekeys.ae</span>
+        </a>
+        <a href="https://wa.me/971521110944" target="_blank" class="contact-pill contact-pill-green">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp Us</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTACT SECTION ===== -->
+  <section class="contact-main-section">
+    <div class="contact-container">
+      <div class="contact-main-grid">
+
+        <!-- ===== LEFT: INFO PANEL ===== -->
+        <div class="contact-info-panel">
+
+          <!-- Header -->
+          <div class="contact-info-header">
+            <span class="section-tag">Contact Information</span>
+            <h2 class="contact-info-title">We'd Love To <span class="text-primary">Hear From You</span></h2>
+            <p>Whether you're looking to buy, sell, rent, or invest — our team is here to guide you every step of the way.</p>
+          </div>
+
+          <!-- Contact details cards -->
+          <div class="contact-detail-cards">
+
+            <div class="contact-detail-card">
+              <div class="cdc-icon"><i class="fa fa-phone"></i></div>
+              <div class="cdc-content">
+                <span>Phone / Office</span>
+                <a href="tel:+971521110944">+971 52 111 0944</a>
+                <a href="tel:+971529747995">+971 52 974 7995 (CEO)</a>
+              </div>
+            </div>
+
+            <div class="contact-detail-card">
+              <div class="cdc-icon cdc-icon-orange"><i class="fa fa-envelope"></i></div>
+              <div class="cdc-content">
+                <span>Email Address</span>
+                <a href="mailto:info@homekeys.ae">info@homekeys.ae</a>
+                <a href="mailto:CEO@homekeys.ae">CEO@homekeys.ae</a>
+              </div>
+            </div>
+
+            <div class="contact-detail-card">
+              <div class="cdc-icon cdc-icon-green"><i class="fab fa-whatsapp"></i></div>
+              <div class="cdc-content">
+                <span>WhatsApp</span>
+                <a href="https://wa.me/971521110944" target="_blank">+971 52 111 0944</a>
+                <small>Available 9AM – 9PM GST</small>
+              </div>
+            </div>
+
+            <div class="contact-detail-card">
+              <div class="cdc-icon cdc-icon-purple"><i class="fa fa-map-marker-alt"></i></div>
+              <div class="cdc-content">
+                <span>Office Address</span>
+                <strong>HomeKeys Real Estate</strong>
+                <small>Office 409, Sheikha Noora Building, Barsha 1, Dubai, UAE</small>
+              </div>
+            </div>
+
+            <div class="contact-detail-card">
+              <div class="cdc-icon cdc-icon-navy"><i class="fa fa-clock"></i></div>
+              <div class="cdc-content">
+                <span>Working Hours</span>
+                <strong>Mon – Sat: 9:00 AM – 9:00 PM</strong>
+                <small>Sunday: By Appointment</small>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Social Media -->
+          <div class="contact-social-section">
+            <h4>Follow Us On Social Media</h4>
+            <div class="contact-social-grid">
+
+              <a href="https://www.facebook.com/HomeKeysRealEstate" target="_blank" class="contact-social-card facebook">
+                <div class="csc-icon"><i class="fab fa-facebook-f"></i></div>
+                <div class="csc-info">
+                  <strong>Facebook</strong>
+                  <span>HomeKeys Real Estate</span>
+                </div>
+                <i class="fa fa-arrow-right csc-arrow"></i>
+              </a>
+
+              <a href="https://www.instagram.com/homekeysrealestate" target="_blank" class="contact-social-card instagram">
+                <div class="csc-icon"><i class="fab fa-instagram"></i></div>
+                <div class="csc-info">
+                  <strong>Instagram</strong>
+                  <span>@homekeysrealestate</span>
+                </div>
+                <i class="fa fa-arrow-right csc-arrow"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" class="contact-social-card linkedin">
+                <div class="csc-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div class="csc-info">
+                  <strong>LinkedIn</strong>
+                  <span>Home Keys Real Estate</span>
+                </div>
+                <i class="fa fa-arrow-right csc-arrow"></i>
+              </a>
+
+              <a href="mailto:info@homekeys.ae" class="contact-social-card email">
+                <div class="csc-icon"><i class="fa fa-envelope"></i></div>
+                <div class="csc-info">
+                  <strong>Email</strong>
+                  <span>info@homekeys.ae</span>
+                </div>
+                <i class="fa fa-arrow-right csc-arrow"></i>
+              </a>
+
+              <a href="https://youtube.com/@homekeysrealestate" target="_blank" class="contact-social-card youtube">
+                <div class="csc-icon"><i class="fab fa-youtube"></i></div>
+                <div class="csc-info">
+                  <strong>YouTube</strong>
+                  <span>@homekeysrealestate</span>
+                </div>
+                <i class="fa fa-arrow-right csc-arrow"></i>
+              </a>
+
+              <a href="https://wa.me/97145693313" target="_blank" class="contact-social-card whatsapp">
+                <div class="csc-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="csc-info">
+                  <strong>WhatsApp</strong>
+                  <span>Chat Instantly</span>
+                </div>
+                <i class="fa fa-arrow-right csc-arrow"></i>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- RERA badge -->
+          <div class="contact-rera-badge">
+            <i class="fa fa-shield-alt text-primary text-xl"></i>
+            <div>
+              <strong>RERA Registered Agency</strong>
+              <span>Registration No: 12345-UAE · Licensed by DLD</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ===== RIGHT: CONTACT FORM ===== -->
+        <div class="contact-form-panel">
+          <div class="contact-form-card">
+
+            <!-- Form header -->
+            <div class="contact-form-header">
+              <div class="cfh-icon"><i class="fa fa-paper-plane"></i></div>
+              <div>
+                <h3>Send Us A Message</h3>
+                <p>Fill in the form below and we'll get back to you within 24 hours.</p>
+              </div>
+            </div>
+
+            <!-- Enquiry type tabs -->
+            <div class="enquiry-tabs">
+              <button class="enquiry-tab active" data-type="buy">🏠 Buy</button>
+              <button class="enquiry-tab" data-type="rent">🔑 Rent</button>
+              <button class="enquiry-tab" data-type="sell">💼 Sell</button>
+              <button class="enquiry-tab" data-type="invest">📈 Invest</button>
+              <button class="enquiry-tab" data-type="other">💬 Other</button>
+            </div>
+            <input type="hidden" id="enquiryType" value="buy" />
+
+            <!-- The form -->
+            <form id="contactForm" class="contact-form" novalidate>
+
+              <!-- Row 1: Name fields -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa fa-user input-icon"></i>
+                    <input type="text" id="firstName" name="firstName" placeholder="John" required />
+                  </div>
+                  <span class="field-error" id="firstNameError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa fa-user input-icon"></i>
+                    <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+                  </div>
+                  <span class="field-error" id="lastNameError"></span>
+                </div>
+              </div>
+
+              <!-- Row 2: Contact fields -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa fa-envelope input-icon"></i>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                  </div>
+                  <span class="field-error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa fa-phone input-icon"></i>
+                    <input type="tel" id="phone" name="phone" placeholder="+971 50 000 0000" required />
+                  </div>
+                  <span class="field-error" id="phoneError"></span>
+                </div>
+              </div>
+
+              <!-- Row 3: Property details -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="propertyType">Property Type</label>
+                  <div class="input-wrap select-wrap">
+                    <i class="fa fa-home input-icon"></i>
+                    <select id="propertyType" name="propertyType">
+                      <option value="">Select Type</option>
+                      <option>Apartment</option>
+                      <option>Villa</option>
+                      <option>Townhouse</option>
+                      <option>Penthouse</option>
+                      <option>Studio</option>
+                      <option>Commercial</option>
+                      <option>Warehouse</option>
+                      <option>Plot</option>
+                    </select>
+                    <i class="fa fa-chevron-down select-arrow"></i>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="budget">Budget (AED)</label>
+                  <div class="input-wrap select-wrap">
+                    <i class="fa fa-tag input-icon"></i>
+                    <select id="budget" name="budget">
+                      <option value="">Select Budget</option>
+                      <option>Under 500K</option>
+                      <option>500K – 1M</option>
+                      <option>1M – 2M</option>
+                      <option>2M – 5M</option>
+                      <option>5M – 10M</option>
+                      <option>Above 10M</option>
+                    </select>
+                    <i class="fa fa-chevron-down select-arrow"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 4: Location preference -->
+              <div class="form-group">
+                <label for="location">Preferred Location</label>
+                <div class="input-wrap select-wrap">
+                  <i class="fa fa-map-marker-alt input-icon"></i>
+                  <select id="location" name="location">
+                    <option value="">Select City / Area</option>
+                    <optgroup label="Dubai">
+                      <option>Downtown Dubai</option>
+                      <option>Dubai Marina</option>
+                      <option>Palm Jumeirah</option>
+                      <option>Business Bay</option>
+                      <option>JVC (Jumeirah Village Circle)</option>
+                      <option>Dubai Hills Estate</option>
+                      <option>Jumeirah</option>
+                      <option>Al Quoz</option>
+                      <option>DAMAC Hills</option>
+                    </optgroup>
+                    <optgroup label="Abu Dhabi">
+                      <option>Yas Island</option>
+                      <option>Saadiyat Island</option>
+                      <option>Al Reem Island</option>
+                    </optgroup>
+                    <optgroup label="Sharjah">
+                      <option>Al Nahda</option>
+                      <option>Aljada</option>
+                    </optgroup>
+                    <optgroup label="Ras Al Khaimah">
+                      <option>Al Hamra Village</option>
+                      <option>Mina Al Arab</option>
+                    </optgroup>
+                  </select>
+                  <i class="fa fa-chevron-down select-arrow"></i>
+                </div>
+              </div>
+
+              <!-- Row 5: How did you hear -->
+              <div class="form-group">
+                <label for="source">How Did You Hear About Us?</label>
+                <div class="input-wrap select-wrap">
+                  <i class="fa fa-search input-icon"></i>
+                  <select id="source" name="source">
+                    <option value="">Select Source</option>
+                    <option>Google Search</option>
+                    <option>Facebook</option>
+                    <option>Instagram</option>
+                    <option>LinkedIn</option>
+                    <option>Friend / Referral</option>
+                    <option>Property Portal</option>
+                    <option>Walk-In</option>
+                    <option>Other</option>
+                  </select>
+                  <i class="fa fa-chevron-down select-arrow"></i>
+                </div>
+              </div>
+
+              <!-- Row 6: Message -->
+              <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fa fa-comment input-icon textarea-icon"></i>
+                  <textarea id="message" name="message" rows="5" placeholder="Tell us about the property you're looking for, your requirements, timeline, or any questions you have..." required></textarea>
+                </div>
+                <span class="field-error" id="messageError"></span>
+                <div class="char-count"><span id="charCount">0</span> / 500 characters</div>
+              </div>
+
+              <!-- Preferred contact method -->
+              <div class="form-group">
+                <label>Preferred Contact Method</label>
+                <div class="contact-method-options">
+                  <label class="method-option">
+                    <input type="radio" name="contactMethod" value="phone" checked />
+                    <span><i class="fa fa-phone mr-1"></i>Phone Call</span>
+                  </label>
+                  <label class="method-option">
+                    <input type="radio" name="contactMethod" value="whatsapp" />
+                    <span><i class="fab fa-whatsapp mr-1"></i>WhatsApp</span>
+                  </label>
+                  <label class="method-option">
+                    <input type="radio" name="contactMethod" value="email" />
+                    <span><i class="fa fa-envelope mr-1"></i>Email</span>
+                  </label>
+                </div>
+              </div>
+
+              
+              <!-- Submit button -->
+              <button type="submit" class="contact-submit-btn" id="submitBtn">
+                <span class="submit-text">
+                  <i class="fa fa-paper-plane mr-2"></i>Send Message
+                </span>
+                <span class="submit-loading" style="display:none;">
+                  <i class="fa fa-spinner fa-spin mr-2"></i>Sending...
+                </span>
+              </button>
+
+              <!-- Success message -->
+              <div class="form-success" id="formSuccess" style="display:none;">
+                <div class="form-success-inner">
+                  <div class="success-icon"><i class="fa fa-check"></i></div>
+                  <h4>Message Sent Successfully!</h4>
+                  <p>Thank you for reaching out. Our team will contact you within 24 hours.</p>
+                  <button type="button" onclick="resetForm()" class="success-reset">Send Another Message</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP SECTION ===== -->
+  <section class="contact-map-section">
+    <div class="contact-container">
+      <div class="section-header" style="padding-top:0;">
+        <span class="section-tag">Find Us</span>
+        <h2 class="section-title">Our <span class="text-primary">Location</span></h2>
+      </div>
+    </div>
+    <div class="contact-map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.6828658693!2d54.89782484902473!3d25.07575877338484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="HomeKeys Location">
+      </iframe>
+      <!-- Map overlay card -->
+      <div class="contact-map-card">
+        <div class="map-card-icon"><i class="fa fa-map-marker-alt text-primary"></i></div>
+        <h4>HomeKeys Real Estate</h4>
+        <p>Office 409, Sheikha Noora Building, Barsha 1, Dubai UAE</p>
+        <div class="map-card-divider"></div>
+        <div class="map-card-row"><i class="fa fa-phone text-primary mr-2"></i><a href="tel:+97145693313">+971 4 569 3313</a></div>
+        <div class="map-card-row"><i class="fa fa-envelope text-primary mr-2"></i><a href="mailto:info@homekeys.ae">info@homekeys.ae</a></div>
+        <div class="map-card-row"><i class="fa fa-clock text-primary mr-2"></i><span>Mon–Sat: 9AM – 9PM</span></div>
+        <a href="https://maps.google.com/?q=Dubai+UAE" target="_blank" class="map-directions-btn">
+          <i class="fa fa-directions mr-2"></i>Get Directions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ STRIP ===== -->
+  <section class="contact-faq-section">
+    <div class="contact-container">
+      <div class="section-header">
+        <span class="section-tag">Common Questions</span>
+        <h2 class="section-title">Frequently Asked <span class="text-primary">Questions</span></h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How quickly will you respond to my enquiry?</span>
+            <i class="fa fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Our team typically responds within 2–4 hours during business hours. For urgent matters, please call us directly or reach us via WhatsApp for an instant reply.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you charge fees for property consultations?</span>
+            <i class="fa fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Initial consultations are completely free. Our agency fee is only charged upon successful transaction completion, fully transparent and disclosed upfront.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you help international buyers purchase in UAE?</span>
+            <i class="fa fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. We assist overseas clients throughout the entire process including virtual viewings, legal documentation, mortgage guidance and property handover.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Which areas do you specialise in?</span>
+            <i class="fa fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We cover all major UAE markets including Dubai, Abu Dhabi, Sharjah and Ras Al Khaimah. Within Dubai we specialise in Downtown, Marina, Palm Jumeirah, Business Bay and JVC.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you handle commercial and warehouse properties?</span>
+            <i class="fa fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Our dedicated commercial team handles offices, warehouses, retail spaces, staff accommodation and labour camps across Al Quoz, Sonapur and other industrial areas.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are you RERA registered?</span>
+            <i class="fa fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, HomeKeys Real Estate is fully RERA registered and licensed by the Dubai Land Department (DLD). All our agents hold valid RERA certification cards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-section bg-navy-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-1">
+          <div class="footer-logo mb-6">
+            <img src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate" style="height:100px;width:auto;object-fit:contain;" />
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-6">UAE's trusted real estate agency committed to helping you find your perfect property.</p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/HomeKeysRealEstate" target="_blank" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/@homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./sproperties.html">Secondary Properties</a></li>
+            <li><a href="./developers.html">Developers</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Contact Info</h5>
+          <ul class="footer-links">
+            <li><a href="tel:+971521110944"><i class="fa fa-phone mr-2 text-primary"></i>+971 52 111 0944</a></li>
+            <li><a href="mailto:info@homekeys.ae"><i class="fa fa-envelope mr-2 text-primary"></i>info@homekeys.ae</a></li>
+            <li><a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp mr-2 text-primary"></i>WhatsApp</a></li>
+            <li><span class="text-white/50 text-sm"><i class="fa fa-map-marker-alt mr-2 text-primary"></i>Dubai, UAE</span></li>
+            <li><span class="text-white/50 text-sm"><i class="fa fa-clock mr-2 text-primary"></i>Mon–Sat: 9AM – 9PM</span></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="text-white/60 text-sm mb-5">Subscribe for the latest listings and market news.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+          </form>
+          <div class="footer-rera mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p class="text-xs text-white/50 mb-1">RERA Registered Agency</p>
+            <p class="text-sm font-bold text-white">Reg. No: 12345-UAE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm">© 2026 HomeKeys Real Estate. All Rights Reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+  <a href="https://wa.me/971521110944" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

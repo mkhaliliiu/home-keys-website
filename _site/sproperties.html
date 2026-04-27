@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secondary Properties – HomeKeys Real Estate UAE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="secondary-properties.css" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E05A2B',
+            'primary-dark': '#C44A1F',
+            'primary-light': '#F07348',
+            navy: '#1E2D5A',
+            'navy-light': '#2B3875',
+            'navy-dark': '#141E3C',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Raleway', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Featured card text fix -->
+  <style>
+    .service-card-featured h3 { color: #ffffff !important; }
+    .service-card-featured p  { color: rgba(255,255,255,0.75) !important; }
+    .service-card-featured .service-link { color: #E05A2B !important; }
+  </style>
+</head>
+<body class="font-body bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- ===== NAVBAR  ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="index.html" class="flex items-center">
+          <img id="logo-transparent" src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate"
+            style="height: 60px;width:auto;object-fit:contain;transition:all 0.4s ease;display:block;" />
+          <img id="logo-scrolled" src="assets/HomeKeys logo-1 PNG.png" alt="HomeKeys Real Estate"
+            style="height:105px;width:auto;object-fit:contain;transition:all 0.4s ease; display:none;" />
+        </a>
+
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="sproperties.html" class="nav-link active-page">Properties</a>
+          <a href="developers.html" class="nav-link">Developers</a>
+          <a href="./blog.html" class="nav-link">Blog</a>
+          <a href="./about.html" class="nav-link">About Us</a>
+          <a href="./contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="./contact.html" class="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+            <i class="fa fa-phone-alt text-xs"></i> Get In Touch
+          </a>
+          <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+  <span class="ham-line"></span>
+  <span class="ham-line"></span>
+  <span class="ham-line w-4"></span>
+</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu lg:hidden hidden">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="./index.html" class="mobile-nav-link">Home</a>
+        <a href="./sproperties.html" class="mobile-nav-link active-page">Properties</a>
+        <a href="./developers.html" class="mobile-nav-link">Developers</a>
+        <a href="./blog.html" class="mobile-nav-link">Blog</a>
+        <a href="./about.html" class="mobile-nav-link">About Us</a>
+        <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        <a href="./contact.html" class="btn-primary text-center mt-2">Get In Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO BANNER ===== -->
+  <section class="sp-hero">
+    <div class="sp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80')"></div>
+    <div class="sp-hero-overlay"></div>
+    <div class="sp-hero-content">
+      <div class="sp-breadcrumb">
+        <a href="index.html"><i class="fa fa-home mr-1"></i>Home</a>
+        <i class="fa fa-chevron-right"></i>
+        <span>Secondary Properties</span>
+      </div>
+      <h1 class="sp-hero-title">All Featured <span class="text-primary">Properties</span></h1>
+      <p class="sp-hero-desc">Explore ready-to-move premium properties across Dubai, Abu Dhabi, Sharjah & Ras Al Khaimah</p>
+
+      <!-- Quick stats bar -->
+      <div class="sp-hero-stats">
+        <div class="sp-hstat"><strong id="totalCount">24</strong><span>Properties Found</span></div>
+        <div class="sp-hstat-div"></div>
+        <div class="sp-hstat"><strong>4</strong><span>Cities</span></div>
+        <div class="sp-hstat-div"></div>
+        <div class="sp-hstat"><strong>AED 650K</strong><span>Starting From</span></div>
+        <div class="sp-hstat-div"></div>
+        <div class="sp-hstat"><strong>Ready</strong><span>All Listings</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT: SIDEBAR + GRID ===== -->
+  <main class="sp-main">
+    <div class="sp-container">
+
+      <!-- ===== LEFT SIDEBAR FILTER ===== -->
+      <aside class="sp-sidebar" id="sidebar">
+
+        <!-- Mobile filter toggle header -->
+        <div class="sp-filter-header">
+          <div class="sp-filter-title">
+            <i class="fa fa-sliders-h text-primary mr-2"></i>
+            <span>Filter Properties</span>
+          </div>
+          <button class="sp-filter-reset" id="resetFilters">
+            <i class="fa fa-redo mr-1"></i> Reset
+          </button>
+        </div>
+
+        <!-- Active filter tags -->
+        <div class="sp-active-filters" id="activeFilters" style="display:none;">
+          <div class="sp-active-label">Active Filters:</div>
+          <div class="sp-tags-wrap" id="activeTags"></div>
+        </div>
+
+        <!-- ===== FILTER 1: City ===== -->
+        <div class="filter-group">
+          <div class="filter-group-header" data-toggle="city-options">
+            <span><i class="fa fa-map-marker-alt text-primary mr-2"></i>City</span>
+            <i class="fa fa-chevron-down filter-chevron"></i>
+          </div>
+          <div class="filter-options open" id="city-options">
+            <label class="filter-check">
+              <input type="checkbox" name="city" value="dubai" />
+              <span class="check-box"></span>
+              <span class="check-label">Dubai</span>
+              <span class="check-count">12</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="city" value="abudhabi" />
+              <span class="check-box"></span>
+              <span class="check-label">Abu Dhabi</span>
+              <span class="check-count">6</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="city" value="sharjah" />
+              <span class="check-box"></span>
+              <span class="check-label">Sharjah</span>
+              <span class="check-count">4</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="city" value="rak" />
+              <span class="check-box"></span>
+              <span class="check-label">Ras Al Khaimah</span>
+              <span class="check-count">2</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- ===== FILTER 2: Property Type ===== -->
+        <div class="filter-group">
+          <div class="filter-group-header" data-toggle="type-options">
+            <span><i class="fa fa-home text-primary mr-2"></i>Property Type</span>
+            <i class="fa fa-chevron-down filter-chevron"></i>
+          </div>
+          <div class="filter-options open" id="type-options">
+            <label class="filter-check">
+              <input type="checkbox" name="type" value="apartment" />
+              <span class="check-box"></span>
+              <span class="check-label">Apartment</span>
+              <span class="check-count">10</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="type" value="villa" />
+              <span class="check-box"></span>
+              <span class="check-label">Villa</span>
+              <span class="check-count">7</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="type" value="townhouse" />
+              <span class="check-box"></span>
+              <span class="check-label">Townhouse</span>
+              <span class="check-count">4</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="type" value="penthouse" />
+              <span class="check-box"></span>
+              <span class="check-label">Penthouse</span>
+              <span class="check-count">3</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- ===== FILTER 3: Developer ===== -->
+        <div class="filter-group">
+          <div class="filter-group-header" data-toggle="dev-options">
+            <span><i class="fa fa-building text-primary mr-2"></i>Developer</span>
+            <i class="fa fa-chevron-down filter-chevron"></i>
+          </div>
+          <div class="filter-options open" id="dev-options">
+            <label class="filter-check">
+              <input type="checkbox" name="developer" value="emaar" />
+              <span class="check-box"></span>
+              <span class="check-label">Emaar</span>
+              <span class="check-count">6</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="developer" value="damac" />
+              <span class="check-box"></span>
+              <span class="check-label">DAMAC</span>
+              <span class="check-count">5</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="developer" value="nakheel" />
+              <span class="check-box"></span>
+              <span class="check-label">Nakheel</span>
+              <span class="check-count">4</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="developer" value="aldar" />
+              <span class="check-box"></span>
+              <span class="check-label">Aldar</span>
+              <span class="check-count">4</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="developer" value="sobha" />
+              <span class="check-box"></span>
+              <span class="check-label">Sobha</span>
+              <span class="check-count">3</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="developer" value="meraas" />
+              <span class="check-box"></span>
+              <span class="check-label">Meraas</span>
+              <span class="check-count">2</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- ===== FILTER 4: Accommodation ===== -->
+        <div class="filter-group">
+          <div class="filter-group-header" data-toggle="bed-options">
+            <span><i class="fa fa-bed text-primary mr-2"></i>Accommodation</span>
+            <i class="fa fa-chevron-down filter-chevron"></i>
+          </div>
+          <div class="filter-options open" id="bed-options">
+            <label class="filter-check">
+              <input type="checkbox" name="beds" value="studio" />
+              <span class="check-box"></span>
+              <span class="check-label">Studio</span>
+              <span class="check-count">3</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="beds" value="1bed" />
+              <span class="check-box"></span>
+              <span class="check-label">1 Bedroom</span>
+              <span class="check-count">6</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="beds" value="2bed" />
+              <span class="check-box"></span>
+              <span class="check-label">2 Bedrooms</span>
+              <span class="check-count">8</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox" name="beds" value="3plus" />
+              <span class="check-box"></span>
+              <span class="check-label">3+ Bedrooms</span>
+              <span class="check-count">7</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- CTA in sidebar -->
+        <div class="sidebar-cta">
+          <div class="sidebar-cta-icon"><i class="fa fa-headset"></i></div>
+          <h4>Need Help?</h4>
+          <p>Talk to our property experts and find your perfect match today.</p>
+          <a href="index.html#contact" class="btn-primary w-full text-center" style="display:block;padding:12px;">
+            <i class="fa fa-phone mr-2"></i>Contact Agent
+          </a>
+        </div>
+      </aside>
+
+      <!-- ===== RIGHT: PROPERTIES GRID ===== -->
+      <div class="sp-content">
+
+        <!-- Toolbar -->
+        <div class="sp-toolbar">
+          <div class="sp-results-info">
+            Showing <strong id="showingCount">24</strong> properties
+            <span class="sp-results-sub" id="filterLabel"></span>
+          </div>
+          <div class="sp-toolbar-right">
+            <!-- Sort -->
+            <div class="sp-sort-wrap">
+              <i class="fa fa-sort-amount-down text-primary mr-1"></i>
+              <select id="sortSelect" class="sp-sort-select">
+                <option value="default">Sort: Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="newest">Newest First</option>
+                <option value="beds-asc">Beds: Low to High</option>
+              </select>
+            </div>
+            <!-- View toggle -->
+            <div class="sp-view-toggle">
+              <button class="view-btn active" id="gridViewBtn" title="Grid View">
+                <i class="fa fa-th"></i>
+              </button>
+              <button class="view-btn" id="listViewBtn" title="List View">
+                <i class="fa fa-list"></i>
+              </button>
+            </div>
+            <!-- Mobile filter toggle -->
+            <button class="sp-mobile-filter-btn" id="mobileFilterBtn">
+              <i class="fa fa-sliders-h mr-2"></i>Filters
+            </button>
+          </div>
+        </div>
+
+        <!-- Properties Grid -->
+        <div class="sp-grid" id="propertiesGrid">
+
+          <!-- ========== PROPERTY CARDS ========== -->
+          <!-- Each card has data attributes for filtering -->
+
+          <!-- 1 -->
+          <div class="sp-card" data-city="dubai" data-type="villa" data-developer="nakheel" data-beds="3plus" data-price="12500000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="Palm Villa" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+                <span class="sp-badge sp-badge-featured">Featured</span>
+              </div>
+              <div class="sp-card-dev-logo">NAKHEEL</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 12,500,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-home mr-1"></i>Villa</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Palm Jumeirah, Dubai</span>
+              </div>
+              <h3 class="sp-card-title">Signature Palm Villa with Private Beach</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 5 Beds</span>
+                <span><i class="fa fa-bath"></i> 6 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 8,200 sqft</span>
+                <span><i class="fa fa-car"></i> 3 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Private Beach</span><span>Private Pool</span><span>Sea View</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="sp-card" data-city="dubai" data-type="apartment" data-developer="emaar" data-beds="2bed" data-price="3200000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80" alt="Marina Apartment" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-rent">For Rent</span>
+              </div>
+              <div class="sp-card-dev-logo">EMAAR</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 180,000 / yr</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-building mr-1"></i>Apartment</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Dubai Marina, Dubai</span>
+              </div>
+              <h3 class="sp-card-title">High-Floor Marina View Apartment</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 2 Beds</span>
+                <span><i class="fa fa-bath"></i> 3 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 1,650 sqft</span>
+                <span><i class="fa fa-car"></i> 1 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Marina View</span><span>Gym</span><span>Pool</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="sp-card" data-city="dubai" data-type="penthouse" data-developer="damac" data-beds="3plus" data-price="9800000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80" alt="Penthouse" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+                <span class="sp-badge sp-badge-luxury">Luxury</span>
+              </div>
+              <div class="sp-card-dev-logo">DAMAC</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 9,800,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-star mr-1"></i>Penthouse</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Business Bay, Dubai</span>
+              </div>
+              <h3 class="sp-card-title">Sky Penthouse – Burj Khalifa View</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 4 Beds</span>
+                <span><i class="fa fa-bath"></i> 5 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 5,600 sqft</span>
+                <span><i class="fa fa-swimming-pool"></i> Pool</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Burj View</span><span>Private Pool</span><span>Concierge</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="sp-card" data-city="dubai" data-type="villa" data-developer="emaar" data-beds="3plus" data-price="4300000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80" alt="Arabian Ranches" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+              </div>
+              <div class="sp-card-dev-logo">EMAAR</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 4,300,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-home mr-1"></i>Villa</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Arabian Ranches, Dubai</span>
+              </div>
+              <h3 class="sp-card-title">Contemporary 4-Bed Family Villa</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 4 Beds</span>
+                <span><i class="fa fa-bath"></i> 5 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 4,800 sqft</span>
+                <span><i class="fa fa-car"></i> 2 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Garden</span><span>Gated Community</span><span>Schools</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="sp-card" data-city="dubai" data-type="apartment" data-developer="sobha" data-beds="1bed" data-price="1200000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=80" alt="Creek Apartment" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+              </div>
+              <div class="sp-card-dev-logo">SOBHA</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 1,200,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-building mr-1"></i>Apartment</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Creek Harbour, Dubai</span>
+              </div>
+              <h3 class="sp-card-title">Sobha Creek Vistas – 1BR Apartment</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 1 Bed</span>
+                <span><i class="fa fa-bath"></i> 2 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 780 sqft</span>
+                <span><i class="fa fa-car"></i> 1 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Creek View</span><span>Smart Home</span><span>Metro</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="sp-card" data-city="dubai" data-type="townhouse" data-developer="nakheel" data-beds="3plus" data-price="2800000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80" alt="Townhouse" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+              </div>
+              <div class="sp-card-dev-logo">NAKHEEL</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 2,800,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-th-large mr-1"></i>Townhouse</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Jumeirah Village, Dubai</span>
+              </div>
+              <h3 class="sp-card-title">JVC Townhouse – Corner Unit</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 3 Beds</span>
+                <span><i class="fa fa-bath"></i> 4 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 2,800 sqft</span>
+                <span><i class="fa fa-car"></i> 2 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Private Garden</span><span>Community Pool</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 – ABU DHABI -->
+          <div class="sp-card" data-city="abudhabi" data-type="villa" data-developer="aldar" data-beds="3plus" data-price="5800000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1691849233457-837d8e2f9da3?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Saadiyat Villa" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+                <span class="sp-badge sp-badge-luxury">Luxury</span>
+              </div>
+              <div class="sp-card-dev-logo">ALDAR</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 5,800,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-home mr-1"></i>Villa</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Saadiyat Island, Abu Dhabi</span>
+              </div>
+              <h3 class="sp-card-title">Saadiyat Lagoon Villa – Beach Access</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 5 Beds</span>
+                <span><i class="fa fa-bath"></i> 6 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 6,200 sqft</span>
+                <span><i class="fa fa-car"></i> 3 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Beach Access</span><span>Mangrove View</span><span>Museums</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 – ABU DHABI -->
+          <div class="sp-card" data-city="abudhabi" data-type="apartment" data-developer="aldar" data-beds="2bed" data-price="1650000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Yas Island Apartment" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-rent">For Rent</span>
+              </div>
+              <div class="sp-card-dev-logo">ALDAR</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 120,000 / yr</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-building mr-1"></i>Apartment</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Yas Island, Abu Dhabi</span>
+              </div>
+              <h3 class="sp-card-title">Yas Island 2BR Apartment – Golf View</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 2 Beds</span>
+                <span><i class="fa fa-bath"></i> 2 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 1,350 sqft</span>
+                <span><i class="fa fa-car"></i> 1 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Golf View</span><span>Theme Parks</span><span>Mall Access</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9 – ABU DHABI -->
+          <div class="sp-card" data-city="abudhabi" data-type="apartment" data-developer="aldar" data-beds="1bed" data-price="980000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=700&q=80" alt="Al Reem Island" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+              </div>
+              <div class="sp-card-dev-logo">ALDAR</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 980,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-building mr-1"></i>Apartment</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Al Reem Island, Abu Dhabi</span>
+              </div>
+              <h3 class="sp-card-title">Reem Hills – 1BR Sea View Apartment</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 1 Bed</span>
+                <span><i class="fa fa-bath"></i> 2 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 920 sqft</span>
+                <span><i class="fa fa-car"></i> 1 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Sea View</span><span>Island Living</span><span>Metro</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10 – SHARJAH -->
+          <div class="sp-card" data-city="sharjah" data-type="apartment" data-developer="damac" data-beds="2bed" data-price="650000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80" alt="Sharjah Apartment" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+              </div>
+              <div class="sp-card-dev-logo">ARADA</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 650,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-building mr-1"></i>Apartment</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Aljada, Sharjah</span>
+              </div>
+              <h3 class="sp-card-title">Aljada 2BR Premium Apartment</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 2 Beds</span>
+                <span><i class="fa fa-bath"></i> 2 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 1,100 sqft</span>
+                <span><i class="fa fa-car"></i> 1 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Community</span><span>Schools</span><span>Retail</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11 – SHARJAH -->
+          <div class="sp-card" data-city="sharjah" data-type="apartment" data-developer="meraas" data-beds="1bed" data-price="520000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80" alt="Maryam Island" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+              </div>
+              <div class="sp-card-dev-logo">SHARJAH HOLDING</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 520,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-building mr-1"></i>Apartment</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Maryam Island, Sharjah</span>
+              </div>
+              <h3 class="sp-card-title">Maryam Island – Waterfront 1BR</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 1 Bed</span>
+                <span><i class="fa fa-bath"></i> 2 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 850 sqft</span>
+                <span><i class="fa fa-car"></i> 1 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Sea View</span><span>Promenade</span><span>Beach</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12 – RAK -->
+          <div class="sp-card" data-city="rak" data-type="apartment" data-developer="damac" data-beds="2bed" data-price="850000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=700&q=80" alt="Al Marjan" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+                <span class="sp-badge sp-badge-new">Hot Deal</span>
+              </div>
+              <div class="sp-card-dev-logo">AL MARJAN</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 850,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-building mr-1"></i>Apartment</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Al Marjan Island, RAK</span>
+              </div>
+              <h3 class="sp-card-title">Al Marjan Island – 2BR Beach Apartment</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 2 Beds</span>
+                <span><i class="fa fa-bath"></i> 2 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 1,200 sqft</span>
+                <span><i class="fa fa-car"></i> 1 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Beach Front</span><span>Resort</span><span>High ROI</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13 – Dubai Studio -->
+          <div class="sp-card" data-city="dubai" data-type="apartment" data-developer="damac" data-beds="studio" data-price="750000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="Studio Downtown" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+              </div>
+              <div class="sp-card-dev-logo">DAMAC</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 750,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-building mr-1"></i>Apartment</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Downtown Dubai</span>
+              </div>
+              <h3 class="sp-card-title">DAMAC Paramount – Studio Apartment</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> Studio</span>
+                <span><i class="fa fa-bath"></i> 1 Bath</span>
+                <span><i class="fa fa-vector-square"></i> 490 sqft</span>
+                <span><i class="fa fa-car"></i> 1 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Downtown</span><span>Hotel Services</span><span>Burj View</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14 – Dubai Townhouse -->
+          <div class="sp-card" data-city="dubai" data-type="townhouse" data-developer="emaar" data-beds="3plus" data-price="3500000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80" alt="Emaar Townhouse" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+              </div>
+              <div class="sp-card-dev-logo">EMAAR</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 3,500,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-th-large mr-1"></i>Townhouse</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Emaar South, Dubai</span>
+              </div>
+              <h3 class="sp-card-title">Emaar South – 3BR Golf Community Townhouse</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 3 Beds</span>
+                <span><i class="fa fa-bath"></i> 4 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 3,200 sqft</span>
+                <span><i class="fa fa-car"></i> 2 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Golf Course</span><span>Park View</span><span>Airport Proximity</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15 – Sharjah Villa -->
+          <div class="sp-card" data-city="sharjah" data-type="villa" data-developer="damac" data-beds="3plus" data-price="1800000">
+            <div class="sp-card-image">
+              <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&q=80" alt="Sharjah Villa" />
+              <div class="sp-card-badges">
+                <span class="sp-badge sp-badge-sale">For Sale</span>
+              </div>
+              <div class="sp-card-dev-logo">TILAL</div>
+              <div class="sp-card-actions">
+                <button class="sp-action-btn wishlist-btn" title="Wishlist"><i class="fa fa-heart"></i></button>
+                <button class="sp-action-btn" title="Share"><i class="fa fa-share-alt"></i></button>
+              </div>
+              <div class="sp-card-price">AED 1,800,000</div>
+            </div>
+            <div class="sp-card-body">
+              <div class="sp-card-meta">
+                <span class="sp-card-type"><i class="fa fa-home mr-1"></i>Villa</span>
+                <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Tilal City, Sharjah</span>
+              </div>
+              <h3 class="sp-card-title">Tilal City – 4BR Freehold Villa</h3>
+              <div class="sp-card-features">
+                <span><i class="fa fa-bed"></i> 4 Beds</span>
+                <span><i class="fa fa-bath"></i> 5 Baths</span>
+                <span><i class="fa fa-vector-square"></i> 3,800 sqft</span>
+                <span><i class="fa fa-car"></i> 2 Parking</span>
+              </div>
+              <div class="sp-card-tags">
+                <span>Freehold</span><span>Garden</span><span>Gated</span>
+              </div>
+              <div class="sp-card-footer">
+                
+                <a href="#" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- No Results -->
+        <div class="sp-no-results" id="noResults" style="display:none;">
+          <i class="fa fa-search-minus"></i>
+          <h3>No Properties Found</h3>
+          <p>Try adjusting your filters to see more results.</p>
+          <button class="btn-primary mt-4" onclick="document.getElementById('resetFilters').click()">
+            <i class="fa fa-redo mr-2"></i>Reset Filters
+          </button>
+        </div>
+
+        <!-- Load More -->
+        <div class="sp-load-more" id="loadMoreWrap">
+          <button class="sp-load-btn" id="loadMoreBtn">
+            <i class="fa fa-plus mr-2"></i> Load More Properties
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Mobile Sidebar Overlay -->
+  <div class="sp-sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ===== FOOTER (same as index) ===== -->
+  <footer class="footer-section bg-navy-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-1">
+          <div class="footer-logo mb-6">
+            <img src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate" style="height:100px;width:auto;object-fit:contain;" />
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-6">UAE's trusted real estate agency helping clients buy, sell, rent, and invest in premium properties.</p>
+          <div class="flex gap-3">
+            <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./sproperties.html">Secondary Properties</a></li>
+            <li><a href="./developers.html">Developers</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Property Types</h5>
+          <ul class="footer-links">
+            <li><a href="./sproperties.html">Apartments</a></li>
+            <li><a href="./sproperties.html">Villas</a></li>
+            <li><a href="./sproperties.html">Townhouses</a></li>
+            <li><a href="./sproperties.html">Penthouses</a></li>
+            <li><a href="./sproperties.html">Studios</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="text-white/60 text-sm mb-5">Subscribe for the latest listings and exclusive deals.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+          </form>
+          <div class="footer-rera mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p class="text-xs text-white/50 mb-1">RERA Registered Agency</p>
+            <p class="text-sm font-bold text-white">Reg. No: 12345-UAE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm">© 2026 HomeKeys Real Estate. All Rights Reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+  <a href="https://wa.me/971521110944" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="cms-properties.js"></script>
+<script src="cms-sproperties-inject.js"></script>
+  <script src="script.js"></script>
+  <script src="secondary-properties.js"></script>
+</body>
+</html>

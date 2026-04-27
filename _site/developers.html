@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developers – HomeKeys Real Estate UAE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="developers.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E05A2B',
+            'primary-dark': '#C44A1F',
+            'primary-light': '#F07348',
+            navy: '#1E2D5A',
+            'navy-light': '#2B3875',
+            'navy-dark': '#141E3C',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Raleway', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .service-card-featured h3 { color: #ffffff !important; }
+    .service-card-featured p  { color: rgba(255,255,255,0.75) !important; }
+    .service-card-featured .service-link { color: #E05A2B !important; }
+  </style>
+</head>
+<body class="font-body bg-white text-gray-800 overflow-x-hidden">
+
+   <!-- ===== NAVBAR  ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="index.html" class="flex items-center">
+          <img id="logo-transparent" src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate"
+            style="height: 60px;width:auto;object-fit:contain;transition:all 0.4s ease;display:block;" />
+          <img id="logo-scrolled" src="assets/HomeKeys logo-1 PNG.png" alt="HomeKeys Real Estate"
+            style="height:105px;width:auto;object-fit:contain;transition:all 0.4s ease; display:none;" />
+        </a>
+
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="./index.html" class="nav-link">Home</a>
+          <a href="./sproperties.html" class="nav-link ">Properties</a>
+          <a href="./developers.html" class="nav-link active-page">Developers</a>
+          <a href="./blog.html" class="nav-link">Blog</a>
+          <a href="./about.html" class="nav-link">About Us</a>
+          <a href="./contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="./contact.html" class="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+            <i class="fa fa-phone-alt text-xs"></i> Get In Touch
+          </a>
+          <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+  <span class="ham-line"></span>
+  <span class="ham-line"></span>
+  <span class="ham-line w-4"></span>
+</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu lg:hidden hidden">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="./index.html" class="mobile-nav-link">Home</a>
+        <a href="./sproperties.html" class="mobile-nav-link">Properties</a>
+        <a href="./developers.html" class="mobile-nav-link active-page">Developers</a>
+        <a href="./blog.html" class="mobile-nav-link">Blog</a>
+        <a href="./about.html" class="mobile-nav-link">About Us</a>
+        <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        <a href="./contact.html" class="btn-primary text-center mt-2">Get In Touch</a>
+      </div>
+    </div>
+  </nav>
+  <!-- ===== HERO BANNER ===== -->
+  <section class="dev-hero">
+    <div class="dev-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80')"></div>
+    <div class="dev-hero-overlay"></div>
+    <!-- Animated grid pattern -->
+    <div class="dev-hero-grid"></div>
+    <div class="dev-hero-content">
+      <div class="dev-breadcrumb">
+        <a href="./index.html"><i class="fa fa-home mr-1"></i>Home</a>
+        <i class="fa fa-chevron-right"></i>
+        <span>Developers</span>
+      </div>
+      <h1 class="dev-hero-title">Our <span class="text-primary">Developer</span> Partners</h1>
+      <p class="dev-hero-desc">Partnering with UAE's most trusted and awarded real estate developers to bring you the finest properties</p>
+      <!-- Stats row -->
+      <div class="dev-hero-stats">
+        <div class="dev-hstat">
+          <strong>40</strong>
+          <span>Developers</span>
+        </div>
+        <div class="dev-hstat-div"></div>
+        <div class="dev-hstat">
+          <strong>500+</strong>
+          <span>Projects</span>
+        </div>
+        <div class="dev-hstat-div"></div>
+        <div class="dev-hstat">
+          <strong>UAE-Wide</strong>
+          <span>Coverage</span>
+        </div>
+        <div class="dev-hstat-div"></div>
+        <div class="dev-hstat">
+          <strong>15+</strong>
+          <span>Years Partnership</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEARCH + FILTER BAR ===== -->
+  <div class="dev-filter-bar">
+    <div class="dev-filter-inner">
+      <div class="dev-search-wrap">
+        <i class="fa fa-search dev-search-icon"></i>
+        <input type="text" id="devSearch" placeholder="Search developers..." class="dev-search-input" />
+        <button class="dev-search-clear" id="searchClear" style="display:none;">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+      <div class="dev-filter-tags">
+        <button class="dev-filter-tag active" data-filter="all">All <span>40</span></button>
+        <button class="dev-filter-tag" data-filter="featured">Featured <span>6</span></button>
+        <button class="dev-filter-tag" data-filter="luxury">Luxury <span>8</span></button>
+        <button class="dev-filter-tag" data-filter="offplan">Off-Plan <span>12</span></button>
+      </div>
+      <div class="dev-count-display">
+        Showing <strong id="devCount">40</strong> developers
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FEATURED DEVELOPERS (Top 6 Large Cards) ===== -->
+  <section class="dev-featured-section">
+    <div class="dev-section-inner">
+      <div class="dev-section-label">
+        <span class="dev-label-line"></span>
+        <span class="dev-label-text"><i class="fa fa-star mr-2 text-primary"></i>Major Developers</span>
+        <span class="dev-label-line"></span>
+      </div>
+
+      <div class="dev-featured-grid" id="featuredGrid">
+
+        <!-- 1. EMAAR -->
+        <a href="./about.html" class="dev-featured-card" data-name="emaar" data-tags="featured luxury offplan">
+          <div class="dev-feat-logo-wrap">
+            <img src="assets/Emaar-Properties-Logo.png" alt="Emaar" />
+          </div>
+          <div class="dev-feat-info">
+            <h3>EMAAR</h3>
+            <p>Downtown Dubai · Dubai Creek · Arabian Ranches · The Valley</p>
+            <div class="dev-feat-tags">
+              <span>Luxury</span><span>Off-Plan</span><span>Iconic</span>
+            </div>
+          </div>
+          <div class="dev-feat-arrow"><i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 2. BINGHATTI -->
+        <a href="./about.html" class="dev-featured-card" data-name="binghatti" data-tags="featured luxury offplan">
+          <div class="dev-feat-logo-wrap">
+            <img src="assets/binghatti-logo-2.png" alt="Binghatti" />
+          </div>
+          <div class="dev-feat-info">
+            <h3>BINGHATTI</h3>
+            <p>Business Bay · JVC · Al Jaddaf · Dubai Silicon Oasis</p>
+            <div class="dev-feat-tags">
+              <span>Luxury</span><span>Off-Plan</span><span>Branded</span>
+            </div>
+          </div>
+          <div class="dev-feat-arrow"><i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 3. SOBHA -->
+        <a href="./about.html" class="dev-featured-card" data-name="sobha" data-tags="featured luxury">
+          <div class="dev-feat-logo-wrap">
+            <img src="assets/Sobha-Realty-Logo.png" alt="Sobha" />
+          </div>
+          <div class="dev-feat-info">
+            <h3>SOBHA</h3>
+            <p>Sobha Hartland · Mohammed Bin Rashid City · Sobha One</p>
+            <div class="dev-feat-tags">
+              <span>Luxury</span><span>Quality</span><span>Waterfront</span>
+            </div>
+          </div>
+          <div class="dev-feat-arrow"><i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 4. DANUBE -->
+        <a href="./about.html" class="dev-featured-card" data-name="danube" data-tags="featured offplan">
+          <div class="dev-feat-logo-wrap">
+            <img src="assets/danube-logo.png" alt="Danube Properties" />
+          </div>
+          <div class="dev-feat-info">
+            <h3>DANUBE PROPERTIES</h3>
+            <p>Arjan · JVC · Al Furjan · Sports City</p>
+            <div class="dev-feat-tags">
+              <span>Off-Plan</span><span>Affordable</span><span>Innovative</span>
+            </div>
+          </div>
+          <div class="dev-feat-arrow"><i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 5. SAMANA -->
+        <a href="./about.html" class="dev-featured-card" data-name="samana" data-tags="featured offplan">
+          <div class="dev-feat-logo-wrap">
+            <img src="assets/samana-logo-500x500px.png" alt="Samana Developers" />
+          </div>
+          <div class="dev-feat-info">
+            <h3>SAMANA DEVELOPERS</h3>
+            <p>Dubai Studio City · JVC · Dubai Hills Estate</p>
+            <div class="dev-feat-tags">
+              <span>Off-Plan</span><span>Resort-Style</span><span>Pools</span>
+            </div>
+          </div>
+          <div class="dev-feat-arrow"><i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 6. DAMAC -->
+        <a href="./about.html" class="dev-featured-card" data-name="damac" data-tags="featured luxury offplan">
+          <div class="dev-feat-logo-wrap">
+            <img src="assets/damac-logo.png" alt="DAMAC" />
+          </div>
+          <div class="dev-feat-info">
+            <h3>DAMAC</h3>
+            <p>DAMAC Hills · Business Bay · AKOYA · Safa Park</p>
+            <div class="dev-feat-tags">
+              <span>Luxury</span><span>Off-Plan</span><span>Branded</span>
+            </div>
+          </div>
+          <div class="dev-feat-arrow"><i class="fa fa-arrow-right"></i></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ALL 40 DEVELOPERS GRID ===== -->
+  <section class="dev-all-section">
+    <div class="dev-section-inner">
+      <div class="dev-section-label">
+        <span class="dev-label-line"></span>
+        <span class="dev-label-text"><i class="fa fa-th mr-2 text-primary"></i>All Developer Partners</span>
+        <span class="dev-label-line"></span>
+      </div>
+
+      <div class="dev-all-grid" id="devAllGrid">
+
+        <!-- 1 -->
+        <a href="./about.html" class="dev-card" data-name="emaar" data-tags="featured luxury offplan">
+          <div class="dev-card-logo">
+            <img src="assets/Emaar-Properties-Logo.png" alt="Emaar" />
+          </div>
+          <div class="dev-card-body">
+            <h4>EMAAR</h4>
+            <p>Downtown Dubai · Creek Harbour</p>
+            <span class="dev-card-tag">Iconic Developer</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 2 -->
+        <a href="./about.html" class="dev-card" data-name="binghatti" data-tags="featured luxury offplan">
+          <div class="dev-card-logo">
+            <img src="assets/binghatti-logo-2.png" alt="Binghatti" />
+          </div>
+          <div class="dev-card-body">
+            <h4>BINGHATTI</h4>
+            <p>Business Bay · JVC · Al Jaddaf</p>
+            <span class="dev-card-tag">Luxury Living</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 3 -->
+        <a href="./about.html" class="dev-card" data-name="sobha" data-tags="featured luxury">
+          <div class="dev-card-logo">
+            <img src="assets/Sobha-Realty-Logo.png" alt="Sobha" />
+          </div>
+          <div class="dev-card-body">
+            <h4>SOBHA</h4>
+            <p>Sobha Hartland · MBR City</p>
+            <span class="dev-card-tag">Crafted Quality</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 4 -->
+        <a href="./about.html" class="dev-card" data-name="danube" data-tags="featured offplan">
+          <div class="dev-card-logo">
+            <img src="assets/danube-logo.png" alt="Danube" />
+          </div>
+          <div class="dev-card-body">
+            <h4>DANUBE PROPERTIES</h4>
+            <p>Arjan · JVC · Al Furjan</p>
+            <span class="dev-card-tag">Off-Plan Leader</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 5 -->
+        <a href="./about.html" class="dev-card" data-name="samana" data-tags="featured offplan">
+          <div class="dev-card-logo">
+            <img src="assets/samana-logo-500x500px.png" alt="Samana" />
+          </div>
+          <div class="dev-card-body">
+            <h4>SAMANA DEVELOPERS</h4>
+            <p>Studio City · JVC · Dubai Hills</p>
+            <span class="dev-card-tag">Resort Lifestyle</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 6 -->
+        <a href="./about.html" class="dev-card" data-name="damac" data-tags="featured luxury offplan">
+          <div class="dev-card-logo">
+            <img src="assets/damac-logo.png" alt="DAMAC" />
+          </div>
+          <div class="dev-card-body">
+            <h4>DAMAC</h4>
+            <p>DAMAC Hills · Business Bay</p>
+            <span class="dev-card-tag">Luxury Branded</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 7 -->
+        <a href="./about.html" class="dev-card" data-name="azizi" data-tags="offplan luxury">
+          <div class="dev-card-logo">
+            <img src="assets/azizi-logo.png" alt="Azizi" />
+          </div>
+          <div class="dev-card-body">
+            <h4>AZIZI DEVELOPMENTS</h4>
+            <p>Meydan · Palm Jumeirah · Al Furjan</p>
+            <span class="dev-card-tag">Premium Projects</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 8 -->
+        <a href="./about.html" class="dev-card" data-name="imtiaz" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/imtiaz-logo.png" alt="Imtiaz" />
+          </div>
+          <div class="dev-card-body">
+            <h4>IMTIAZ DEVELOPMENTS</h4>
+            <p>JVC · Dubailand · Arjan</p>
+            <span class="dev-card-tag">Boutique Developer</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 9 -->
+        <a href="./about.html" class="dev-card" data-name="reportage" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/reportage-logo.png" alt="Reportage" />
+          </div>
+          <div class="dev-card-body">
+            <h4>REPORTAGE</h4>
+            <p>Abu Dhabi · Dubai · RAK</p>
+            <span class="dev-card-tag">UAE Developer</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 10 -->
+        <a href="./about.html" class="dev-card" data-name="alhabtoor" data-tags="luxury">
+          <div class="dev-card-logo">
+            <img src="assets/al_habtoor-logo.png" alt="Al Habtoor" />
+          </div>
+          <div class="dev-card-body">
+            <h4>ALHABTOOR</h4>
+            <p>Al Habtoor City · Business Bay</p>
+            <span class="dev-card-tag">Heritage Brand</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 11 -->
+        <a href="./about.html" class="dev-card" data-name="arada" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/arada-logo.png" alt="Arada" />
+          </div>
+          <div class="dev-card-body">
+            <h4>ARADA</h4>
+            <p>Aljada · Masaar · Sharjah</p>
+            <span class="dev-card-tag">Sharjah Leader</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 12 -->
+        <a href="./about.html" class="dev-card" data-name="segrex" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/segrex-logo.png" alt="Segrex" />
+          </div>
+          <div class="dev-card-body">
+            <h4>SEGREX DEVELOPMENT</h4>
+            <p>Dubai · Emerging Communities</p>
+            <span class="dev-card-tag">Modern Developer</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 13 -->
+        <a href="./about.html" class="dev-card" data-name="anantara" data-tags="luxury">
+          <div class="dev-card-logo">
+            <img src="assets/anantara-logo.png" alt="Anantara" />
+          </div>
+          <div class="dev-card-body">
+            <h4>ANANTARA</h4>
+            <p>Palm Jumeirah · Dubai</p>
+            <span class="dev-card-tag">Resort Branded</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 14 -->
+        <a href="./about.html" class="dev-card" data-name="aqua" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/aqua-logo.png" alt="Aqua Properties" />
+          </div>
+          <div class="dev-card-body">
+            <h4>AQUA PROPERTIES</h4>
+            <p>Dubai · Waterfront Living</p>
+            <span class="dev-card-tag">Waterfront Specialist</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 15 -->
+        <a href="./about.html" class="dev-card" data-name="axpremium" data-tags="luxury offplan">
+          <div class="dev-card-logo">
+            <img src="assets/ax-premium-properties-logo.png" alt="AX Premium" />
+          </div>
+          <div class="dev-card-body">
+            <h4>AX-PREMIUM PROPERTIES</h4>
+            <p>Dubai · Premium Residences</p>
+            <span class="dev-card-tag">Premium Living</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 16 -->
+        <a href="./about.html" class="dev-card" data-name="dugasta" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/dugasta-properties-logo.png" alt="Dugasta" />
+          </div>
+          <div class="dev-card-body">
+            <h4>DUGASTA</h4>
+            <p>Dubai · Residential Projects</p>
+            <span class="dev-card-tag">Growing Developer</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 17 -->
+        <a href="./about.html" class="dev-card" data-name="deca" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/deca-properties-logo.png" alt="Deca Properties" />
+          </div>
+          <div class="dev-card-body">
+            <h4>DECA PROPERTIES</h4>
+            <p>Dubai · Modern Communities</p>
+            <span class="dev-card-tag">Modern Living</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 18 -->
+        <a href="./about.html" class="dev-card" data-name="aya" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/aya-properties-logo.png" alt="AYA Properties" />
+          </div>
+          <div class="dev-card-body">
+            <h4>AYA PROPERTIES</h4>
+            <p>Dubai · Boutique Residences</p>
+            <span class="dev-card-tag">Boutique Projects</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 19 -->
+        <a href="./about.html" class="dev-card" data-name="condors" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/condor-logo.png" alt="Condors Properties" />
+          </div>
+          <div class="dev-card-body">
+            <h4>CONDORS PROPERTIES</h4>
+            <p>Dubai · JVC · Residential</p>
+            <span class="dev-card-tag">Off-Plan Specialist</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 20 -->
+        <a href="./about.html" class="dev-card" data-name="dedor" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/cledor-logo.png" alt="Dedor" />
+          </div>
+          <div class="dev-card-body">
+            <h4>DEDOR</h4>
+            <p>Dubai · Premium Apartments</p>
+            <span class="dev-card-tag">Modern Developer</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 21 -->
+        <a href="./about.html" class="dev-card" data-name="ellington" data-tags="luxury offplan">
+          <div class="dev-card-logo">
+            <img src="assets/ellington-properties-logo.png" alt="Ellington Properties" />
+          </div>
+          <div class="dev-card-body">
+            <h4>ELLINGTON PROPERTIES</h4>
+            <p>Dubai Hills · JVC · Palm Jumeirah</p>
+            <span class="dev-card-tag">Design-Led Luxury</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 22 -->
+        <a href="./about.html" class="dev-card" data-name="fortune5" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/fortune-5-logo.png" alt="Fortune 5" />
+          </div>
+          <div class="dev-card-body">
+            <h4>FORTUNE 5</h4>
+            <p>Dubai · Residential Communities</p>
+            <span class="dev-card-tag">Value Homes</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 23 -->
+        <a href="./about.html" class="dev-card" data-name="igo" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/igo-logo.png" alt="IGO" />
+          </div>
+          <div class="dev-card-body">
+            <h4>IGO</h4>
+            <p>Dubai · Innovative Developments</p>
+            <span class="dev-card-tag">Innovation First</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 24 -->
+        <a href="./about.html" class="dev-card" data-name="kasco" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/kasco-logo.png" alt="Kasco" />
+          </div>
+          <div class="dev-card-body">
+            <h4>KASCO</h4>
+            <p>Dubai · Residential Projects</p>
+            <span class="dev-card-tag">Quality Builder</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 25 -->
+        <a href="./about.html" class="dev-card" data-name="luxe" data-tags="luxury offplan">
+          <div class="dev-card-logo">
+            <img src="assets/luxe-properties-logo.png" alt="Luxe Properties" />
+          </div>
+          <div class="dev-card-body">
+            <h4>LUXE PROPERTIES</h4>
+            <p>Dubai · Premium Residences</p>
+            <span class="dev-card-tag">Luxury Living</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 26 -->
+        <a href="./about.html" class="dev-card" data-name="madain" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/madain-properties-logo.png" alt="Madain Properties" />
+          </div>
+          <div class="dev-card-body">
+            <h4>MADAIN PROPERTIES</h4>
+            <p>Dubai · Community Living</p>
+            <span class="dev-card-tag">Community Focus</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 27 -->
+        <a href="./about.html" class="dev-card" data-name="meraki" data-tags="offplan luxury">
+          <div class="dev-card-logo">
+            <img src="assets/meraki-logo.png" alt="Meraki Developers" />
+          </div>
+          <div class="dev-card-body">
+            <h4>MERAKI DEVELOPERS</h4>
+            <p>Dubai · Contemporary Homes</p>
+            <span class="dev-card-tag">Artisan Developer</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 28 -->
+        <a href="./about.html" class="dev-card" data-name="mreight" data-tags="offplan luxury">
+          <div class="dev-card-logo">
+            <img src="assets/mr8-logo.png" alt="Mr. Eight Development" />
+          </div>
+          <div class="dev-card-body">
+            <h4>MR. EIGHT DEVELOPMENT</h4>
+            <p>Dubai · Signature Residences</p>
+            <span class="dev-card-tag">Signature Homes</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 29 -->
+        <a href="./about.html" class="dev-card" data-name="object1" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/object-1-logo.png" alt="Object 1" />
+          </div>
+          <div class="dev-card-body">
+            <h4>OBJECT 1</h4>
+            <p>Dubai · Futuristic Concepts</p>
+            <span class="dev-card-tag">Future Forward</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 30 -->
+        <a href="./about.html" class="dev-card" data-name="prestige" data-tags="luxury offplan">
+          <div class="dev-card-logo">
+            <img src="assets/prestige-one-logo.png" alt="Prestige One" />
+          </div>
+          <div class="dev-card-body">
+            <h4>PRESTIGE ONE DEVELOPMENTS</h4>
+            <p>Dubai · Upscale Living</p>
+            <span class="dev-card-tag">Prestige Homes</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 31 -->
+        <a href="./about.html" class="dev-card" data-name="realhome" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/real-homes-logo.png" alt="Real Home" />
+          </div>
+          <div class="dev-card-body">
+            <h4>REAL HOME</h4>
+            <p>Dubai · Residential Projects</p>
+            <span class="dev-card-tag">Family Homes</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 32 -->
+        <a href="./about.html" class="dev-card" data-name="reef" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/reef-developments-logo.png" alt="Reef Developments" />
+          </div>
+          <div class="dev-card-body">
+            <h4>REEF DEVELOPMENTS</h4>
+            <p>Dubai · Creative Residences</p>
+            <span class="dev-card-tag">Creative Living</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 33 -->
+        <a href="./about.html" class="dev-card" data-name="rijas" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/rijas-logo.png" alt="Rijas Developers" />
+          </div>
+          <div class="dev-card-body">
+            <h4>RIJAS DEVELOPERS</h4>
+            <p>Dubai · Residential Communities</p>
+            <span class="dev-card-tag">Community Builder</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 34 -->
+        <a href="./about.html" class="dev-card" data-name="rokane" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/rokane-logo.png" alt="Rokane" />
+          </div>
+          <div class="dev-card-body">
+            <h4>ROKANE</h4>
+            <p>Dubai · Modern Living</p>
+            <span class="dev-card-tag">Modern Homes</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 35 -->
+        <a href="./about.html" class="dev-card" data-name="select" data-tags="luxury offplan">
+          <div class="dev-card-logo">
+            <img src="assets/select-logo.png" alt="Select Group" />
+          </div>
+          <div class="dev-card-body">
+            <h4>SELECT GROUP</h4>
+            <p>Dubai Marina · The Palm</p>
+            <span class="dev-card-tag">Waterfront Living</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 36 -->
+        <a href="./about.html" class="dev-card" data-name="union" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/up-logo.png" alt="Union Properties" />
+          </div>
+          <div class="dev-card-body">
+            <h4>UNION PROPERTIES</h4>
+            <p>Motor City · Dubai · Green Living</p>
+            <span class="dev-card-tag">Established Developer</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 37 -->
+        <a href="./about.html" class="dev-card" data-name="townx" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/townx-logo.png" alt="Town X" />
+          </div>
+          <div class="dev-card-body">
+            <h4>TOWN X</h4>
+            <p>Dubai · Urban Communities</p>
+            <span class="dev-card-tag">Urban Developer</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 38 -->
+        <a href="./about.html" class="dev-card" data-name="vincitore" data-tags="luxury offplan">
+          <div class="dev-card-logo">
+            <img src="assets/vincitore-logo.png" alt="Vincitore" />
+          </div>
+          <div class="dev-card-body">
+            <h4>VINCITORE</h4>
+            <p>Arjan · Dubai · Italian Inspired</p>
+            <span class="dev-card-tag">Italian Elegance</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 39 -->
+        <a href="./about.html" class="dev-card" data-name="srg" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/srg-logo.png" alt="SRG" />
+          </div>
+          <div class="dev-card-body">
+            <h4>SRG</h4>
+            <p>Dubai · Residential Projects</p>
+            <span class="dev-card-tag">Rising Developer</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+        <!-- 40 -->
+        <a href="./about.html" class="dev-card" data-name="synergy" data-tags="offplan">
+          <div class="dev-card-logo">
+            <img src="assets/synergy-properties-logo.png" alt="Synergy Properties" />
+          </div>
+          <div class="dev-card-body">
+            <h4>SYNERGY PROPERTIES</h4>
+            <p>Dubai · Smart Homes</p>
+            <span class="dev-card-tag">Smart Living</span>
+          </div>
+          <div class="dev-card-cta">View Projects <i class="fa fa-arrow-right"></i></div>
+        </a>
+
+      </div>
+
+      <!-- No results -->
+      <div class="dev-no-results" id="devNoResults" style="display:none;">
+        <i class="fa fa-search-minus"></i>
+        <h3>No Developers Found</h3>
+        <p>Try a different search or reset your filters.</p>
+        <button onclick="document.getElementById('devSearch').value=''; document.getElementById('searchClear').style.display='none'; filterDevCards();" class="btn-primary mt-4">
+          <i class="fa fa-redo mr-2"></i> Show All Developers
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CTA STRIP ===== -->
+  <section class="dev-cta-strip">
+    <div class="dev-cta-inner">
+      <div class="dev-cta-text">
+        <h3>Can't find a specific developer?</h3>
+        <p>Contact our team and we'll connect you with any developer in UAE.</p>
+      </div>
+      <a href="./contact.html" class="btn-primary btn-lg">
+        <i class="fa fa-headset mr-2"></i> Talk to an Expert
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-section bg-navy-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-1">
+          <div class="footer-logo mb-6">
+            <img src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate" style="height:100px;width:auto;object-fit:contain;" />
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-6">UAE's trusted real estate agency partnering with 40+ top developers across the country.</p>
+          <div class="flex gap-3">
+            <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./sproperties.html">Secondary Properties</a></li>
+            <li><a href="./developers.html">Developers</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Top Developers</h5>
+          <ul class="footer-links">
+            <li><a href="#">Emaar</a></li>
+            <li><a href="#">DAMAC</a></li>
+            <li><a href="#">Binghatti</a></li>
+            <li><a href="#">Sobha</a></li>
+            <li><a href="#">Danube Properties</a></li>
+            <li><a href="#">Ellington Properties</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="text-white/60 text-sm mb-5">Subscribe for latest developer launches and exclusive deals.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+          </form>
+          <div class="footer-rera mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p class="text-xs text-white/50 mb-1">RERA Registered Agency</p>
+            <p class="text-sm font-bold text-white">Reg. No: 12345-UAE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm">© 2026 HomeKeys Real Estate. All Rights Reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+  <a href="https://wa.me/971521110944" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
+  <script src="developers.js"></script>
+</body>
+</html>

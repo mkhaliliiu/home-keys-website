@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog – HomeKeys Real Estate UAE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary:'#E05A2B','primary-dark':'#C44A1F', navy:'#1E2D5A','navy-light':'#2B3875','navy-dark':'#141E3C' },
+          fontFamily: { display:['Playfair Display','serif'], body:['Raleway','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="font-body bg-white overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="./index.html">
+          <img id="logo-transparent" src="assets/home-keys whiete.webp" alt="HomeKeys" style="height:60px;width:auto;object-fit:contain;display:block;" />
+          <img id="logo-scrolled" src="assets/HomeKeys logo-1 PNG.png" alt="HomeKeys" style="height:105px;width:auto;object-fit:contain;display:none;" />
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="./index.html" class="nav-link">Home</a>
+          <a href="./sproperties.html" class="nav-link">Properties</a>
+          <a href="./developers.html" class="nav-link">Developers</a>
+          <a href="./blog.html" class="nav-link active-page">Blog</a>
+          <a href="./about.html" class="nav-link">About Us</a>
+          <a href="./contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="./contact.html" class="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+            <i class="fa fa-phone-alt text-xs"></i> Get In Touch
+          </a>
+          <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2">
+            <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line w-4"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden hidden">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="./index.html" class="mobile-nav-link">Home</a>
+        <a href="./sproperties.html" class="mobile-nav-link">Properties</a>
+        <a href="./developers.html" class="mobile-nav-link">Developers</a>
+        <a href="./blog.html" class="mobile-nav-link active-page">Blog</a>
+        <a href="./about.html" class="mobile-nav-link">About Us</a>
+        <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        <a href="./contact.html" class="btn-primary text-center mt-2">Get In Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="blog-hero">
+    <div class="blog-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1920&q=80')"></div>
+    <div class="blog-hero-overlay"></div>
+    <div class="blog-hero-grid"></div>
+    <div class="blog-hero-content">
+      <div class="blog-breadcrumb">
+        <a href="./index.html"><i class="fa fa-home mr-1"></i>Home</a>
+        <i class="fa fa-chevron-right"></i>
+        <span>Blog</span>
+      </div>
+      <h1 class="blog-hero-title">Real Estate <span class="text-primary">Insights</span></h1>
+      <p class="blog-hero-desc">Expert analysis, market trends and investment strategies for the UAE's most dynamic property market</p>
+      <div class="blog-hero-pills">
+        <span class="bhp"><i class="fa fa-newspaper mr-2 text-primary"></i>7 Articles</span>
+        <span class="bhp"><i class="fa fa-map-marker-alt mr-2 text-primary"></i>UAE Market</span>
+        <span class="bhp"><i class="fa fa-chart-line mr-2 text-primary"></i>Investment Tips</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <div class="blog-filter-bar" id="blogFilterBar">
+    <div class="blog-filter-inner">
+      <div class="blog-search-wrap">
+        <i class="fa fa-search bsi"></i>
+        <input type="text" id="blogSearch" placeholder="Search articles..." class="blog-search-input" />
+        <button id="searchClear" class="search-clear-btn" style="display:none;"><i class="fa fa-times"></i></button>
+      </div>
+      <div class="blog-cat-tabs" id="blogCatTabs">
+        <button class="bct active" data-cat="all">All <span>7</span></button>
+        <button class="bct" data-cat="investment">Investment <span>3</span></button>
+        <button class="bct" data-cat="market">Market Trends <span>2</span></button>
+        <button class="bct" data-cat="legal">Legal & Rental <span>1</span></button>
+        <button class="bct" data-cat="tech">Technology <span>1</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <section class="blog-section">
+    <div class="blog-container">
+
+      <!-- FEATURED – Article 1 -->
+      <article class="blog-featured" id="featuredArticle" data-cat="investment" data-search="owning second home uae global citizens buying dubai tax golden visa freehold">
+        <div class="bf-image">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80" alt="Dubai skyline second home" loading="lazy" />
+          <div class="bf-img-overlay"></div>
+          <span class="bf-featured-badge"><i class="fa fa-star mr-1"></i>Featured</span>
+          <span class="bf-cat invest-tag">Investment</span>
+        </div>
+        <div class="bf-body">
+          <div class="bf-meta">
+            <span><i class="fa fa-calendar mr-1"></i>February 2026</span>
+            <span class="mdot">·</span>
+            <span><i class="fa fa-clock mr-1"></i>6 min read</span>
+            <span class="mdot">·</span>
+            <span><i class="fa fa-eye mr-1"></i>2,840 views</span>
+          </div>
+          <h2 class="bf-title">Owning a Second Home in the UAE: Why Global Citizens Are Buying in Dubai</h2>
+          <p class="bf-excerpt">Today, a growing number of international buyers are looking beyond traditional investments and choosing Dubai as their second home destination. From zero property tax and high rental yields to the Golden Visa pathway, Dubai offers a compelling package that very few global cities can match. With freehold ownership rights extended to all nationalities in designated zones, buying property in Dubai has never been more accessible — or more rewarding.</p>
+          <div class="bf-highlights">
+            <div class="bf-hl"><i class="fa fa-check-circle"></i><span>Zero property tax and no capital gains tax on real estate</span></div>
+            <div class="bf-hl"><i class="fa fa-check-circle"></i><span>Golden Visa eligibility for AED 2M+ property investments</span></div>
+            <div class="bf-hl"><i class="fa fa-check-circle"></i><span>Rental yields averaging 5–8% across prime Dubai locations</span></div>
+            <div class="bf-hl"><i class="fa fa-check-circle"></i><span>Freehold ownership open to all nationalities in 60+ zones</span></div>
+          </div>
+          <div class="bf-footer">
+            <div class="bf-author">
+              <div class="bf-avatar"><i class="fa fa-pen-nib"></i></div>
+              <div><strong>HomeKeys Editorial</strong><span>Research & Market Analysis</span></div>
+            </div>
+            <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener" class="bf-read-btn">
+              Read Full Article <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- GRID + SIDEBAR -->
+      <div class="blog-layout">
+
+        <!-- Grid -->
+        <div class="blog-grid-wrap">
+          <p class="blog-count-bar" id="blogCountBar">Showing 6 articles</p>
+          <div class="blog-grid" id="blogGrid">
+
+            <!-- Card 2: Crypto -->
+            <article class="bc" data-cat="tech" data-search="cryptocurrency changing property transactions uae bitcoin ethereum blockchain vara damac emaar smart contracts">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80" alt="Cryptocurrency UAE Real Estate" loading="lazy" />
+                <span class="bc-cat tech-tag">Technology</span>
+                <div class="bc-overlay">
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener">
+                    <i class="fa fa-external-link-alt mr-1"></i>Read Article
+                  </a>
+                </div>
+              </div>
+              <div class="bc-body">
+                <div class="bc-meta">
+                  <span><i class="fa fa-calendar mr-1"></i>January 2026</span><span class="mdot">·</span><span><i class="fa fa-clock mr-1"></i>5 min read</span>
+                </div>
+                <h3>How Cryptocurrency Is Changing Property Transactions in the UAE</h3>
+                <p>Cryptocurrency is no longer just a buzzword — it's actively transforming how real estate works in the UAE. Bitcoin, Ethereum and stablecoins are now accepted by major developers including DAMAC and Emaar, processed through VARA-licensed exchanges providing full legal compliance. Blockchain-based smart contracts are cutting intermediary costs and enabling near-instant deal settlement.</p>
+                <div class="bc-tags"><span>Bitcoin</span><span>Blockchain</span><span>VARA</span><span>PropTech</span></div>
+                <div class="bc-footer">
+                  <div class="bc-author"><span class="bc-dot"></span><span>HomeKeys Editorial</span></div>
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener" class="bc-link">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Short vs Long -->
+            <article class="bc" data-cat="investment" data-search="short term long term rentals dubai strategy uae market airbnb roi yield dtcm holiday home">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Rentals Dubai Strategy" loading="lazy" />
+                <span class="bc-cat invest-tag">Investment</span>
+                <div class="bc-overlay">
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener">
+                    <i class="fa fa-external-link-alt mr-1"></i>Read Article
+                  </a>
+                </div>
+              </div>
+              <div class="bc-body">
+                <div class="bc-meta">
+                  <span><i class="fa fa-calendar mr-1"></i>January 2026</span><span class="mdot">·</span><span><i class="fa fa-clock mr-1"></i>7 min read</span>
+                </div>
+                <h3>Short-Term vs Long-Term Rentals in Dubai: Which Strategy Works Best?</h3>
+                <p>Short-term rentals surged 18% in 2025, driven by Dubai's record 19.59 million tourist arrivals. Meanwhile, long-term leases delivered 13% steady growth in annual rental values. Our in-depth analysis breaks down ROI by location, property type, management costs and compliance requirements under DTCM and DLD — helping investors choose the right strategy for their portfolio.</p>
+                <div class="bc-tags"><span>Airbnb</span><span>Rental Yield</span><span>ROI</span><span>DTCM</span></div>
+                <div class="bc-footer">
+                  <div class="bc-author"><span class="bc-dot"></span><span>HomeKeys Editorial</span></div>
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener" class="bc-link">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4: Tourism -->
+            <article class="bc" data-cat="market" data-search="tourism growth reshaping dubai property prices 2025 visitors hospitality luxury travel global events">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80" alt="Dubai Tourism Property" loading="lazy" />
+                <span class="bc-cat market-tag">Market Trends</span>
+                <div class="bc-overlay">
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener">
+                    <i class="fa fa-external-link-alt mr-1"></i>Read Article
+                  </a>
+                </div>
+              </div>
+              <div class="bc-body">
+                <div class="bc-meta">
+                  <span><i class="fa fa-calendar mr-1"></i>December 2025</span><span class="mdot">·</span><span><i class="fa fa-clock mr-1"></i>5 min read</span>
+                </div>
+                <h3>How Tourism Growth Is Reshaping Dubai's Property Prices in 2025</h3>
+                <p>Tourism in Dubai is entering 2025 with unprecedented strength, driven by global events, new attractions and the city's status as a luxury travel capital. With over 19.59 million international visitors — a 5% year-on-year rise — the hospitality and real estate sectors are operating in near-perfect symbiosis, driving property values and short-term rental demand to record highs across the emirate.</p>
+                <div class="bc-tags"><span>Tourism 2025</span><span>Property Prices</span><span>Hospitality</span></div>
+                <div class="bc-footer">
+                  <div class="bc-author"><span class="bc-dot"></span><span>HomeKeys Editorial</span></div>
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener" class="bc-link">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5: Ejari -->
+            <article class="bc" data-cat="legal" data-search="ejari dld rental transparency landlord tenant dubai lease registration rera rental increase">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="Ejari DLD Campaign" loading="lazy" />
+                <span class="bc-cat legal-tag">Legal & Rental</span>
+                <span class="bc-badge-new"><i class="fa fa-bolt mr-1"></i>New</span>
+                <div class="bc-overlay">
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener">
+                    <i class="fa fa-external-link-alt mr-1"></i>Read Article
+                  </a>
+                </div>
+              </div>
+              <div class="bc-body">
+                <div class="bc-meta">
+                  <span><i class="fa fa-calendar mr-1"></i>January 2026</span><span class="mdot">·</span><span><i class="fa fa-clock mr-1"></i>4 min read</span>
+                </div>
+                <h3>HomeKeys Supports DLD's New 'Ejari' Campaign to Boost Rental Transparency</h3>
+                <p>The Dubai Land Department launched its landmark 'Ejari – Step by Step' awareness campaign to simplify rental processes for landlords, tenants and brokers across the city. The initiative covers lease registration, contract cancellation, certificate downloads and RERA rental increase calculations — all designed to reduce disputes and build a fully transparent rental ecosystem in Dubai.</p>
+                <div class="bc-tags"><span>Ejari</span><span>DLD</span><span>RERA</span><span>Transparency</span></div>
+                <div class="bc-footer">
+                  <div class="bc-author"><span class="bc-dot"></span><span>HomeKeys Editorial</span></div>
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener" class="bc-link">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6: Top 5 Areas -->
+            <article class="bc" data-cat="investment" data-search="top 5 areas invest dubai property 2026 jvc marina downtown creek harbour business bay roi yield appreciation">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80" alt="Top Investment Areas Dubai 2026" loading="lazy" />
+                <span class="bc-cat invest-tag">Investment</span>
+                <span class="bc-badge-hot"><i class="fa fa-fire mr-1"></i>Hot</span>
+                <div class="bc-overlay">
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener">
+                    <i class="fa fa-external-link-alt mr-1"></i>Read Article
+                  </a>
+                </div>
+              </div>
+              <div class="bc-body">
+                <div class="bc-meta">
+                  <span><i class="fa fa-calendar mr-1"></i>February 2026</span><span class="mdot">·</span><span><i class="fa fa-clock mr-1"></i>8 min read</span>
+                </div>
+                <h3>Top 5 Areas to Invest in Dubai Property in 2026</h3>
+                <p>Dubai's property market continues to outperform global benchmarks with rental yields of 6–9% and strong capital appreciation heading into 2026. Our analysts break down the five best areas to invest right now: Dubai Marina, Downtown Dubai, Business Bay, Jumeirah Village Circle and the rapidly emerging Dubai Creek Harbour — with data-driven insights on yields, price trends and future growth potential for each.</p>
+                <div class="bc-tags"><span>JVC</span><span>Dubai Marina</span><span>Creek Harbour</span><span>Business Bay</span></div>
+                <div class="bc-footer">
+                  <div class="bc-author"><span class="bc-dot"></span><span>HomeKeys Editorial</span></div>
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener" class="bc-link">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 7: Smart Communities -->
+            <article class="bc" data-cat="market" data-search="smart communities expo city dubai sustainable living tech net zero urban planning green spaces connectivity">
+              <div class="bc-img">
+                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Smart Communities Expo City Dubai" loading="lazy" />
+                <span class="bc-cat market-tag">Market Trends</span>
+                <div class="bc-overlay">
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener">
+                    <i class="fa fa-external-link-alt mr-1"></i>Read Article
+                  </a>
+                </div>
+              </div>
+              <div class="bc-body">
+                <div class="bc-meta">
+                  <span><i class="fa fa-calendar mr-1"></i>November 2025</span><span class="mdot">·</span><span><i class="fa fa-clock mr-1"></i>6 min read</span>
+                </div>
+                <h3>The Rise of Smart Communities: Why Everyone's Talking About Expo City Dubai</h3>
+                <p>Expo City Dubai has evolved from a post-event legacy project into one of the UAE's most sought-after residential and investment destinations. Designed as a blueprint for sustainable urban planning with net-zero carbon targets, it blends smart technology infrastructure, expansive green spaces and world-class metro connectivity — attracting both end-users and investors seeking the communities of tomorrow, available today.</p>
+                <div class="bc-tags"><span>Expo City</span><span>Smart Living</span><span>Sustainable</span><span>Net Zero</span></div>
+                <div class="bc-footer">
+                  <div class="bc-author"><span class="bc-dot"></span><span>HomeKeys Editorial</span></div>
+                  <a href="./blog-details-dubaihome.html" target="_blank" rel="noopener" class="bc-link">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /blog-grid -->
+
+          <!-- No results -->
+          <div class="blog-empty" id="blogEmpty" style="display:none;">
+            <i class="fa fa-search-minus"></i>
+            <h3>No articles found</h3>
+            <p>Try a different keyword or reset the filters.</p>
+            <button onclick="resetBlog()">Show All Articles</button>
+          </div>
+
+        </div><!-- /grid wrap -->
+
+        <!-- SIDEBAR -->
+        <aside class="blog-sidebar">
+
+          <!-- Newsletter -->
+          <div class="sw sidebar-nl">
+            <div class="sw-nl-icon"><i class="fa fa-envelope-open-text"></i></div>
+            <h4>Weekly Market Updates</h4>
+            <p>Get the latest UAE property insights delivered to your inbox every week.</p>
+            <form id="sidebarNL">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit">Subscribe <i class="fa fa-arrow-right ml-1"></i></button>
+            </form>
+            <small><i class="fa fa-lock mr-1"></i>No spam. Unsubscribe anytime.</small>
+          </div>
+
+          <!-- Categories -->
+          <div class="sw">
+            <div class="sw-head"><i class="fa fa-layer-group text-primary mr-2"></i><h4>Categories</h4></div>
+            <div class="sb-cats" id="sbCats">
+              <button class="sb-cat active" data-cat="all"><span><i class="fa fa-th mr-2"></i>All Articles</span><span class="sbc-count">7</span></button>
+              <button class="sb-cat" data-cat="investment"><span><i class="fa fa-chart-line mr-2"></i>Investment</span><span class="sbc-count">3</span></button>
+              <button class="sb-cat" data-cat="market"><span><i class="fa fa-city mr-2"></i>Market Trends</span><span class="sbc-count">2</span></button>
+              <button class="sb-cat" data-cat="legal"><span><i class="fa fa-balance-scale mr-2"></i>Legal & Rental</span><span class="sbc-count">1</span></button>
+              <button class="sb-cat" data-cat="tech"><span><i class="fa fa-microchip mr-2"></i>Technology</span><span class="sbc-count">1</span></button>
+            </div>
+          </div>
+
+          <!-- Market Snapshot -->
+          <div class="sw sidebar-market">
+            <div class="sw-head"><i class="fa fa-chart-bar text-primary mr-2"></i><h4>UAE Market Snapshot</h4></div>
+            <div class="sm-grid">
+              <div class="sm-stat"><strong>19.59M</strong><span>Visitors 2025</span></div>
+              <div class="sm-stat"><strong>12.88%</strong><span>Price Growth YoY</span></div>
+              <div class="sm-stat"><strong>7.1%</strong><span>Avg. Rental Yield</span></div>
+              <div class="sm-stat"><strong>AED 2M</strong><span>Golden Visa Min.</span></div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="sw">
+            <div class="sw-head"><i class="fa fa-tags text-primary mr-2"></i><h4>Popular Tags</h4></div>
+            <div class="sb-tags">
+              <button onclick="tagFilter('Golden Visa')">Golden Visa</button>
+              <button onclick="tagFilter('ROI')">ROI</button>
+              <button onclick="tagFilter('JVC')">JVC</button>
+              <button onclick="tagFilter('Airbnb')">Airbnb</button>
+              <button onclick="tagFilter('Ejari')">Ejari</button>
+              <button onclick="tagFilter('Bitcoin')">Bitcoin</button>
+              <button onclick="tagFilter('Expo City')">Expo City</button>
+              <button onclick="tagFilter('Tourism')">Tourism</button>
+              <button onclick="tagFilter('Blockchain')">Blockchain</button>
+              <button onclick="tagFilter('Marina')">Dubai Marina</button>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="sw sidebar-cta">
+            <div class="scta-icon"><i class="fa fa-headset"></i></div>
+            <h4>Need Property Advice?</h4>
+            <p>Our expert consultants help you make the right investment decision in the UAE market.</p>
+            <a href="./contact.html" class="scta-btn-navy">Talk to an Expert</a>
+            <a href="https://wa.me/971521110944" target="_blank" class="scta-btn-wa"><i class="fab fa-whatsapp mr-2"></i>WhatsApp Us Now</a>
+          </div>
+
+        </aside>
+      </div><!-- /blog-layout -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="blog-cta">
+    <div class="blog-cta-bg" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80')"></div>
+    <div class="blog-cta-ov"></div>
+    <div class="blog-container blog-cta-content">
+      <span class="section-tag section-tag-white">Ready to Invest?</span>
+      <h2>Turn Insights Into <span class="text-primary">Smart Investments</span></h2>
+      <p>Our expert team helps you identify the right opportunities and make confident, data-driven property decisions in the UAE market.</p>
+      <div class="blog-cta-btns">
+        <a href="./sproperties.html" class="btn-primary btn-lg"><i class="fa fa-search mr-2"></i>Browse Properties</a>
+        <a href="./contact.html" class="btn-white btn-lg"><i class="fa fa-phone mr-2"></i>Talk to an Expert</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section bg-navy-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <img src="assets/home-keys whiete.webp" alt="HomeKeys" style="height:100px;width:auto;object-fit:contain;margin-bottom:20px;" />
+          <p class="text-white/60 text-sm leading-relaxed mb-6">UAE's trusted real estate agency with deep expertise across Dubai, Abu Dhabi, Sharjah and Ras Al Khaimah.</p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/HomeKeysRealEstate" target="_blank" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/@homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./sproperties.html">Properties</a></li>
+            <li><a href="./developers.html">Developers</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Blog Topics</h5>
+          <ul class="footer-links">
+            <li><a href="./blog.html">Investment Guides</a></li>
+            <li><a href="./blog.html">Market Trends</a></li>
+            <li><a href="./blog.html">Legal & Rental</a></li>
+            <li><a href="./blog.html">Technology</a></li>
+            <li><a href="./blog.html">UAE Property News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Newsletter</h5>
+          <p class="text-white/60 text-sm mb-5">Weekly market updates and investment insights.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+          </form>
+          <div class="mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p class="text-xs text-white/50 mb-1">RERA Registered Agency</p>
+            <p class="text-sm font-bold text-white">Reg. No: 12345-UAE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm">© 2026 HomeKeys Real Estate. All Rights Reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top"><i class="fa fa-arrow-up"></i></button>
+  <a href="https://wa.me/971521110944" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
+  <script src="blog.js"></script>
+</body>
+</html>

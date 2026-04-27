@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties – HomeKeys Real Estate UAE</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/secondary-properties.css" />
+  <link rel="stylesheet" href="/property-detail.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E05A2B', 'primary-dark': '#C44A1F',
+            navy: '#1E2D5A', 'navy-light': '#2B3875', 'navy-dark': '#141E3C',
+          },
+          fontFamily: { display: ['Playfair Display', 'serif'], body: ['Raleway', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="font-body bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center">
+          <img id="logo-transparent" src="/assets/home-keys whiete.webp" alt="HomeKeys" style="height:60px;width:auto;object-fit:contain;display:block;" />
+          <img id="logo-scrolled" src="/assets/HomeKeys logo-1 PNG.png" alt="HomeKeys" style="height:105px;width:auto;object-fit:contain;display:none;" />
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/properties/" class="nav-link">Properties</a>
+          <a href="/developers.html" class="nav-link">Developers</a>
+          <a href="/blog.html" class="nav-link">Blog</a>
+          <a href="/about.html" class="nav-link">About Us</a>
+          <a href="/contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="/contact.html" class="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+            <i class="fa fa-phone-alt text-xs"></i> Get In Touch
+          </a>
+          <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2">
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line w-4"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden hidden">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="/" class="mobile-nav-link">Home</a>
+        <a href="/properties/" class="mobile-nav-link">Properties</a>
+        <a href="/developers.html" class="mobile-nav-link">Developers</a>
+        <a href="/blog.html" class="mobile-nav-link">Blog</a>
+        <a href="/about.html" class="mobile-nav-link">About Us</a>
+        <a href="/contact.html" class="mobile-nav-link">Contact</a>
+        <a href="/contact.html" class="btn-primary text-center mt-2">Get In Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  
+<div style="padding-top:80px;">
+
+<section class="sp-hero">
+  <div class="sp-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80')"></div>
+  <div class="sp-hero-overlay"></div>
+  <div class="sp-hero-content">
+    <div class="sp-breadcrumb">
+      <a href="/"><i class="fa fa-home mr-1"></i>Home</a>
+      <i class="fa fa-chevron-right"></i>
+      <span>Properties</span>
+    </div>
+    <h1 class="sp-hero-title">All Featured <span class="text-primary">Properties</span></h1>
+    <p class="sp-hero-desc">Explore premium properties across Dubai, Abu Dhabi, Sharjah & Ras Al Khaimah</p>
+    <div class="sp-hero-stats">
+      <div class="sp-hstat"><strong>1</strong><span>Properties</span></div>
+      <div class="sp-hstat-div"></div>
+      <div class="sp-hstat"><strong>4</strong><span>Cities</span></div>
+      <div class="sp-hstat-div"></div>
+      <div class="sp-hstat"><strong>RERA</strong><span>Registered</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="sp-main">
+  <div class="sp-container">
+
+    <div class="sp-sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sp-sidebar" id="sidebar">
+      <div class="sp-sidebar-header">
+        <h3><i class="fa fa-filter mr-2 text-primary"></i>Filter Properties</h3>
+        <button id="resetFilters" class="sp-reset-btn">
+          <i class="fa fa-undo mr-1"></i>Reset <span id="filterLabel"></span>
+        </button>
+      </div>
+      <div class="sp-filter-group">
+        <div class="filter-group-header" data-toggle="cityOptions">
+          <span><i class="fa fa-map-marker-alt text-primary mr-2"></i>City</span>
+          <i class="fa fa-chevron-down filter-chevron"></i>
+        </div>
+        <div class="filter-options open" id="cityOptions">
+          <label class="filter-check"><input type="checkbox" name="city" value="dubai" /><span>Dubai</span></label>
+          <label class="filter-check"><input type="checkbox" name="city" value="abudhabi" /><span>Abu Dhabi</span></label>
+          <label class="filter-check"><input type="checkbox" name="city" value="sharjah" /><span>Sharjah</span></label>
+          <label class="filter-check"><input type="checkbox" name="city" value="rak" /><span>Ras Al Khaimah</span></label>
+        </div>
+      </div>
+      <div class="sp-filter-group">
+        <div class="filter-group-header" data-toggle="typeOptions">
+          <span><i class="fa fa-home text-primary mr-2"></i>Property Type</span>
+          <i class="fa fa-chevron-down filter-chevron"></i>
+        </div>
+        <div class="filter-options open" id="typeOptions">
+          <label class="filter-check"><input type="checkbox" name="type" value="apartment" /><span>Apartment</span></label>
+          <label class="filter-check"><input type="checkbox" name="type" value="villa" /><span>Villa</span></label>
+          <label class="filter-check"><input type="checkbox" name="type" value="townhouse" /><span>Townhouse</span></label>
+          <label class="filter-check"><input type="checkbox" name="type" value="penthouse" /><span>Penthouse</span></label>
+        </div>
+      </div>
+      <div class="sp-filter-group">
+        <div class="filter-group-header" data-toggle="devOptions">
+          <span><i class="fa fa-building text-primary mr-2"></i>Developer</span>
+          <i class="fa fa-chevron-down filter-chevron"></i>
+        </div>
+        <div class="filter-options open" id="devOptions">
+          <label class="filter-check"><input type="checkbox" name="developer" value="emaar" /><span>Emaar</span></label>
+          <label class="filter-check"><input type="checkbox" name="developer" value="damac" /><span>DAMAC</span></label>
+          <label class="filter-check"><input type="checkbox" name="developer" value="nakheel" /><span>Nakheel</span></label>
+          <label class="filter-check"><input type="checkbox" name="developer" value="aldar" /><span>Aldar</span></label>
+          <label class="filter-check"><input type="checkbox" name="developer" value="sobha" /><span>Sobha</span></label>
+          <label class="filter-check"><input type="checkbox" name="developer" value="meraas" /><span>Meraas</span></label>
+        </div>
+      </div>
+      <div class="sp-filter-group">
+        <div class="filter-group-header" data-toggle="bedsOptions">
+          <span><i class="fa fa-bed text-primary mr-2"></i>Bedrooms</span>
+          <i class="fa fa-chevron-down filter-chevron"></i>
+        </div>
+        <div class="filter-options open" id="bedsOptions">
+          <label class="filter-check"><input type="checkbox" name="beds" value="studio" /><span>Studio</span></label>
+          <label class="filter-check"><input type="checkbox" name="beds" value="1bed" /><span>1 Bedroom</span></label>
+          <label class="filter-check"><input type="checkbox" name="beds" value="2bed" /><span>2 Bedrooms</span></label>
+          <label class="filter-check"><input type="checkbox" name="beds" value="3plus" /><span>3+ Bedrooms</span></label>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sp-content">
+      <div class="sp-toolbar">
+        <div class="sp-toolbar-left">
+          <button id="mobileFilterBtn" class="sp-mobile-filter-btn">
+            <i class="fa fa-filter mr-2"></i>Filters
+          </button>
+          <p class="sp-results-text">
+            Showing <strong id="showingCount">1</strong> of
+            <strong id="totalCount">1</strong> properties
+          </p>
+        </div>
+        <div class="sp-toolbar-right">
+          <select id="sortSelect" class="sp-sort-select">
+            <option value="default">Sort: Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="beds-asc">Bedrooms</option>
+          </select>
+          <div class="sp-view-toggle">
+            <button id="gridViewBtn" class="sp-view-btn active"><i class="fa fa-th-large"></i></button>
+            <button id="listViewBtn" class="sp-view-btn"><i class="fa fa-list"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sp-active-filters" id="activeFilters" style="display:none;">
+        <div id="activeTags"></div>
+      </div>
+
+      <div class="sp-grid" id="propertiesGrid">
+        
+        <div class="sp-card"
+          data-city="dubai"
+          data-type="apartment"
+          data-developer="damac"
+          data-beds="studio"
+          data-price="345000">
+          <div class="sp-card-image">
+            <img src="https://cdn.sanity.io/images/imnhlgw5/production/986b95e1fd0ef7a435e8fcd922eed8bead8de512-871x581.heif" alt="First Test Property by CMS" loading="lazy" />
+            <div class="sp-card-badges">
+              <span class="sp-badge sp-badge-sale">For Sale</span>
+            </div>
+            <div class="sp-card-dev-logo">DAMAC</div>
+            <div class="sp-card-price">345,000</div>
+            <button class="wishlist-btn"><i class="fa fa-heart"></i></button>
+          </div>
+          <div class="sp-card-body">
+            <div class="sp-card-meta">
+              <span class="sp-card-type"><i class="fa fa-home mr-1"></i>Apartment</span>
+              <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Barsha</span>
+            </div>
+            <h3 class="sp-card-title">First Test Property by CMS</h3>
+            <div class="sp-card-features">
+              <span><i class="fa fa-bed"></i> studio</span>
+              <span><i class="fa fa-bath"></i> 2 Baths</span>
+              <span><i class="fa fa-vector-square"></i> 4 sqft</span>
+            </div>
+            <div class="sp-card-footer">
+              <a href="/properties/First Test property By CMS/" class="sp-view-btn">
+                View Details <i class="fa fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div id="noResults" style="display:none;" class="sp-no-results">
+        <i class="fa fa-search-minus"></i>
+        <h3>No Properties Found</h3>
+        <p>Try adjusting your filters.</p>
+      </div>
+
+      <div id="loadMoreWrap" class="sp-load-more-wrap">
+        <button id="loadMoreBtn" class="sp-load-more-btn">
+          <i class="fa fa-plus mr-2"></i>Load More Properties
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+  <!-- FOOTER -->
+  <footer class="footer-section bg-navy-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <img src="/assets/home-keys whiete.webp" alt="HomeKeys" style="height:100px;width:auto;object-fit:contain;margin-bottom:20px;" />
+          <p class="text-white/60 text-sm leading-relaxed mb-6">UAE's trusted real estate agency helping clients buy, sell, rent and invest in premium properties.</p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/HomeKeysRealEstate" target="_blank" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/@homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/properties/">Properties</a></li>
+            <li><a href="/developers.html">Developers</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Property Types</h5>
+          <ul class="footer-links">
+            <li><a href="/properties/">Apartments</a></li>
+            <li><a href="/properties/">Villas</a></li>
+            <li><a href="/properties/">Townhouses</a></li>
+            <li><a href="/properties/">Penthouses</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Contact Us</h5>
+          <ul class="footer-links">
+            <li><a href="tel:+97145693313"><i class="fa fa-phone mr-2 text-primary"></i>+971 4 569 3313</a></li>
+            <li><a href="mailto:info@homekeys.ae"><i class="fa fa-envelope mr-2 text-primary"></i>info@homekeys.ae</a></li>
+            <li><a href="https://wa.me/97145693313" target="_blank"><i class="fab fa-whatsapp mr-2 text-primary"></i>WhatsApp</a></li>
+          </ul>
+          <div class="mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p class="text-xs text-white/50 mb-1">RERA Registered Agency</p>
+            <p class="text-sm font-bold text-white">Reg. No: 12345-UAE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm">© 2026 HomeKeys Real Estate. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top"><i class="fa fa-arrow-up"></i></button>
+  <a href="https://wa.me/97145693313" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="/script.js"></script>
+  <script src="/secondary-properties.js"></script>
+  <script src="/property-detail.js"></script>
+
+</body>
+</html>

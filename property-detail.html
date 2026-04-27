@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signature Palm Villa – HomeKeys Real Estate UAE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="secondary-properties.css" />
+  <link rel="stylesheet" href="property-detail.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E05A2B', 'primary-dark': '#C44A1F', 'primary-light': '#F07348',
+            navy: '#1E2D5A', 'navy-light': '#2B3875', 'navy-dark': '#141E3C',
+          },
+          fontFamily: { display: ['Playfair Display', 'Georgia', 'serif'], body: ['Raleway', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="font-body bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- ===== NAVBAR (transparent → white on scroll) ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center">
+          <img id="logo-transparent" src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate" style="height:60px;width:auto;object-fit:contain;transition:all 0.4s ease;display:block;" />
+          <img id="logo-scrolled" src="assets/HomeKeys logo-1 PNG.png" alt="HomeKeys Real Estate" style="height:105px;width:auto;object-fit:contain;transition:all 0.4s ease;display:none;" />
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="sproperties.html" class="nav-link active-page">Properties</a>
+          <a href="developers.html" class="nav-link">Developers</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="contact.html" class="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+            <i class="fa fa-phone-alt text-xs"></i> Get In Touch
+          </a>
+          <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line w-4"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden hidden">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="sproperties.html" class="mobile-nav-link active-page">Properties</a>
+        <a href="developers.html" class="mobile-nav-link">Developers</a>
+        <a href="blog.html" class="mobile-nav-link">Blog</a>
+        <a href="about.html" class="mobile-nav-link">About Us</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <a href="contact.html" class="btn-primary text-center mt-2">Get In Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION (same style as sproperties.html) ===== -->
+  <section class="pd-hero">
+    <div class="pd-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80')"></div>
+    <div class="pd-hero-overlay"></div>
+    <div class="pd-hero-content">
+
+      <!-- Breadcrumb pill -->
+      <div class="pd-hero-breadcrumb">
+        <a href="index.html"><i class="fa fa-home mr-1"></i>Home</a>
+        <i class="fa fa-chevron-right"></i>
+        <a href="sproperties.html">Properties</a>
+        <i class="fa fa-chevron-right"></i>
+        <span>Palm Jumeirah Villa</span>
+      </div>
+
+      <!-- Badges row -->
+      <div class="pd-hero-badges">
+        <span class="sp-badge sp-badge-sale">For Sale</span>
+        <span class="sp-badge sp-badge-featured">Featured</span>
+        <span class="pd-hero-devbadge">NAKHEEL</span>
+      </div>
+
+      <h1 class="pd-hero-title">Signature Palm Villa <span class="text-primary">with Private Beach</span></h1>
+      <p class="pd-hero-location"><i class="fa fa-map-marker-alt mr-2 text-primary"></i>Frond K, Palm Jumeirah, Dubai, UAE</p>
+
+      <!-- Stats bar (same as sp-hero-stats) -->
+      <div class="pd-hero-stats">
+        <div class="pd-hstat"><strong>AED 12.5M</strong><span>Asking Price</span></div>
+        <div class="pd-hstat-div"></div>
+        <div class="pd-hstat"><strong>5</strong><span>Bedrooms</span></div>
+        <div class="pd-hstat-div"></div>
+        <div class="pd-hstat"><strong>8,200</strong><span>Sq Ft</span></div>
+        <div class="pd-hstat-div"></div>
+        <div class="pd-hstat"><strong>Ready</strong><span>To Move</span></div>
+        <div class="pd-hstat-div"></div>
+        <div class="pd-hstat"><strong>Ref: HK-PJ-001</strong><span>Property ID</span></div>
+      </div>
+
+      <!-- Action buttons row -->
+      <div class="pd-hero-actions">
+        <button class="pd-hero-action-btn" id="wishlistTopBtn" onclick="toggleWishlist()">
+          <i class="fa fa-heart mr-2"></i>Save
+        </button>
+        <button class="pd-hero-action-btn" onclick="shareProperty()">
+          <i class="fa fa-share-alt mr-2"></i>Share
+        </button>
+        <a href="sproperties.html" class="pd-hero-action-btn">
+          <i class="fa fa-arrow-left mr-2"></i>Back to Properties
+        </a>
+        <a href="#gallery" class="pd-hero-action-btn pd-hero-photos-btn">
+          <i class="fa fa-images mr-2"></i>View All Photos
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION (separate, below hero) ===== -->
+  <section class="pd-gallery-section" id="gallery">
+    <div class="pd-gallery-header">
+      <h2 class="pd-gallery-title"><i class="fa fa-images text-primary mr-2"></i>Property Gallery <span class="pd-gallery-count">9 Photos</span></h2>
+    </div>
+
+    <!-- Slider wrap -->
+    <div class="pd-slider-wrap">
+      <div class="pd-slider-track" id="sliderTrack">
+        <div class="pd-slide"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=85" alt="Villa Front" /></div>
+        <div class="pd-slide"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1400&q=85" alt="Living Room" /></div>
+        <div class="pd-slide"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=85" alt="Pool Area" /></div>
+        <div class="pd-slide"><img src="https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=1400&q=85" alt="Master Bedroom" /></div>
+        <div class="pd-slide"><img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=1400&q=85" alt="Kitchen" /></div>
+        <div class="pd-slide"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1400&q=85" alt="Terrace" /></div>
+        <div class="pd-slide"><img src="https://images.unsplash.com/photo-1559767949-0faa5c7e9992?w=1400&q=85" alt="Dining Area" /></div>
+        <div class="pd-slide"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1400&q=85" alt="Garden" /></div>
+        <div class="pd-slide"><img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1400&q=85" alt="Exterior" /></div>
+      </div>
+
+      <!-- Prev / Next arrows -->
+      <button class="pd-slider-arrow pd-slider-prev" id="sliderPrev" aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
+      <button class="pd-slider-arrow pd-slider-next" id="sliderNext" aria-label="Next"><i class="fa fa-chevron-right"></i></button>
+
+      <!-- Counter -->
+      <div class="pd-slider-counter" id="sliderCounter">1 / 9</div>
+
+      <!-- Fullscreen -->
+      <button class="pd-slider-expand" onclick="openLightbox(currentSlide)" aria-label="View fullscreen"><i class="fa fa-expand-alt"></i></button>
+    </div>
+
+    <!-- Dots -->
+    <div class="pd-slider-dots" id="sliderDots"></div>
+
+    <!-- Thumbnail strip -->
+    <div class="pd-thumb-strip" id="thumbStrip"></div>
+  </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="pd-lightbox" id="lightbox">
+    <button class="pd-lb-close" onclick="closeLightbox()"><i class="fa fa-times"></i></button>
+    <button class="pd-lb-prev" onclick="lbNav(-1)"><i class="fa fa-chevron-left"></i></button>
+    <button class="pd-lb-next" onclick="lbNav(1)"><i class="fa fa-chevron-right"></i></button>
+    <div class="pd-lb-content">
+      <img id="lbImg" src="" alt="Gallery" />
+      <div class="pd-lb-counter" id="lbCounter"></div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="pd-main">
+    <div class="pd-container">
+      <div class="pd-layout">
+
+        <!-- ===== LEFT: PROPERTY INFO ===== -->
+        <div class="pd-info-col">
+
+          <!-- Title & Price block -->
+          <div class="pd-title-block">
+            <div class="pd-title-top">
+              <div class="pd-prop-type"><i class="fa fa-home mr-1"></i>Villa · Palm Jumeirah</div>
+              <div class="pd-ref">Ref: HK-PJ-001</div>
+            </div>
+            <h1 class="pd-title">Signature Palm Villa with Private Beach</h1>
+            <div class="pd-location"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Frond K, Palm Jumeirah, Dubai, UAE</div>
+            <div class="pd-price-row">
+              <div class="pd-price">AED 12,500,000</div>
+              <div class="pd-price-sub">≈ USD 3,403,000 · AED 1,524 / sqft</div>
+            </div>
+          </div>
+
+          <!-- Quick stats strip -->
+          <div class="pd-quick-stats">
+            <div class="pd-qs-item">
+              <i class="fa fa-bed pd-qs-icon"></i>
+              <strong>5</strong>
+              <span>Bedrooms</span>
+            </div>
+            <div class="pd-qs-div"></div>
+            <div class="pd-qs-item">
+              <i class="fa fa-bath pd-qs-icon"></i>
+              <strong>6</strong>
+              <span>Bathrooms</span>
+            </div>
+            <div class="pd-qs-div"></div>
+            <div class="pd-qs-item">
+              <i class="fa fa-vector-square pd-qs-icon"></i>
+              <strong>8,200</strong>
+              <span>sqft</span>
+            </div>
+            <div class="pd-qs-div"></div>
+            <div class="pd-qs-item">
+              <i class="fa fa-car pd-qs-icon"></i>
+              <strong>3</strong>
+              <span>Parking</span>
+            </div>
+            <div class="pd-qs-div"></div>
+            <div class="pd-qs-item">
+              <i class="fa fa-layer-group pd-qs-icon"></i>
+              <strong>G+2</strong>
+              <span>Floors</span>
+            </div>
+          </div>
+
+          <!-- TABS NAV -->
+          <div class="pd-tabs-nav" id="pdTabsNav">
+            <button class="pd-tab-btn active" data-tab="overview">Overview</button>
+            <button class="pd-tab-btn" data-tab="features">Features</button>
+            <button class="pd-tab-btn" data-tab="floorplan">Floor Plan</button>
+            <button class="pd-tab-btn" data-tab="location">Location</button>
+            <button class="pd-tab-btn" data-tab="similar">Similar</button>
+          </div>
+
+          <!-- ===== TAB: OVERVIEW ===== -->
+          <div class="pd-tab-content active" id="tab-overview">
+
+            <div class="pd-section">
+              <h2 class="pd-section-title"><span class="pd-section-dot"></span>About This Property</h2>
+              <div class="pd-description" id="descText">
+                <p>Welcome to this exceptional signature villa nestled on the iconic Palm Jumeirah — one of Dubai's most prestigious and globally recognised addresses. This magnificent five-bedroom residence commands a prime position on Frond K, offering uninterrupted sea views, direct private beach access, and the ultimate in coastal luxury living.</p>
+                <p>Spanning 8,200 square feet across three floors, the villa has been meticulously designed by award-winning architects to blend contemporary aesthetics with Arabian coastal sensibility. The ground floor centres on an open-plan living and dining area that flows seamlessly onto the pool terrace and private beach through floor-to-ceiling bi-fold doors — creating a rare indoor-outdoor experience that few properties in Dubai can offer.</p>
+                <p class="pd-desc-more" id="descMore" style="display:none;">The chef's kitchen is a masterpiece of Italian craftsmanship, featuring Miele appliances, Calacatta marble countertops, and a separate catering kitchen for entertaining. Five en-suite bedrooms are distributed across the upper floors, each designed as a private retreat with walk-in wardrobes and designer bathrooms. The master suite commands the entire third floor with its own private terrace, a rain shower overlooking the sea, and a custom his-and-hers dressing room. The villa's outdoor space is equally impressive — featuring a 25-metre private infinity pool, poolside pavilion, fully equipped outdoor kitchen, beach sun deck and mature tropical landscaping maintained by the building team. A private gated driveway accommodates up to three vehicles alongside a dedicated golf cart for beach access.</p>
+              </div>
+              <button class="pd-read-more" id="readMoreBtn" onclick="toggleDesc()">
+                Read More <i class="fa fa-chevron-down ml-1" id="readMoreIcon"></i>
+              </button>
+            </div>
+
+            <!-- Key Details grid -->
+            <div class="pd-section">
+              <h2 class="pd-section-title"><span class="pd-section-dot"></span>Property Details</h2>
+              <div class="pd-details-grid">
+                <div class="pd-detail-row"><span>Property Type</span><strong>Villa</strong></div>
+                <div class="pd-detail-row"><span>Status</span><strong class="text-primary">For Sale</strong></div>
+                <div class="pd-detail-row"><span>Developer</span><strong>Nakheel</strong></div>
+                <div class="pd-detail-row"><span>Community</span><strong>Palm Jumeirah</strong></div>
+                <div class="pd-detail-row"><span>Bedrooms</span><strong>5</strong></div>
+                <div class="pd-detail-row"><span>Bathrooms</span><strong>6 + 2 Guest</strong></div>
+                <div class="pd-detail-row"><span>Total Area</span><strong>8,200 sqft</strong></div>
+                <div class="pd-detail-row"><span>Plot Area</span><strong>12,500 sqft</strong></div>
+                <div class="pd-detail-row"><span>Parking</span><strong>3 Covered</strong></div>
+                <div class="pd-detail-row"><span>Floors</span><strong>Ground + 2</strong></div>
+                <div class="pd-detail-row"><span>Furnishing</span><strong>Fully Furnished</strong></div>
+                <div class="pd-detail-row"><span>Completion</span><strong>Ready to Move</strong></div>
+                <div class="pd-detail-row"><span>View</span><strong>Full Sea View</strong></div>
+                <div class="pd-detail-row"><span>Service Charges</span><strong>AED 18/sqft/yr</strong></div>
+                <div class="pd-detail-row"><span>Ownership</span><strong>Freehold</strong></div>
+                <div class="pd-detail-row"><span>Reference</span><strong>HK-PJ-001</strong></div>
+              </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="pd-section">
+              <h2 class="pd-section-title"><span class="pd-section-dot"></span>Highlights</h2>
+              <div class="pd-highlight-tags">
+                <span><i class="fa fa-water mr-1 text-primary"></i>Private Beach</span>
+                <span><i class="fa fa-swimming-pool mr-1 text-primary"></i>Infinity Pool</span>
+                <span><i class="fa fa-eye mr-1 text-primary"></i>Sea View</span>
+                <span><i class="fa fa-star mr-1 text-primary"></i>Fully Furnished</span>
+                <span><i class="fa fa-shield-alt mr-1 text-primary"></i>Gated Community</span>
+                <span><i class="fa fa-dumbbell mr-1 text-primary"></i>Gym</span>
+                <span><i class="fa fa-concierge-bell mr-1 text-primary"></i>24/7 Concierge</span>
+                <span><i class="fa fa-parking mr-1 text-primary"></i>3 Parking</span>
+              </div>
+            </div>
+
+            <!-- ROI Calculator -->
+            <div class="pd-section">
+              <h2 class="pd-section-title"><span class="pd-section-dot"></span>Investment Snapshot</h2>
+              <div class="pd-roi-grid">
+                <div class="pd-roi-card pd-roi-primary">
+                  <i class="fa fa-chart-line"></i>
+                  <strong>5.8%</strong>
+                  <span>Estimated Gross Yield</span>
+                </div>
+                <div class="pd-roi-card">
+                  <i class="fa fa-money-bill-wave"></i>
+                  <strong>AED 725K</strong>
+                  <span>Est. Annual Rent</span>
+                </div>
+                <div class="pd-roi-card">
+                  <i class="fa fa-arrow-trend-up"></i>
+                  <strong>+18.4%</strong>
+                  <span>Capital Growth (2yr)</span>
+                </div>
+                <div class="pd-roi-card">
+                  <i class="fa fa-medal"></i>
+                  <strong>Golden Visa</strong>
+                  <span>Eligible (AED 2M+)</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ===== TAB: FEATURES ===== -->
+          <div class="pd-tab-content" id="tab-features">
+            <div class="pd-section">
+              <h2 class="pd-section-title"><span class="pd-section-dot"></span>Amenities & Features</h2>
+              <div class="pd-amenities-grid">
+
+                <div class="pd-amenity-group">
+                  <div class="pd-amenity-group-title"><i class="fa fa-home text-primary mr-2"></i>Interior</div>
+                  <div class="pd-amenity-list">
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Open-plan living & dining</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Italian chef's kitchen</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Miele appliances</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Calacatta marble throughout</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Walk-in wardrobes</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Smart home automation</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Floor-to-ceiling windows</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Separate catering kitchen</div>
+                  </div>
+                </div>
+
+                <div class="pd-amenity-group">
+                  <div class="pd-amenity-group-title"><i class="fa fa-swimming-pool text-primary mr-2"></i>Outdoor</div>
+                  <div class="pd-amenity-list">
+                    <div class="pd-amenity"><i class="fa fa-check"></i>25m infinity pool</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Private beach access</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Poolside pavilion</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Outdoor kitchen & BBQ</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Mature tropical garden</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Sun deck & loungers</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Private gated driveway</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Golf cart included</div>
+                  </div>
+                </div>
+
+                <div class="pd-amenity-group">
+                  <div class="pd-amenity-group-title"><i class="fa fa-concierge-bell text-primary mr-2"></i>Building</div>
+                  <div class="pd-amenity-list">
+                    <div class="pd-amenity"><i class="fa fa-check"></i>24/7 security & CCTV</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Dedicated concierge</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>3 covered parking spaces</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Visitor parking</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>High-speed lift</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Generator backup</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Central A/C</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Maintenance team</div>
+                  </div>
+                </div>
+
+                <div class="pd-amenity-group">
+                  <div class="pd-amenity-group-title"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Community</div>
+                  <div class="pd-amenity-list">
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Palm Monorail access</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Nakheel Mall nearby</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Atlantis & Beach clubs</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>International restaurants</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>GEMS Wellington School</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>Mediclinic Palm</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>The Pointe waterfront</div>
+                    <div class="pd-amenity"><i class="fa fa-check"></i>SLS, FIVE & W Hotels</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== TAB: FLOOR PLAN ===== -->
+          <div class="pd-tab-content" id="tab-floorplan">
+            <div class="pd-section">
+              <h2 class="pd-section-title"><span class="pd-section-dot"></span>Floor Plan</h2>
+              <div class="pd-floorplan-tabs">
+                <button class="pd-fp-btn active" onclick="switchFloor(this,'ground')">Ground Floor</button>
+                <button class="pd-fp-btn" onclick="switchFloor(this,'first')">First Floor</button>
+                <button class="pd-fp-btn" onclick="switchFloor(this,'second')">Second Floor</button>
+              </div>
+              <div class="pd-floorplan-visual" id="floorplanVisual">
+                <!-- Ground Floor SVG plan -->
+                <div class="pd-fp-plan active" id="floor-ground">
+                  <div class="pd-fp-diagram">
+                    <svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" class="pd-floor-svg">
+                      <!-- Outer walls -->
+                      <rect x="20" y="20" width="660" height="440" fill="none" stroke="#1E2D5A" stroke-width="4" rx="4"/>
+                      <!-- Living Room -->
+                      <rect x="20" y="20" width="280" height="200" fill="rgba(224,90,43,0.08)" stroke="#E05A2B" stroke-width="2"/>
+                      <text x="160" y="100" text-anchor="middle" font-family="Raleway" font-size="13" font-weight="700" fill="#1E2D5A">LIVING ROOM</text>
+                      <text x="160" y="120" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">42 sqm</text>
+                      <!-- Dining -->
+                      <rect x="300" y="20" width="200" height="200" fill="rgba(30,45,90,0.06)" stroke="#1E2D5A" stroke-width="2"/>
+                      <text x="400" y="100" text-anchor="middle" font-family="Raleway" font-size="13" font-weight="700" fill="#1E2D5A">DINING</text>
+                      <text x="400" y="120" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">28 sqm</text>
+                      <!-- Kitchen -->
+                      <rect x="500" y="20" width="180" height="200" fill="rgba(30,45,90,0.06)" stroke="#1E2D5A" stroke-width="2"/>
+                      <text x="590" y="100" text-anchor="middle" font-family="Raleway" font-size="13" font-weight="700" fill="#1E2D5A">KITCHEN</text>
+                      <text x="590" y="120" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">24 sqm</text>
+                      <!-- Guest Room -->
+                      <rect x="20" y="220" width="180" height="160" fill="rgba(30,45,90,0.04)" stroke="#1E2D5A" stroke-width="2"/>
+                      <text x="110" y="295" text-anchor="middle" font-family="Raleway" font-size="12" font-weight="700" fill="#1E2D5A">GUEST ROOM</text>
+                      <text x="110" y="313" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">18 sqm</text>
+                      <!-- Maid Room -->
+                      <rect x="200" y="220" width="140" height="160" fill="rgba(30,45,90,0.04)" stroke="#1E2D5A" stroke-width="2"/>
+                      <text x="270" y="300" text-anchor="middle" font-family="Raleway" font-size="11" font-weight="700" fill="#1E2D5A">MAID ROOM</text>
+                      <!-- Garage -->
+                      <rect x="340" y="220" width="180" height="160" fill="rgba(0,0,0,0.04)" stroke="#999" stroke-width="2"/>
+                      <text x="430" y="300" text-anchor="middle" font-family="Raleway" font-size="13" font-weight="700" fill="#1E2D5A">GARAGE</text>
+                      <text x="430" y="318" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">3 Cars</text>
+                      <!-- Store -->
+                      <rect x="520" y="220" width="160" height="160" fill="rgba(30,45,90,0.04)" stroke="#1E2D5A" stroke-width="2"/>
+                      <text x="600" y="300" text-anchor="middle" font-family="Raleway" font-size="12" font-weight="700" fill="#1E2D5A">STORE</text>
+                      <!-- Pool terrace -->
+                      <rect x="20" y="380" width="660" height="80" fill="rgba(0,120,200,0.08)" stroke="#2B6CB0" stroke-width="2"/>
+                      <text x="350" y="428" text-anchor="middle" font-family="Raleway" font-size="13" font-weight="700" fill="#2B6CB0">POOL TERRACE & BEACH ACCESS</text>
+                    </svg>
+                  </div>
+                  <div class="pd-fp-stats">
+                    <div class="pd-fp-stat"><strong>Ground Floor</strong><span>2,800 sqft</span></div>
+                    <div class="pd-fp-stat"><strong>Rooms</strong><span>6</span></div>
+                    <div class="pd-fp-stat"><strong>Garage</strong><span>3 Cars</span></div>
+                    <div class="pd-fp-stat"><strong>Terrace</strong><span>1,200 sqft</span></div>
+                  </div>
+                </div>
+                <!-- First Floor Plan -->
+                <div class="pd-fp-plan" id="floor-first">
+                  <div class="pd-fp-diagram">
+                    <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" class="pd-floor-svg">
+                      <rect x="20" y="20" width="660" height="340" fill="none" stroke="#1E2D5A" stroke-width="4" rx="4"/>
+                      <rect x="20" y="20" width="200" height="180" fill="rgba(224,90,43,0.08)" stroke="#E05A2B" stroke-width="2"/>
+                      <text x="120" y="105" text-anchor="middle" font-family="Raleway" font-size="12" font-weight="700" fill="#1E2D5A">BEDROOM 2</text>
+                      <text x="120" y="123" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">32 sqm · En-suite</text>
+                      <rect x="220" y="20" width="240" height="180" fill="rgba(30,45,90,0.06)" stroke="#1E2D5A" stroke-width="2"/>
+                      <text x="340" y="105" text-anchor="middle" font-family="Raleway" font-size="12" font-weight="700" fill="#1E2D5A">BEDROOM 3</text>
+                      <text x="340" y="123" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">38 sqm · En-suite</text>
+                      <rect x="460" y="20" width="220" height="180" fill="rgba(30,45,90,0.06)" stroke="#1E2D5A" stroke-width="2"/>
+                      <text x="570" y="105" text-anchor="middle" font-family="Raleway" font-size="12" font-weight="700" fill="#1E2D5A">BEDROOM 4</text>
+                      <text x="570" y="123" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">36 sqm · En-suite</text>
+                      <rect x="20" y="200" width="460" height="160" fill="rgba(0,120,200,0.06)" stroke="#2B6CB0" stroke-width="2"/>
+                      <text x="250" y="285" text-anchor="middle" font-family="Raleway" font-size="13" font-weight="700" fill="#2B6CB0">FAMILY LOUNGE</text>
+                      <text x="250" y="303" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">55 sqm</text>
+                      <rect x="480" y="200" width="200" height="160" fill="rgba(30,45,90,0.04)" stroke="#1E2D5A" stroke-width="2"/>
+                      <text x="580" y="285" text-anchor="middle" font-family="Raleway" font-size="12" font-weight="700" fill="#1E2D5A">STUDY</text>
+                    </svg>
+                  </div>
+                  <div class="pd-fp-stats">
+                    <div class="pd-fp-stat"><strong>First Floor</strong><span>2,800 sqft</span></div>
+                    <div class="pd-fp-stat"><strong>Bedrooms</strong><span>3</span></div>
+                    <div class="pd-fp-stat"><strong>Family Lounge</strong><span>55 sqm</span></div>
+                    <div class="pd-fp-stat"><strong>Study</strong><span>1</span></div>
+                  </div>
+                </div>
+                <!-- Second Floor Plan -->
+                <div class="pd-fp-plan" id="floor-second">
+                  <div class="pd-fp-diagram">
+                    <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" class="pd-floor-svg">
+                      <rect x="20" y="20" width="660" height="340" fill="none" stroke="#1E2D5A" stroke-width="4" rx="4"/>
+                      <rect x="20" y="20" width="400" height="220" fill="rgba(224,90,43,0.1)" stroke="#E05A2B" stroke-width="2.5"/>
+                      <text x="220" y="120" text-anchor="middle" font-family="Raleway" font-size="14" font-weight="800" fill="#1E2D5A">MASTER SUITE</text>
+                      <text x="220" y="140" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">Bedroom · Sitting · His & Hers Dressing</text>
+                      <text x="220" y="158" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">72 sqm</text>
+                      <rect x="420" y="20" width="260" height="220" fill="rgba(30,45,90,0.06)" stroke="#1E2D5A" stroke-width="2"/>
+                      <text x="550" y="120" text-anchor="middle" font-family="Raleway" font-size="12" font-weight="700" fill="#1E2D5A">MASTER BATH</text>
+                      <text x="550" y="138" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">Rain shower · Soaking tub</text>
+                      <rect x="20" y="240" width="660" height="120" fill="rgba(0,120,200,0.08)" stroke="#2B6CB0" stroke-width="2"/>
+                      <text x="350" y="310" text-anchor="middle" font-family="Raleway" font-size="13" font-weight="700" fill="#2B6CB0">PRIVATE TERRACE · SEA VIEW</text>
+                      <text x="350" y="328" text-anchor="middle" font-family="Raleway" font-size="11" fill="#666">600 sqft</text>
+                    </svg>
+                  </div>
+                  <div class="pd-fp-stats">
+                    <div class="pd-fp-stat"><strong>Second Floor</strong><span>2,600 sqft</span></div>
+                    <div class="pd-fp-stat"><strong>Master Suite</strong><span>72 sqm</span></div>
+                    <div class="pd-fp-stat"><strong>Terrace</strong><span>600 sqft</span></div>
+                    <div class="pd-fp-stat"><strong>Sea View</strong><span>Full Panorama</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== TAB: LOCATION ===== -->
+          <div class="pd-tab-content" id="tab-location">
+            <div class="pd-section">
+              <h2 class="pd-section-title"><span class="pd-section-dot"></span>Location & Nearby</h2>
+              <div class="pd-map-wrap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14443.54!2d55.1282!3d25.1124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6900be94e4e9%3A0x5b9b5b5b5b5b5b5b!2sPalm+Jumeirah%2C+Dubai!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae" width="100%" height="320" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+              <div class="pd-nearby-grid">
+                <div class="pd-nearby-cat">
+                  <div class="pd-nearby-cat-title"><i class="fa fa-plane text-primary mr-2"></i>Travel</div>
+                  <div class="pd-nearby-item"><span>Dubai International Airport</span><strong>35 min</strong></div>
+                  <div class="pd-nearby-item"><span>Al Maktoum Airport</span><strong>45 min</strong></div>
+                  <div class="pd-nearby-item"><span>Palm Monorail Station</span><strong>5 min</strong></div>
+                </div>
+                <div class="pd-nearby-cat">
+                  <div class="pd-nearby-cat-title"><i class="fa fa-shopping-bag text-primary mr-2"></i>Shopping</div>
+                  <div class="pd-nearby-item"><span>Nakheel Mall</span><strong>8 min</strong></div>
+                  <div class="pd-nearby-item"><span>Dubai Mall</span><strong>20 min</strong></div>
+                  <div class="pd-nearby-item"><span>The Pointe</span><strong>5 min</strong></div>
+                </div>
+                <div class="pd-nearby-cat">
+                  <div class="pd-nearby-cat-title"><i class="fa fa-graduation-cap text-primary mr-2"></i>Education</div>
+                  <div class="pd-nearby-item"><span>GEMS Wellington School</span><strong>10 min</strong></div>
+                  <div class="pd-nearby-item"><span>Regent International</span><strong>12 min</strong></div>
+                  <div class="pd-nearby-item"><span>Dubai British School</span><strong>18 min</strong></div>
+                </div>
+                <div class="pd-nearby-cat">
+                  <div class="pd-nearby-cat-title"><i class="fa fa-heartbeat text-primary mr-2"></i>Healthcare</div>
+                  <div class="pd-nearby-item"><span>Mediclinic Palm</span><strong>8 min</strong></div>
+                  <div class="pd-nearby-item"><span>American Hospital</span><strong>20 min</strong></div>
+                  <div class="pd-nearby-item"><span>Saudi German Hospital</span><strong>25 min</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== TAB: SIMILAR ===== -->
+          <div class="pd-tab-content" id="tab-similar">
+            <div class="pd-section">
+              <h2 class="pd-section-title"><span class="pd-section-dot"></span>Similar Properties</h2>
+              <div class="pd-similar-grid">
+
+                <div class="sp-card" style="margin:0;">
+                  <div class="sp-card-image">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=75" alt="Similar Villa" />
+                    <div class="sp-card-badges"><span class="sp-badge sp-badge-sale">For Sale</span></div>
+                    <div class="sp-card-dev-logo">EMAAR</div>
+                    <div class="sp-card-price">AED 4,300,000</div>
+                  </div>
+                  <div class="sp-card-body">
+                    <div class="sp-card-meta">
+                      <span class="sp-card-type"><i class="fa fa-home mr-1"></i>Villa</span>
+                      <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Arabian Ranches</span>
+                    </div>
+                    <h3 class="sp-card-title">Contemporary 4-Bed Family Villa</h3>
+                    <div class="sp-card-features">
+                      <span><i class="fa fa-bed"></i> 4 Beds</span>
+                      <span><i class="fa fa-bath"></i> 5 Baths</span>
+                      <span><i class="fa fa-vector-square"></i> 4,800 sqft</span>
+                    </div>
+                    <div class="sp-card-footer">
+                      <a href="property-detail.html" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sp-card" style="margin:0;">
+                  <div class="sp-card-image">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&q=75" alt="Similar Villa 2" />
+                    <div class="sp-card-badges"><span class="sp-badge sp-badge-sale">For Sale</span><span class="sp-badge sp-badge-luxury">Luxury</span></div>
+                    <div class="sp-card-dev-logo">SOBHA</div>
+                    <div class="sp-card-price">AED 8,200,000</div>
+                  </div>
+                  <div class="sp-card-body">
+                    <div class="sp-card-meta">
+                      <span class="sp-card-type"><i class="fa fa-home mr-1"></i>Villa</span>
+                      <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Sobha Hartland</span>
+                    </div>
+                    <h3 class="sp-card-title">Waterfront Golf View Villa</h3>
+                    <div class="sp-card-features">
+                      <span><i class="fa fa-bed"></i> 5 Beds</span>
+                      <span><i class="fa fa-bath"></i> 6 Baths</span>
+                      <span><i class="fa fa-vector-square"></i> 6,400 sqft</span>
+                    </div>
+                    <div class="sp-card-footer">
+                      <a href="property-detail.html" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sp-card" style="margin:0;">
+                  <div class="sp-card-image">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=75" alt="Similar Villa 3" />
+                    <div class="sp-card-badges"><span class="sp-badge sp-badge-sale">For Sale</span></div>
+                    <div class="sp-card-dev-logo">DAMAC</div>
+                    <div class="sp-card-price">AED 6,500,000</div>
+                  </div>
+                  <div class="sp-card-body">
+                    <div class="sp-card-meta">
+                      <span class="sp-card-type"><i class="fa fa-home mr-1"></i>Villa</span>
+                      <span class="sp-card-city"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>DAMAC Hills</span>
+                    </div>
+                    <h3 class="sp-card-title">Golf Course 5BR Executive Villa</h3>
+                    <div class="sp-card-features">
+                      <span><i class="fa fa-bed"></i> 5 Beds</span>
+                      <span><i class="fa fa-bath"></i> 6 Baths</span>
+                      <span><i class="fa fa-vector-square"></i> 5,800 sqft</span>
+                    </div>
+                    <div class="sp-card-footer">
+                      <a href="property-detail.html" class="sp-view-btn">View Details <i class="fa fa-arrow-right ml-1"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /pd-info-col -->
+
+        <!-- ===== RIGHT: STICKY SIDEBAR ===== -->
+        <aside class="pd-sidebar">
+
+          <!-- Price card -->
+          <div class="pd-price-card">
+            <div class="pd-pc-price">AED 12,500,000</div>
+            <div class="pd-pc-sub">≈ USD 3,403,000 · Ready to Move</div>
+            <div class="pd-pc-divider"></div>
+
+            <!-- Company branding -->
+            <div class="pd-company-row">
+              <div class="pd-company-logo-wrap">
+                <img src="assets/HomeKeys logo-1 PNG.png" alt="HomeKeys Real Estate" class="pd-company-logo" />
+              </div>
+              <div class="pd-company-info">
+                <strong>HomeKeys Real Estate</strong>
+                <div class="pd-company-location"><i class="fa fa-map-marker-alt mr-1 text-primary"></i>Dubai, UAE</div>
+              </div>
+            </div>
+
+            <!-- Company contact CTAs -->
+            <div class="pd-cta-btns">
+              <a href="tel:+97145693313" class="pd-cta-primary">
+                <i class="fa fa-phone mr-2"></i> +971 4 569 3313
+              </a>
+              <a href="https://wa.me/97145693313?text=Hi, I'm interested in the Palm Jumeirah Villa (Ref: HK-PJ-001)" target="_blank" class="pd-cta-wa">
+                <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+              </a>
+              <a href="mailto:info@homekeys.ae?subject=Enquiry: Palm Villa HK-PJ-001" class="pd-cta-email">
+                <i class="fa fa-envelope mr-2"></i> info@homekeys.ae
+              </a>
+            </div>
+
+            <!-- Office hours -->
+            <div class="pd-office-hours">
+              <i class="fa fa-clock text-primary mr-2"></i>
+              <span>Mon–Sat: 9:00 AM – 9:00 PM · Sunday by Appointment</span>
+            </div>
+          </div>
+
+          <!-- Enquiry form -->
+          <div class="pd-enquiry-card">
+            <h4 class="pd-enquiry-title"><i class="fa fa-comment-dots text-primary mr-2"></i>Send Enquiry</h4>
+            <form id="enquiryForm" class="pd-enquiry-form">
+              <div class="pd-form-group">
+                <input type="text" placeholder="Your Full Name *" required />
+              </div>
+              <div class="pd-form-group">
+                <input type="email" placeholder="Email Address *" required />
+              </div>
+              <div class="pd-form-group">
+                <input type="tel" placeholder="Phone Number *" required />
+              </div>
+              <div class="pd-form-group">
+                <select>
+                  <option value="">I'm interested in...</option>
+                  <option>Buying this property</option>
+                  <option>Getting more info</option>
+                  <option>Arranging a viewing</option>
+                  <option>Making an offer</option>
+                </select>
+              </div>
+              <div class="pd-form-group">
+                <textarea placeholder="Your message (optional)" rows="3"></textarea>
+              </div>
+              <button type="submit" class="pd-enquiry-submit">
+                <i class="fa fa-paper-plane mr-2"></i> Send Message
+              </button>
+              <p class="pd-form-note"><i class="fa fa-lock mr-1"></i>Your info is secure. We don't share your details.</p>
+            </form>
+          </div>
+
+          <!-- Quick actions -->
+          <div class="pd-quick-actions">
+            <button class="pd-qa-btn" id="wishlistSideBtn" onclick="toggleWishlist()">
+              <i class="fa fa-heart mr-2"></i> Save to Wishlist
+            </button>
+            <button class="pd-qa-btn" onclick="shareProperty()">
+              <i class="fa fa-share-alt mr-2"></i> Share Property
+            </button>
+            <a href="sproperties.html" class="pd-qa-btn">
+              <i class="fa fa-th-large mr-2"></i> All Properties
+            </a>
+          </div>
+
+          <!-- Mortgage calculator -->
+          <div class="pd-mortgage-card">
+            <h4><i class="fa fa-calculator text-primary mr-2"></i>Mortgage Estimator</h4>
+            <div class="pd-mort-inputs">
+              <div class="pd-mort-row">
+                <label>Price (AED)</label>
+                <input type="number" id="mortPrice" value="12500000" onchange="calcMortgage()" />
+              </div>
+              <div class="pd-mort-row">
+                <label>Down Payment (%)</label>
+                <input type="number" id="mortDown" value="20" min="5" max="90" onchange="calcMortgage()" />
+              </div>
+              <div class="pd-mort-row">
+                <label>Interest Rate (%)</label>
+                <input type="number" id="mortRate" value="4.5" step="0.1" onchange="calcMortgage()" />
+              </div>
+              <div class="pd-mort-row">
+                <label>Term (Years)</label>
+                <input type="number" id="mortTerm" value="25" min="5" max="30" onchange="calcMortgage()" />
+              </div>
+            </div>
+            <div class="pd-mort-result">
+              <div class="pd-mort-result-row">
+                <span>Loan Amount</span>
+                <strong id="mortLoan">AED 10,000,000</strong>
+              </div>
+              <div class="pd-mort-result-row">
+                <span>Monthly Payment</span>
+                <strong id="mortMonthly" class="text-primary">AED ~55,117</strong>
+              </div>
+              <div class="pd-mort-result-row">
+                <span>Down Payment</span>
+                <strong id="mortDownAmt">AED 2,500,000</strong>
+              </div>
+            </div>
+            <p class="pd-mort-note">* Indicative estimate only. Consult your bank for actual figures.</p>
+          </div>
+
+        </aside>
+      </div><!-- /pd-layout -->
+    </div><!-- /pd-container -->
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-section bg-navy-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-1">
+          <div class="footer-logo mb-6">
+            <img src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate" style="height:100px;width:auto;object-fit:contain;" />
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-6">UAE's trusted real estate agency helping clients buy, sell, rent, and invest in premium properties.</p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/HomeKeysRealEstate" target="_blank" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/@homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sproperties.html">Properties</a></li>
+            <li><a href="developers.html">Developers</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Property Types</h5>
+          <ul class="footer-links">
+            <li><a href="sproperties.html">Apartments</a></li>
+            <li><a href="sproperties.html">Villas</a></li>
+            <li><a href="sproperties.html">Townhouses</a></li>
+            <li><a href="sproperties.html">Penthouses</a></li>
+            <li><a href="sproperties.html">Studios</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="text-white/60 text-sm mb-5">Subscribe for the latest listings and exclusive deals.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+          </form>
+          <div class="footer-rera mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p class="text-xs text-white/50 mb-1">RERA Registered Agency</p>
+            <p class="text-sm font-bold text-white">Reg. No: 12345-UAE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm">© 2026 HomeKeys Real Estate. All Rights Reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+  <a href="https://wa.me/971521110944" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
+  <script src="property-detail.js"></script>
+</body>
+</html>

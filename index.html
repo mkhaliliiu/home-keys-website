@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomeKeys Real Estate – Find Your Dream Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E05A2B',
+            'primary-dark': '#C44A1F',
+            'primary-light': '#F07348',
+            navy: '#1E2D5A',
+            'navy-light': '#2B3875',
+            'navy-dark': '#141E3C',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Raleway', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="font-body bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+
+  <!-- Logo 1: Shown on transparent navbar (hero section) -->
+  <img 
+    id="logo-transparent" 
+    src="assets/home-keys whiete.webp" 
+    alt="HomeKeys Real Estate" 
+    style="height: 60px; width: auto; object-fit: contain; transition: all 0.4s ease;"
+  />
+
+  <!-- Logo 2: Shown when navbar turns white on scroll -->
+  <img 
+    id="logo-scrolled" 
+    src="assets/HomeKeys logo-1 PNG.png" 
+    alt="HomeKeys Real Estate" 
+    style="height: 105px; width: auto; object-fit: contain; transition: all 0.4s ease; display: none;"
+  />
+
+</a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="./index.html" class="nav-link active-page">Home</a>
+          <a href="./sproperties.html" class="nav-link"> Properties</a>
+          <a href="./developers.html" class="nav-link">Developers</a>
+          <a href="./blog.html" class="nav-link">Blog</a>
+          <a href="./about.html" class="nav-link">About Us</a>
+          <a href="./contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <!-- CTA + Hamburger -->
+        <div class="flex items-center gap-4">
+          <a href="./contact.html" class="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-primary/40 hover:-translate-y-0.5">
+            <i class="fa fa-phone-alt text-xs"></i> Get In Touch
+          </a>
+          <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line w-4"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu lg:hidden hidden">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="./index.html" class="mobile-nav-link active-page">Home</a>
+        <a href="./sproperties.html" class="mobile-nav-link">Properties</a>
+        <a href="./developers.html" class="mobile-nav-link">Developers</a>
+        <a href="./blog.html" class="mobile-nav-link">Blog</a>
+        <a href="./about.html" class="mobile-nav-link">About Us</a>
+        <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        <a href="./contact.html" class="btn-primary text-center mt-2">Get In Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- BG Slides -->
+    <div class="hero-bg-slider">
+      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80')"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80')"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920&q=80')"></div>
+    </div>
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white pt-20">
+      <div class="hero-badge mb-6 inline-flex items-center gap-2">
+        <span class="badge-dot"></span>
+        <span class="text-sm font-semibold tracking-widest uppercase">UAE's Premier Real Estate Agency</span>
+      </div>
+
+      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-6 hero-title">
+        Find Your<br />
+        <span class="text-gradient-orange">Dream Home</span><br />
+        <span class="text-outline">In UAE</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-12 font-light leading-relaxed hero-subtitle">
+        Discover exceptional properties across Dubai, Abu Dhabi & beyond. We connect people with their perfect homes.
+      </p>
+
+      <!-- Search Bar -->
+      <div class="hero-search-wrap max-w-4xl mx-auto hero-search-anim">
+        <!-- Tabs -->
+        <div class="flex gap-1 mb-0 w-fit mx-auto bg-white/10 backdrop-blur-sm rounded-t-2xl p-1">
+          <button class="search-tab active" data-tab="buy">Buy</button>
+          <button class="search-tab" data-tab="rent">Rent</button>
+          <button class="search-tab" data-tab="off-plan">Off-Plan</button>
+          <button class="search-tab" data-tab="commercial">Commercial</button>
+        </div>
+        <!-- Search Box -->
+        <div class="hero-search-box">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 divide-x divide-gray-200">
+            <div class="search-field">
+              <label>Location</label>
+              <div class="flex items-center gap-2">
+                <i class="fa fa-map-marker-alt text-primary"></i>
+                <select class="search-select">
+                  <option>Dubai Marina</option>
+                  <option>Downtown Dubai</option>
+                  <option>Palm Jumeirah</option>
+                  <option>Business Bay</option>
+                  <option>Abu Dhabi</option>
+                </select>
+              </div>
+            </div>
+            <div class="search-field">
+              <label>Property Type</label>
+              <div class="flex items-center gap-2">
+                <i class="fa fa-home text-primary"></i>
+                <select class="search-select">
+                  <option>All Types</option>
+                  <option>Apartment</option>
+                  <option>Villa</option>
+                  <option>Townhouse</option>
+                  <option>Penthouse</option>
+                </select>
+              </div>
+            </div>
+            <div class="search-field">
+              <label>Bedrooms</label>
+              <div class="flex items-center gap-2">
+                <i class="fa fa-bed text-primary"></i>
+                <select class="search-select">
+                  <option>Any</option>
+                  <option>Studio</option>
+                  <option>1 Bed</option>
+                  <option>2 Beds</option>
+                  <option>3+ Beds</option>
+                </select>
+              </div>
+            </div>
+            <div class="search-field border-0">
+              <label>Price Range</label>
+              <div class="flex items-center gap-2">
+                <i class="fa fa-tag text-primary"></i>
+                <select class="search-select">
+                  <option>Any Price</option>
+                  <option>Under 1M AED</option>
+                  <option>1M – 3M AED</option>
+                  <option>3M – 5M AED</option>
+                  <option>5M+ AED</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="p-3 border-t border-gray-100 flex justify-between items-center">
+            <span class="text-sm text-gray-500 pl-2"><i class="fa fa-filter mr-1"></i> Advanced Filters</span>
+            <button class="search-btn">
+              <i class="fa fa-search mr-2"></i> Search Properties
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="flex flex-wrap justify-center gap-8 mt-14 hero-stats">
+        <div class="stat-pill">
+          <span class="stat-num" data-target="2500">0</span><span class="text-primary font-bold">+</span>
+          <span class="stat-label">Properties Listed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-num" data-target="850">0</span><span class="text-primary font-bold">+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-num" data-target="15">0</span><span class="text-primary font-bold">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-num" data-target="120">0</span><span class="text-primary font-bold">+</span>
+          <span class="stat-label">Expert Agents</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    </div>
+
+    <!-- Slide Controls -->
+    <div class="hero-controls">
+      <button class="slide-btn" id="prevSlide"><i class="fa fa-chevron-left"></i></button>
+      <div class="slide-dots" id="slideDots">
+        <span class="slide-dot active"></span>
+        <span class="slide-dot"></span>
+        <span class="slide-dot"></span>
+      </div>
+      <button class="slide-btn" id="nextSlide"><i class="fa fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE STRIP ===== -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>🏠 Luxury Villas</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🏢 Prime Apartments</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🌴 Waterfront Homes</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🏙️ Downtown Living</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🏗️ Off-Plan Projects</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🌟 Premium Listings</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>💼 Commercial Properties</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🏠 Luxury Villas</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🏢 Prime Apartments</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🌴 Waterfront Homes</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🏙️ Downtown Living</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🏗️ Off-Plan Projects</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>🌟 Premium Listings</span>
+      <span class="mx-4 text-primary">✦</span>
+      <span>💼 Commercial Properties</span>
+      <span class="mx-4 text-primary">✦</span>
+    </div>
+  </div>
+<!-- =====================================================
+     TOP PROJECTS SECTION
+     Paste this ABOVE the ===== PARTNERS ===== section
+     in your index.html
+     ===================================================== -->
+
+<!-- ===== TOP PROJECTS BY LOCATION ===== -->
+<section id="top-projects" class="top-projects-section">
+
+  <!-- Background Decoration -->
+  <div class="tp-bg-left"></div>
+  <div class="tp-bg-right"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-tag">Handpicked Across UAE</span>
+      <h2 class="section-title">Top Projects by <span class="text-primary">Location</span></h2>
+      <p class="section-desc">Explore the most prestigious developments across UAE's four key real estate markets.</p>
+    </div>
+
+    <!-- City Tab Switcher -->
+    <div class="city-tabs-wrap">
+      <div class="city-tabs" id="cityTabs">
+
+        <button class="city-tab active" data-city="dubai">
+          <div class="city-tab-icon">🏙️</div>
+          <div class="city-tab-text">
+            <span class="city-tab-name">Dubai</span>
+            <span class="city-tab-count">48 Projects</span>
+          </div>
+          <div class="city-tab-bar"></div>
+        </button>
+
+        <button class="city-tab" data-city="abudhabi">
+          <div class="city-tab-icon">🕌</div>
+          <div class="city-tab-text">
+            <span class="city-tab-name">Abu Dhabi</span>
+            <span class="city-tab-count">31 Projects</span>
+          </div>
+          <div class="city-tab-bar"></div>
+        </button>
+
+        <button class="city-tab" data-city="sharjah">
+          <div class="city-tab-icon">🌆</div>
+          <div class="city-tab-text">
+            <span class="city-tab-name">Sharjah</span>
+            <span class="city-tab-count">22 Projects</span>
+          </div>
+          <div class="city-tab-bar"></div>
+        </button>
+
+        <button class="city-tab" data-city="rasalkhaimah">
+          <div class="city-tab-icon">🏔️</div>
+          <div class="city-tab-text">
+            <span class="city-tab-name">Ras Al Khaimah</span>
+            <span class="city-tab-count">17 Projects</span>
+          </div>
+          <div class="city-tab-bar"></div>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Projects Slider for each city -->
+    <!-- ===== DUBAI ===== -->
+    <div class="city-panel active" id="panel-dubai">
+      <div class="projects-slider-wrap">
+        <div class="projects-slider" id="slider-dubai">
+
+          <!-- CARD 1 — FEATURED/LARGE -->
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&q=80" alt="Burj Khalifa District" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-offplan">Off-Plan</span>
+                <span class="proj-dev-badge">EMAAR</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Downtown Dubai</span>
+                </div>
+                <h3 class="proj-title">Burj Khalifa District Residences</h3>
+                <p class="proj-desc">Ultra-luxury residences in the shadow of the world's tallest tower. Featuring panoramic Burj views, world-class amenities and Emaar's signature finishing.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 2.1M</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">1–4 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Q3 2027</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Pool</span><span>Gym</span><span>Concierge</span><span>Smart Home</span>
+                </div>
+                <a href="./sproperties.html?city=dubai" class="proj-cta-btn">
+                  View All Dubai Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80" alt="Palm Jumeirah Signature" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-sale">For Sale</span>
+                <span class="proj-dev-badge">NAKHEEL</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Palm Jumeirah</span>
+                </div>
+                <h3 class="proj-title">Palm Signature Villas</h3>
+                <p class="proj-desc">Exclusive beachfront villas on the iconic Palm Jumeirah with private pools, direct beach access and breathtaking views of the Dubai skyline.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 8.5M</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">4–6 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Ready</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Private Beach</span><span>Private Pool</span><span>Marina View</span>
+                </div>
+                <a href="./sproperties.html?city=dubai" class="proj-cta-btn">
+                  View All Dubai Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80" alt="Dubai Creek Tower" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-offplan">Off-Plan</span>
+                <span class="proj-dev-badge">EMAAR</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Dubai Creek Harbour</span>
+                </div>
+                <h3 class="proj-title">Creek Tower Residences</h3>
+                <p class="proj-desc">Waterfront living at Dubai's newest landmark destination. Stunning Creek views, vibrant dining promenades, and resort-style facilities.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 1.4M</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Studio–3 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Q2 2026</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Waterfront</span><span>Retail</span><span>Dining</span><span>Metro</span>
+                </div>
+                <a href="./sproperties.html?city=dubai" class="proj-cta-btn">
+                  View All Dubai Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="proj-slider-controls">
+          <button class="proj-arrow proj-prev" data-slider="slider-dubai">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <div class="proj-dots" id="dots-dubai">
+            <span class="proj-dot active"></span>
+            <span class="proj-dot"></span>
+            <span class="proj-dot"></span>
+          </div>
+          <button class="proj-arrow proj-next" data-slider="slider-dubai">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- City Info Footer -->
+      <div class="city-info-footer">
+        <div class="city-info-stats">
+          <div class="cif-stat">
+            <i class="fa fa-building text-primary"></i>
+            <div>
+              <strong>48</strong>
+              <span>Total Projects</span>
+            </div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-home text-primary"></i>
+            <div>
+              <strong>12,400+</strong>
+              <span>Total Units</span>
+            </div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-tag text-primary"></i>
+            <div>
+              <strong>AED 900K+</strong>
+              <span>Starting From</span>
+            </div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-chart-line text-primary"></i>
+            <div>
+              <strong>8–12%</strong>
+              <span>Avg. ROI</span>
+            </div>
+          </div>
+        </div>
+        <a href="./sproperties.html" class="city-explore-btn">
+          <span>Explore All 48 Dubai Projects</span>
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== ABU DHABI ===== -->
+    <div class="city-panel" id="panel-abudhabi">
+      <div class="projects-slider-wrap">
+        <div class="projects-slider" id="slider-abudhabi">
+
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1590822067318-d58785999ad3?q=80&w=732&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Saadiyat Island" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-offplan">Off-Plan</span>
+                <span class="proj-dev-badge">ALDAR</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Saadiyat Island, Abu Dhabi</span>
+                </div>
+                <h3 class="proj-title">Saadiyat Lagoons Villas</h3>
+                <p class="proj-desc">Exclusive eco-friendly villas surrounded by mangroves on Saadiyat Island. World-class museums, beaches and cultural landmarks at your doorstep.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 3.8M</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">3–5 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Q4 2026</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Mangrove</span><span>Beach Club</span><span>Museums</span><span>Eco Living</span>
+                </div>
+                <a href="./sproperties.html?city=abudhabi" class="proj-cta-btn">
+                  View All Abu Dhabi Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1717167398830-05e70ed34b67?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Yas Island" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-sale">For Sale</span>
+                <span class="proj-dev-badge">ALDAR</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Yas Island, Abu Dhabi</span>
+                </div>
+                <h3 class="proj-title">Yas Acres Golf & Waterfront</h3>
+                <p class="proj-desc">Golf-facing villas and townhouses on Yas Island next to Ferrari World, Yas Waterworld and world-class entertainment destinations.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 2.2M</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">2–5 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Ready</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Golf Course</span><span>Waterfront</span><span>Theme Parks</span>
+                </div>
+                <a href="./sproperties.html?city=abudhabi" class="proj-cta-btn">
+                  View All Abu Dhabi Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1646240531468-2c263f1b19e0?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Al Reem Island" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-offplan">Off-Plan</span>
+                <span class="proj-dev-badge">ALDAR</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Al Reem Island, Abu Dhabi</span>
+                </div>
+                <h3 class="proj-title">Reem Hills Residences</h3>
+                <p class="proj-desc">Premium island-living apartments with stunning sea views just minutes from Abu Dhabi city centre. Modern architecture with resort facilities.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 1.1M</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">1–3 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Q1 2027</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Sea View</span><span>Island</span><span>City Access</span>
+                </div>
+                <a href="./sproperties.html?city=abudhabi" class="proj-cta-btn">
+                  View All Abu Dhabi Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="proj-slider-controls">
+          <button class="proj-arrow proj-prev" data-slider="slider-abudhabi"><i class="fa fa-chevron-left"></i></button>
+          <div class="proj-dots" id="dots-abudhabi">
+            <span class="proj-dot active"></span>
+            <span class="proj-dot"></span>
+            <span class="proj-dot"></span>
+          </div>
+          <button class="proj-arrow proj-next" data-slider="slider-abudhabi"><i class="fa fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="city-info-footer">
+        <div class="city-info-stats">
+          <div class="cif-stat">
+            <i class="fa fa-building text-primary"></i>
+            <div><strong>31</strong><span>Total Projects</span></div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-home text-primary"></i>
+            <div><strong>7,800+</strong><span>Total Units</span></div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-tag text-primary"></i>
+            <div><strong>AED 750K+</strong><span>Starting From</span></div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-chart-line text-primary"></i>
+            <div><strong>6–10%</strong><span>Avg. ROI</span></div>
+          </div>
+        </div>
+        <a href="./sproperties.html?city=abudhabi" class="city-explore-btn">
+          <span>Explore All 31 Abu Dhabi Projects</span>
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== SHARJAH ===== -->
+    <div class="city-panel" id="panel-sharjah">
+      <div class="projects-slider-wrap">
+        <div class="projects-slider" id="slider-sharjah">
+
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80" alt="Aljada Sharjah" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-offplan">Off-Plan</span>
+                <span class="proj-dev-badge">ARADA</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Aljada, Sharjah</span>
+                </div>
+                <h3 class="proj-title">Aljada Master Community</h3>
+                <p class="proj-desc">Sharjah's most ambitious mega-development spanning 24 million sqft. A self-contained city with residences, retail, education and entertainment.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 450K</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Studio–4 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Multiple</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Mega Project</span><span>Schools</span><span>Retail</span><span>Parks</span>
+                </div>
+                <a href="./sproperties.html?city=sharjah" class="proj-cta-btn">
+                  View All Sharjah Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80" alt="Sharjah Waterfront" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-sale">For Sale</span>
+                <span class="proj-dev-badge">SHARJAH HOLDING</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Maryam Island, Sharjah</span>
+                </div>
+                <h3 class="proj-title">Maryam Island Residences</h3>
+                <p class="proj-desc">Waterfront apartments and townhouses on Sharjah's most sought-after island. Stunning sea views with a vibrant promenade lifestyle.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 620K</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">1–3 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Ready</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Sea View</span><span>Promenade</span><span>Beach</span>
+                </div>
+                <a href="./sproperties.html?city=sharjah" class="proj-cta-btn">
+                  View All Sharjah Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1743819464838-ead29229489e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tilal City Sharjah" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-offplan">Off-Plan</span>
+                <span class="proj-dev-badge">TILAL</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Tilal City, Sharjah</span>
+                </div>
+                <h3 class="proj-title">Tilal City Plots & Villas</h3>
+                <p class="proj-desc">Freehold land plots and villas in one of Sharjah's fastest-growing master communities. Excellent connectivity and value for money.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 380K</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Plots & Villas</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Ready</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Freehold</span><span>Gated</span><span>Family</span>
+                </div>
+                <a href="./sproperties.html?city=sharjah" class="proj-cta-btn">
+                  View All Sharjah Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="proj-slider-controls">
+          <button class="proj-arrow proj-prev" data-slider="slider-sharjah"><i class="fa fa-chevron-left"></i></button>
+          <div class="proj-dots" id="dots-sharjah">
+            <span class="proj-dot active"></span>
+            <span class="proj-dot"></span>
+            <span class="proj-dot"></span>
+          </div>
+          <button class="proj-arrow proj-next" data-slider="slider-sharjah"><i class="fa fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="city-info-footer">
+        <div class="city-info-stats">
+          <div class="cif-stat">
+            <i class="fa fa-building text-primary"></i>
+            <div><strong>22</strong><span>Total Projects</span></div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-home text-primary"></i>
+            <div><strong>5,200+</strong><span>Total Units</span></div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-tag text-primary"></i>
+            <div><strong>AED 380K+</strong><span>Starting From</span></div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-chart-line text-primary"></i>
+            <div><strong>5–8%</strong><span>Avg. ROI</span></div>
+          </div>
+        </div>
+        <a href="./sproperties.html?city=sharjah" class="city-explore-btn">
+          <span>Explore All 22 Sharjah Projects</span>
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== RAS AL KHAIMAH ===== -->
+    <div class="city-panel" id="panel-rasalkhaimah">
+      <div class="projects-slider-wrap">
+        <div class="projects-slider" id="slider-rasalkhaimah">
+
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=900&q=80" alt="Wynn Al Marjan" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-offplan">Off-Plan</span>
+                <span class="proj-dev-badge">AL MARJAN</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Al Marjan Island, RAK</span>
+                </div>
+                <h3 class="proj-title">Al Marjan Island Residences</h3>
+                <p class="proj-desc">Iconic waterfront development on RAK's artificial island with pristine beaches, luxury hotels and the upcoming Wynn Resort. UAE's fastest-growing investment destination.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 800K</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">1–4 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Q2 2027</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Island</span><span>Resort</span><span>High ROI</span><span>Beach</span>
+                </div>
+                <a href="./sproperties.html?city=rasalkhaimah" class="proj-cta-btn">
+                  View All RAK Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1719299225324-301bad5c333c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mina Al Arab" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-sale">For Sale</span>
+                <span class="proj-dev-badge">RAK PROPERTIES</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Mina Al Arab, RAK</span>
+                </div>
+                <h3 class="proj-title">Mina Al Arab Waterfront Villas</h3>
+                <p class="proj-desc">Resort-style living with mangrove views, private beaches and lagoon access. RAK's most prestigious waterfront community with international school and mall.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 1.2M</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">2–5 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Ready</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Mangrove</span><span>Private Beach</span><span>School</span>
+                </div>
+                <a href="./sproperties.html?city=rasalkhaimah" class="proj-cta-btn">
+                  View All RAK Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-slide">
+            <div class="project-card project-card-featured">
+              <div class="proj-image-wrap">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&q=80" alt="RAK Mountain Views" />
+                <div class="proj-overlay"></div>
+                <span class="proj-status-badge badge-offplan">Off-Plan</span>
+                <span class="proj-dev-badge">EMAAR</span>
+                <div class="proj-featured-label"><i class="fa fa-star mr-1"></i> Featured Project</div>
+              </div>
+              <div class="proj-content">
+                <div class="proj-location-row">
+                  <i class="fa fa-map-marker-alt text-primary"></i>
+                  <span>Hayat Island, RAK</span>
+                </div>
+                <h3 class="proj-title">Hayat Island Resort Residences</h3>
+                <p class="proj-desc">Luxury resort residences with mountain and sea views on Hayat Island. Steps away from a world-class beach resort with branded hotel services.</p>
+                <div class="proj-stats-row">
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">AED 950K</span>
+                    <span class="proj-stat-label">Starting Price</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">1–3 Bed</span>
+                    <span class="proj-stat-label">Unit Types</span>
+                  </div>
+                  <div class="proj-stat">
+                    <span class="proj-stat-val">Q3 2027</span>
+                    <span class="proj-stat-label">Handover</span>
+                  </div>
+                </div>
+                <div class="proj-tags">
+                  <span>Mountain View</span><span>Sea View</span><span>Hotel Services</span>
+                </div>
+                <a href="./sproperties.html?city=rasalkhaimah" class="proj-cta-btn">
+                  View All RAK Projects <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="proj-slider-controls">
+          <button class="proj-arrow proj-prev" data-slider="slider-rasalkhaimah"><i class="fa fa-chevron-left"></i></button>
+          <div class="proj-dots" id="dots-rasalkhaimah">
+            <span class="proj-dot active"></span>
+            <span class="proj-dot"></span>
+            <span class="proj-dot"></span>
+          </div>
+          <button class="proj-arrow proj-next" data-slider="slider-rasalkhaimah"><i class="fa fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="city-info-footer">
+        <div class="city-info-stats">
+          <div class="cif-stat">
+            <i class="fa fa-building text-primary"></i>
+            <div><strong>17</strong><span>Total Projects</span></div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-home text-primary"></i>
+            <div><strong>3,100+</strong><span>Total Units</span></div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-tag text-primary"></i>
+            <div><strong>AED 380K+</strong><span>Starting From</span></div>
+          </div>
+          <div class="cif-divider"></div>
+          <div class="cif-stat">
+            <i class="fa fa-chart-line text-primary"></i>
+            <div><strong>7–13%</strong><span>Avg. ROI</span></div>
+          </div>
+        </div>
+        <a href="./sproperties.html?city=rasalkhaimah" class="city-explore-btn">
+          <span>Explore All 17 RAK Projects</span>
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ===== END TOP PROJECTS SECTION ===== -->
+  <!-- ===== FEATURED PROPERTIES ===== -->
+  <section id="properties" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="section-header">
+        <span class="section-tag">Handpicked For You</span>
+        <h2 class="section-title">Featured <span class="text-primary">Properties</span></h2>
+        <p class="section-desc">Explore our curated collection of premium listings across the UAE's most sought-after locations.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="prop-filter-wrap">
+        <button class="prop-filter active" data-filter="all">All</button>
+        <button class="prop-filter" data-filter="buy">For Sale</button>
+        <button class="prop-filter" data-filter="rent">For Rent</button>
+        <button class="prop-filter" data-filter="offplan">Off-Plan</button>
+        <button class="prop-filter" data-filter="luxury">Luxury</button>
+      </div>
+
+      <!-- Properties Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" id="propertiesGrid">
+
+        <!-- Card 1 -->
+        <div class="property-card" data-category="buy luxury">
+          <div class="prop-image-wrap">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="Palm Jumeirah Villa" class="prop-image" />
+            <span class="prop-badge badge-sale">For Sale</span>
+            <span class="prop-badge badge-featured right-3">Featured</span>
+            <div class="prop-overlay-actions">
+              <button class="prop-action" title="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prop-action" title="Compare"><i class="fa fa-exchange-alt"></i></button>
+              <button class="prop-action" title="Quick View"><i class="fa fa-eye"></i></button>
+            </div>
+            <div class="prop-price-tag">AED 12,500,000</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location"><i class="fa fa-map-marker-alt text-primary mr-1"></i> Palm Jumeirah, Dubai</div>
+            <h3 class="prop-title">Signature Palm Villa with Private Beach</h3>
+            <div class="prop-features">
+              <span><i class="fa fa-bed"></i> 5 Beds</span>
+              <span><i class="fa fa-bath"></i> 6 Baths</span>
+              <span><i class="fa fa-vector-square"></i> 8,200 sqft</span>
+              <span><i class="fa fa-car"></i> 3 Garage</span>
+            </div>
+            <div class="prop-footer">
+              <a href="./sproperties.html" class="prop-cta">View Details <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="property-card" data-category="rent">
+          <div class="prop-image-wrap">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80" alt="Marina Apartment" class="prop-image" />
+            <span class="prop-badge badge-rent">For Rent</span>
+            <div class="prop-overlay-actions">
+              <button class="prop-action" title="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prop-action" title="Compare"><i class="fa fa-exchange-alt"></i></button>
+              <button class="prop-action" title="Quick View"><i class="fa fa-eye"></i></button>
+            </div>
+            <div class="prop-price-tag">AED 180,000 / yr</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location"><i class="fa fa-map-marker-alt text-primary mr-1"></i> Dubai Marina, Dubai</div>
+            <h3 class="prop-title">High-Floor Marina View Apartment</h3>
+            <div class="prop-features">
+              <span><i class="fa fa-bed"></i> 2 Beds</span>
+              <span><i class="fa fa-bath"></i> 3 Baths</span>
+              <span><i class="fa fa-vector-square"></i> 1,650 sqft</span>
+              <span><i class="fa fa-car"></i> 1 Garage</span>
+            </div>
+            <div class="prop-footer">
+              
+              <a href="./sproperties.html" class="prop-cta">View Details <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="property-card" data-category="offplan">
+          <div class="prop-image-wrap">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="Downtown Tower" class="prop-image" />
+            <span class="prop-badge badge-offplan">Off-Plan</span>
+            <span class="prop-badge badge-new right-3">New Launch</span>
+            <div class="prop-overlay-actions">
+              <button class="prop-action" title="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prop-action" title="Compare"><i class="fa fa-exchange-alt"></i></button>
+              <button class="prop-action" title="Quick View"><i class="fa fa-eye"></i></button>
+            </div>
+            <div class="prop-price-tag">From AED 2,100,000</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location"><i class="fa fa-map-marker-alt text-primary mr-1"></i> Downtown Dubai</div>
+            <h3 class="prop-title">The Pinnacle – Downtown Residences</h3>
+            <div class="prop-features">
+              <span><i class="fa fa-bed"></i> 1-3 Beds</span>
+              <span><i class="fa fa-bath"></i> 2 Baths</span>
+              <span><i class="fa fa-vector-square"></i> 900–2,100 sqft</span>
+              <span><i class="fa fa-calendar"></i> Q4 2027</span>
+            </div>
+            <div class="prop-footer">
+              
+              <a href="./sproperties.html" class="prop-cta">View Details <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="property-card" data-category="buy">
+          <div class="prop-image-wrap">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80" alt="Arabian Ranches" class="prop-image" />
+            <span class="prop-badge badge-sale">For Sale</span>
+            <div class="prop-overlay-actions">
+              <button class="prop-action" title="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prop-action" title="Compare"><i class="fa fa-exchange-alt"></i></button>
+              <button class="prop-action" title="Quick View"><i class="fa fa-eye"></i></button>
+            </div>
+            <div class="prop-price-tag">AED 4,300,000</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location"><i class="fa fa-map-marker-alt text-primary mr-1"></i> Arabian Ranches, Dubai</div>
+            <h3 class="prop-title">Contemporary 4-Bedroom Family Villa</h3>
+            <div class="prop-features">
+              <span><i class="fa fa-bed"></i> 4 Beds</span>
+              <span><i class="fa fa-bath"></i> 5 Baths</span>
+              <span><i class="fa fa-vector-square"></i> 4,800 sqft</span>
+              <span><i class="fa fa-car"></i> 2 Garage</span>
+            </div>
+            <div class="prop-footer">
+              
+              <a href="./sproperties.html" class="prop-cta">View Details <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="property-card" data-category="rent luxury">
+          <div class="prop-image-wrap">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&q=80" alt="Business Bay Penthouse" class="prop-image" />
+            <span class="prop-badge badge-rent">For Rent</span>
+            <span class="prop-badge badge-featured right-3">Luxury</span>
+            <div class="prop-overlay-actions">
+              <button class="prop-action" title="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prop-action" title="Compare"><i class="fa fa-exchange-alt"></i></button>
+              <button class="prop-action" title="Quick View"><i class="fa fa-eye"></i></button>
+            </div>
+            <div class="prop-price-tag">AED 600,000 / yr</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location"><i class="fa fa-map-marker-alt text-primary mr-1"></i> Business Bay, Dubai</div>
+            <h3 class="prop-title">Sky Penthouse with Burj Khalifa View</h3>
+            <div class="prop-features">
+              <span><i class="fa fa-bed"></i> 4 Beds</span>
+              <span><i class="fa fa-bath"></i> 4 Baths</span>
+              <span><i class="fa fa-vector-square"></i> 5,600 sqft</span>
+              <span><i class="fa fa-swimming-pool"></i> Pool</span>
+            </div>
+            <div class="prop-footer">
+              
+              <a href="./sproperties.html" class="prop-cta">View Details <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="property-card" data-category="offplan buy">
+          <div class="prop-image-wrap">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=80" alt="Creek Harbour" class="prop-image" />
+            <span class="prop-badge badge-offplan">Off-Plan</span>
+            <div class="prop-overlay-actions">
+              <button class="prop-action" title="Wishlist"><i class="fa fa-heart"></i></button>
+              <button class="prop-action" title="Compare"><i class="fa fa-exchange-alt"></i></button>
+              <button class="prop-action" title="Quick View"><i class="fa fa-eye"></i></button>
+            </div>
+            <div class="prop-price-tag">From AED 1,500,000</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location"><i class="fa fa-map-marker-alt text-primary mr-1"></i> Dubai Creek Harbour</div>
+            <h3 class="prop-title">Creek Horizon – Waterfront Studios</h3>
+            <div class="prop-features">
+              <span><i class="fa fa-bed"></i> Studio–2 Beds</span>
+              <span><i class="fa fa-bath"></i> 1–2 Baths</span>
+              <span><i class="fa fa-vector-square"></i> 450–1,200 sqft</span>
+              <span><i class="fa fa-calendar"></i> Q2 2026</span>
+            </div>
+            <div class="prop-footer">
+              
+              <a href="./sproperties.html" class="prop-cta">View Details <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- View All -->
+      <div class="text-center mt-14">
+        <a href="./sproperties.html" class="btn-outline-primary">
+          Explore All Properties <i class="fa fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section id="about" class="why-section py-24 relative overflow-hidden">
+    <div class="why-bg-pattern"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Image Stack -->
+        <div class="why-image-stack" data-aos="fade-right">
+          <div class="why-img-main">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80" alt="Real Estate Team" />
+          </div>
+          <div class="why-img-accent">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&q=80" alt="Property" />
+          </div>
+          <div class="why-stats-card">
+            <div class="text-4xl font-display font-bold text-navy">15+</div>
+            <div class="text-sm text-gray-500 font-semibold uppercase tracking-wide">Years of Trust</div>
+            <div class="flex gap-1 mt-2">
+              <i class="fa fa-star text-yellow-400 text-xs"></i>
+              <i class="fa fa-star text-yellow-400 text-xs"></i>
+              <i class="fa fa-star text-yellow-400 text-xs"></i>
+              <i class="fa fa-star text-yellow-400 text-xs"></i>
+              <i class="fa fa-star text-yellow-400 text-xs"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div data-aos="fade-left">
+          <span class="section-tag">Why HomeKeys</span>
+          <h2 class="section-title text-left mt-3">Your Trusted Partner<br /><span class="text-primary">In Real Estate</span></h2>
+          <p class="text-gray-500 mt-4 mb-8 leading-relaxed">
+            At HomeKeys Real Estate, we combine deep market expertise with a personal touch to guide you through every step of your property journey — whether you're buying, selling, renting, or investing.
+          </p>
+
+          <!-- Features -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+            <div class="why-feature">
+              <div class="why-icon"><i class="fa fa-shield-alt"></i></div>
+              <div>
+                <h4>Trusted & Verified</h4>
+                <p>Every listing is verified for authenticity and legal compliance.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-icon"><i class="fa fa-chart-line"></i></div>
+              <div>
+                <h4>Market Intelligence</h4>
+                <p>Real-time insights and data-driven advice to maximize your ROI.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-icon"><i class="fa fa-headset"></i></div>
+              <div>
+                <h4>24/7 Support</h4>
+                <p>Our expert agents are available around the clock for you.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-icon"><i class="fa fa-handshake"></i></div>
+              <div>
+                <h4>End-to-End Service</h4>
+                <p>From search to keys-in-hand, we handle everything seamlessly.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="./contact.html" class="btn-primary">Consult An Expert</a>
+            <a href="./sproperties.html" class="btn-ghost">View Properties <i class="fa fa-arrow-right ml-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS COUNTER ===== -->
+  <section class="stats-section py-20 bg-navy relative overflow-hidden">
+    <div class="stats-bg-decor"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
+        <div class="stats-item">
+          <div class="stats-icon"><i class="fa fa-home"></i></div>
+          <div class="stats-number" data-target="2500">0</div>
+          <div class="stats-plus">+</div>
+          <div class="stats-label">Properties Listed</div>
+        </div>
+        <div class="stats-item">
+          <div class="stats-icon"><i class="fa fa-users"></i></div>
+          <div class="stats-number" data-target="3200">0</div>
+          <div class="stats-plus">+</div>
+          <div class="stats-label">Happy Clients</div>
+        </div>
+        <div class="stats-item">
+          <div class="stats-icon"><i class="fa fa-trophy"></i></div>
+          <div class="stats-number" data-target="45">0</div>
+          <div class="stats-plus"></div>
+          <div class="stats-label">Awards Won</div>
+        </div>
+        <div class="stats-item">
+          <div class="stats-icon"><i class="fa fa-user-tie"></i></div>
+          <div class="stats-number" data-target="120">0</div>
+          <div class="stats-plus">+</div>
+          <div class="stats-label">Expert Agents</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Our <span class="text-primary">Services</span></h2>
+        <p class="section-desc">Comprehensive real estate services tailored for buyers, sellers, landlords, and investors.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <i class="fa fa-search-location"></i>
+          </div>
+          <h3>Property Search</h3>
+          <p>Advanced AI-powered search to find your perfect property from thousands of verified listings across the UAE.</p>
+          <a href="./about.html" class="service-link">Learn More <i class="fa fa-arrow-right ml-1"></i></a>
+        </div>
+
+        <div class="service-card service-card-featured">
+          <div class="service-icon-wrap">
+            <i class="fa fa-key"></i>
+          </div>
+          <h3>Buy & Sell</h3>
+          <p>Expert guidance through every stage of the buying and selling process with maximum return on investment.</p>
+          <a href="./about.html" class="service-link">Learn More <i class="fa fa-arrow-right ml-1"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <i class="fa fa-building"></i>
+          </div>
+          <h3>Property Management</h3>
+          <p>End-to-end property management services for landlords — from tenant screening to maintenance coordination.</p>
+          <a href="./about.html" class="service-link">Learn More <i class="fa fa-arrow-right ml-1"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <i class="fa fa-chart-pie"></i>
+          </div>
+          <h3>Investment Advisory</h3>
+          <p>Strategic real estate investment advice backed by comprehensive market analysis and ROI projections.</p>
+          <a href="./about.html" class="service-link">Learn More <i class="fa fa-arrow-right ml-1"></i></a>
+        </div>
+
+        <div class="service-card service-card-featured">
+          <div class="service-icon-wrap">
+            <i class="fa fa-file-contract"></i>
+          </div>
+          <h3>Legal & Mortgage</h3>
+          <p>Seamless assistance with property documentation, DLD registration, and mortgage pre-approval services.</p>
+          <a href="./about.html" class="service-link">Learn More <i class="fa fa-arrow-right ml-1"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <i class="fa fa-globe-asia"></i>
+          </div>
+          <h3>International Buyers</h3>
+          <p>Dedicated support for overseas investors looking to own property in the UAE with full legalities handled.</p>
+          <a href="./about.html" class="service-link">Learn More <i class="fa fa-arrow-right ml-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEIGHBORHOODS ===== -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header">
+        <span class="section-tag">Explore Locations</span>
+        <h2 class="section-title">Popular <span class="text-primary">Neighborhoods</span></h2>
+        <p class="section-desc">Discover the UAE's most desirable communities and find where you belong.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div class="neighborhood-card col-span-2 row-span-2">
+          <img src="https://images.unsplash.com/photo-1582120042072-d01e2fc8f3ea?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dubai Marina" />
+          <div class="neighborhood-overlay">
+            <h3>Dubai Marina</h3>
+            <p>245 Properties</p>
+            <a href="./sproperties.html">Explore <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+          </div>
+        </div>
+        <div class="neighborhood-card">
+          <img src="https://images.unsplash.com/photo-1542628682-88321d2a4828?w=500&q=80" alt="Downtown Dubai" />
+          <div class="neighborhood-overlay">
+            <h3>Downtown Dubai</h3>
+            <p>183 Properties</p>
+            <a href="./sproperties.html">Explore <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+          </div>
+        </div>
+        <div class="neighborhood-card">
+          <img src="https://images.unsplash.com/photo-1679682598283-a1b88b136ed8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Palm Jumeirah" />
+          <div class="neighborhood-overlay">
+            <h3>Palm Jumeirah</h3>
+            <p>97 Properties</p>
+            <a href="./sproperties.html">Explore <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+          </div>
+        </div>
+        <div class="neighborhood-card">
+          <img src="https://plus.unsplash.com/premium_photo-1697729914552-368899dc4757?q=80&w=812&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Business Bay" />
+          <div class="neighborhood-overlay">
+            <h3>Business Bay</h3>
+            <p>312 Properties</p>
+            <a href="./sproperties.html">Explore <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+          </div>
+        </div>
+        <div class="neighborhood-card">
+          <img src="https://images.unsplash.com/photo-1763604434058-1610eb3e255b?q=80&w=860&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Duabi Creek Harbour" />
+          <div class="neighborhood-overlay">
+            <h3>Dubai Creek Harbour</h3>
+            <p>159 Properties</p>
+            <a href="./sproperties.html">Explore <i class="fa fa-arrow-right ml-1 text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="py-24 bg-gray-50 relative overflow-hidden">
+    <div class="testimonial-bg-decor"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="section-header">
+        <span class="section-tag">Client Stories</span>
+        <h2 class="section-title">What Our Clients <span class="text-primary">Say</span></h2>
+        <p class="section-desc">Real stories from real people who found their dream homes with HomeKeys.</p>
+      </div>
+
+      <div class="testimonial-slider-wrap">
+        <div class="testimonial-slider" id="testimonialSlider">
+
+          <div class="testimonial-card">
+            <div class="test-quote"><i class="fa fa-quote-left"></i></div>
+            <p>"HomeKeys made finding our dream villa an absolute breeze. Ahmed was professional, knowledgeable, and incredibly patient throughout the entire process. We couldn't be happier!"</p>
+            <div class="test-stars">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+            <div class="test-author">
+              <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Client" />
+              <div>
+                <strong>James Mitchell</strong>
+                <span>Bought Villa – Palm Jumeirah</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="test-quote"><i class="fa fa-quote-left"></i></div>
+            <p>"As an overseas investor, I was nervous about buying property in Dubai remotely. HomeKeys handled everything flawlessly — from virtual tours to finalizing documentation. Exceptional service!"</p>
+            <div class="test-stars">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+            <div class="test-author">
+              <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Client" />
+              <div>
+                <strong>Priya Sharma</strong>
+                <span>Investor – Downtown Dubai</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="test-quote"><i class="fa fa-quote-left"></i></div>
+            <p>"I've worked with several agencies in Dubai and HomeKeys stands out above all others. Their market knowledge, transparency, and dedication is truly unmatched. Highly recommend!"</p>
+            <div class="test-stars">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i>
+            </div>
+            <div class="test-author">
+              <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Client" />
+              <div>
+                <strong>Michael Andreou</strong>
+                <span>Rented Apartment – Dubai Marina</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="test-quote"><i class="fa fa-quote-left"></i></div>
+            <p>"The team at HomeKeys was outstanding. They understood our requirements perfectly and found us an ideal family home in Arabian Ranches. The whole process was smooth and stress-free."</p>
+            <div class="test-stars">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+            <div class="test-author">
+              <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Client" />
+              <div>
+                <strong>Fatima Al-Khalidi</strong>
+                <span>Bought Villa – Arabian Ranches</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Arrows -->
+        <button class="test-arrow test-prev" id="testPrev"><i class="fa fa-chevron-left"></i></button>
+        <button class="test-arrow test-next" id="testNext"><i class="fa fa-chevron-right"></i></button>
+
+        <!-- Dots -->
+        <div class="test-dots" id="testDots">
+          <span class="test-dot active"></span>
+          <span class="test-dot"></span>
+          <span class="test-dot"></span>
+          <span class="test-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-section relative py-24 overflow-hidden">
+    <div class="cta-bg" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&q=80')"></div>
+    <div class="cta-overlay"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 text-white">
+      <span class="section-tag section-tag-white">Limited Time</span>
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6 leading-tight">
+        Ready to Find Your <span class="text-primary">Dream Home?</span>
+      </h2>
+      <p class="text-white/80 text-lg max-w-2xl mx-auto mb-10">
+        Get a free consultation with one of our expert agents and discover properties that match your lifestyle and budget.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="./contact.html" class="btn-primary btn-lg">
+          <i class="fa fa-calendar-check mr-2"></i> Book Free Consultation
+        </a>
+        <a href="tel:+97112345678" class="btn-white btn-lg">
+          <i class="fa fa-phone mr-2"></i> Call: +971 12 345 678
+        </a>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- ===== PARTNERS ===== -->
+<section class="py-20 bg-white border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="section-header">
+      <span class="section-tag">Our Developer Partners</span>
+      <h2 class="section-title">UAE's Leading <span class="text-primary">Developers</span></h2>
+      <p class="section-desc">We proudly partner with the most trusted and iconic real estate developers across the UAE.</p>
+    </div>
+
+    <div class="developers-grid">
+
+      <!-- EMAAR -->
+      <div class="developer-card">
+        <div class="dev-logo-wrap">
+          <img src="assets/Emaar-Properties-Logo.png" alt="Emaar" />
+        </div>
+        <div class="dev-info">
+          <h4>Emaar Properties</h4>
+          <p>Downtown Dubai · Dubai Creek · Arabian Ranches</p>
+          <span class="dev-tag">Iconic Landmarks</span>
+        </div>
+      </div>
+
+      <!-- DAMAC -->
+      <div class="developer-card">
+        <div class="dev-logo-wrap">
+          <img src="assets/Damac_logo.svg.png" alt="DAMAC" />
+        </div>
+        <div class="dev-info">
+          <h4>DAMAC Properties</h4>
+          <p>DAMAC Hills · Business Bay · AKOYA</p>
+          <span class="dev-tag">Luxury Living</span>
+        </div>
+      </div>
+
+      <!-- NAKHEEL -->
+      <div class="developer-card">
+        <div class="dev-logo-wrap">
+          <img src="assets/nakheel-properties-logo.svg" alt="Nakheel" />
+        </div>
+        <div class="dev-info">
+          <h4>Nakheel</h4>
+          <p>Palm Jumeirah · Deira Islands · JBR</p>
+          <span class="dev-tag">Iconic Islands</span>
+        </div>
+      </div>
+
+      <!-- MERAAS -->
+      <div class="developer-card">
+        <div class="dev-logo-wrap">
+          <img src="assets/Meraas-logo.svg" alt="Meraas" />
+        </div>
+        <div class="dev-info">
+          <h4>Meraas</h4>
+          <p>City Walk · Bluewaters · Port De La Mer</p>
+          <span class="dev-tag">Urban Lifestyle</span>
+        </div>
+      </div>
+
+      <!-- ALDAR -->
+      <div class="developer-card">
+        <div class="dev-logo-wrap">
+          <img src="assets/aldar-properties-logo.png" alt="Aldar" />
+        </div>
+        <div class="dev-info">
+          <h4>Aldar Properties</h4>
+          <p>Yas Island · Al Reem Island · Saadiyat</p>
+          <span class="dev-tag">Abu Dhabi Leader</span>
+        </div>
+      </div>
+
+      <!-- SOBHA -->
+      <div class="developer-card">
+        <div class="dev-logo-wrap">
+          <img src="assets/Sobha-Realty-Logo.png" alt="Sobha" />
+        </div>
+        <div class="dev-info">
+          <h4>Sobha Realty</h4>
+          <p>Sobha Hartland · Mohammed Bin Rashid City</p>
+          <span class="dev-tag">Crafted Quality</span>
+        </div>
+      </div>
+
+      <!-- DUBAI HOLDING -->
+      <div class="developer-card">
+        <div class="dev-logo-wrap">
+          <img src="assets/dubai-holdings.jpg" alt="Dubai Holding" />
+        </div>
+        <div class="dev-info">
+          <h4>Dubai Holding</h4>
+          <p>Jumeirah · Business Bay · Madinat Jumeirah</p>
+          <span class="dev-tag">Premium Destinations</span>
+        </div>
+      </div>
+
+      <!-- MEYDAN -->
+      <div class="developer-card">
+        <div class="dev-logo-wrap">
+          <img src="assets/meydan-group.png" alt="Meydan" />
+        </div>
+        <div class="dev-info">
+          <h4>Meydan Group</h4>
+          <p>Meydan City · Mohammed Bin Rashid City</p>
+          <span class="dev-tag">Future Vision</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-section bg-navy-dark text-white">
+    <!-- Top -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <div class="footer-logo mb-6">
+            <img src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate" style="height: 100px; width: auto; object-fit: contain;" />
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-6">
+            UAE's trusted real estate agency helping clients buy, sell, rent, and invest in premium properties across Dubai, Abu Dhabi, and beyond.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./sproperties.html">Secondary Properties</a></li>
+            <li><a href="./developers.html">Developers</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Property Types -->
+        <div>
+          <h5 class="footer-heading">Property Types</h5>
+          <ul class="footer-links">
+            <li><a href="./sproperties.html">Apartments</a></li>
+            <li><a href="./sproperties.html">Villas</a></li>
+            <li><a href="./sproperties.html">Townhouses</a></li>
+            <li><a href="./sproperties.html">Penthouses</a></li>
+            <li><a href="./sproperties.html">Off-Plan Projects</a></li>
+            <li><a href="./sproperties.html">Commercial Spaces</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="text-white/60 text-sm mb-5">Subscribe to receive the latest property listings, market news and exclusive deals.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+          </form>
+          <div class="footer-rera mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p class="text-xs text-white/50 mb-1">RERA Registered Agency</p>
+            <p class="text-sm font-bold text-white">Reg. No: 12345-UAE</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm">© 2026 HomeKeys Real Estate. All Rights Reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Terms of Service</a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/971521110944" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+<script src="cms-properties.js"></script>
+<script src="cms-inject.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

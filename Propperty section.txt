@@ -1,0 +1,286 @@
+ <!-- ===== PROPERTY CONSULTANTS SECTION ===== -->
+  <section class="consultants-section">
+    <div class="about-container">
+      <div class="section-header">
+        <span class="section-tag">Our Sales Team</span>
+        <h2 class="section-title">Property <span class="text-primary">Consultants</span></h2>
+        <p class="section-desc">Our Sales Team is the heartbeat of HomeKeys Real Estate — passionate, dedicated, and driven to turn your real estate goals into reality.</p>
+      </div>
+
+      <div class="consultants-grid">
+
+        <!-- 1. Amjad Majeed -->
+        <div class="consultant-card">
+          <div class="consultant-photo-wrap">
+            <img src="assets/amjad-majeed.jpg" alt="Amjad Majeed"
+              onerror="this.src='https://ui-avatars.com/api/?name=Amjad+Majeed&background=1E2D5A&color=fff&size=200'" />
+            <div class="consultant-overlay">
+              <div class="consultant-social">
+                <a href="tel:+971521110944" title="Call"><i class="fa fa-phone"></i></a>
+                <a href="mailto:amjad@homekeys.ae" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/971521110944" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-info">
+            <h4>Amjad Majeed</h4>
+            <span>Property Consultant</span>
+            <div class="consultant-spec"><i class="fa fa-home mr-1 text-primary"></i>Residential</div>
+            <div class="consultant-langs"><i class="fa fa-language mr-1"></i>English · Urdu</div>
+            <div class="consultant-contacts">
+              <a href="tel:+971521110944"><i class="fa fa-phone text-primary"></i></a>
+              <a href="mailto:amjad@homekeys.ae"><i class="fa fa-envelope text-primary"></i></a>
+              <a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp text-primary"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Abdul Rehman -->
+        <div class="consultant-card">
+          <div class="consultant-photo-wrap">
+            <img src="assets/abdul-rehman.jpg" alt="Abdul Rehman"
+              onerror="this.src='https://ui-avatars.com/api/?name=Abdul+Rehman&background=E05A2B&color=fff&size=200'" />
+            <div class="consultant-overlay">
+              <div class="consultant-social">
+                <a href="tel:+971521110944" title="Call"><i class="fa fa-phone"></i></a>
+                <a href="mailto:rehman@homekeys.ae" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/971521110944" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-info">
+            <h4>Abdul Rehman</h4>
+            <span>Property Consultant</span>
+            <div class="consultant-spec"><i class="fa fa-home mr-1 text-primary"></i>Residential</div>
+            <div class="consultant-langs"><i class="fa fa-language mr-1"></i>English · Urdu</div>
+            <div class="consultant-contacts">
+              <a href="tel:+971521110944"><i class="fa fa-phone text-primary"></i></a>
+              <a href="mailto:rehman@homekeys.ae"><i class="fa fa-envelope text-primary"></i></a>
+              <a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp text-primary"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Qazi Umair -->
+        <div class="consultant-card">
+          <div class="consultant-photo-wrap">
+            <img src="assets/umair-pf-2048x2048.png" alt="Qazi Umair"
+              onerror="this.src='https://ui-avatars.com/api/?name=Qazi+Umair&background=1E2D5A&color=fff&size=200'" />
+            <div class="consultant-overlay">
+              <div class="consultant-social">
+                <a href="tel:+971521110944" title="Call"><i class="fa fa-phone"></i></a>
+                <a href="mailto:qaziumair@homekeys.ae" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/971521110944" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-info">
+            <h4>Qazi Umair</h4>
+            <span>Property Consultant</span>
+            <div class="consultant-spec"><i class="fa fa-home mr-1 text-primary"></i>Residential</div>
+            <div class="consultant-langs"><i class="fa fa-language mr-1"></i>English · Urdu</div>
+            <div class="consultant-contacts">
+              <a href="tel:+971521110944"><i class="fa fa-phone text-primary"></i></a>
+              <a href="mailto:qaziumair@homekeys.ae"><i class="fa fa-envelope text-primary"></i></a>
+              <a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp text-primary"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Areeb Aqil -->
+        <div class="consultant-card">
+          <div class="consultant-photo-wrap">
+            <img src="assets/areeb-pf-2048x2048.png" alt="Areeb Aqil"
+              onerror="this.src='https://ui-avatars.com/api/?name=Areeb+Aqil&background=E05A2B&color=fff&size=200'" />
+            <div class="consultant-overlay">
+              <div class="consultant-social">
+                <a href="tel:+971521110944" title="Call"><i class="fa fa-phone"></i></a>
+                <a href="mailto:areeb@homekeys.ae" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/971521110944" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-info">
+            <h4>Areeb Aqil</h4>
+            <span>Property Consultant</span>
+            <div class="consultant-spec"><i class="fa fa-city mr-1 text-primary"></i>Off-Plan Specialist</div>
+            <div class="consultant-langs"><i class="fa fa-language mr-1"></i>English · Urdu</div>
+            <div class="consultant-contacts">
+              <a href="tel:+971521110944"><i class="fa fa-phone text-primary"></i></a>
+              <a href="mailto:areeb@homekeys.ae"><i class="fa fa-envelope text-primary"></i></a>
+              <a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp text-primary"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Nimra Ijaz -->
+        <div class="consultant-card">
+          <div class="consultant-photo-wrap">
+            <img src="assets/nimra-pf-2048x2048.png" alt="Nimra Ijaz"
+              onerror="this.src='https://ui-avatars.com/api/?name=Nimra+Ijaz&background=1E2D5A&color=fff&size=200'" />
+            <div class="consultant-overlay">
+              <div class="consultant-social">
+                <a href="tel:+971521110944" title="Call"><i class="fa fa-phone"></i></a>
+                <a href="mailto:nimraijaz@homekeys.ae" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/971521110944" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-info">
+            <h4>Nimra Ijaz</h4>
+            <span>Property Consultant</span>
+            <div class="consultant-spec"><i class="fa fa-city mr-1 text-primary"></i>Off-Plan Team</div>
+            <div class="consultant-langs"><i class="fa fa-language mr-1"></i>English · Urdu</div>
+            <div class="consultant-contacts">
+              <a href="tel:+971521110944"><i class="fa fa-phone text-primary"></i></a>
+              <a href="mailto:nimraijaz@homekeys.ae"><i class="fa fa-envelope text-primary"></i></a>
+              <a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp text-primary"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Ahmad Hafeez -->
+        <div class="consultant-card">
+          <div class="consultant-photo-wrap">
+            <img src="assets/ahmed-dp2-1-2048x2048.png" alt="Ahmad Hafeez"
+              onerror="this.src='https://ui-avatars.com/api/?name=Ahmad+Hafeez&background=E05A2B&color=fff&size=200'" />
+            <div class="consultant-overlay">
+              <div class="consultant-social">
+                <a href="tel:+971521110944" title="Call"><i class="fa fa-phone"></i></a>
+                <a href="mailto:ahmadhafeez@homekeys.ae" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/971521110944" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-info">
+            <h4>Ahmad Hafeez</h4>
+            <span>Property Consultant</span>
+            <div class="consultant-spec"><i class="fa fa-city mr-1 text-primary"></i>Off-Plan Market</div>
+            <div class="consultant-langs"><i class="fa fa-language mr-1"></i>English · Urdu</div>
+            <div class="consultant-contacts">
+              <a href="tel:+971521110944"><i class="fa fa-phone text-primary"></i></a>
+              <a href="mailto:ahmadhafeez@homekeys.ae"><i class="fa fa-envelope text-primary"></i></a>
+              <a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp text-primary"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Qaiser Mehmood -->
+        <div class="consultant-card">
+          <div class="consultant-photo-wrap">
+            <img src="assets/qaiser-mehmood.jpg" alt="Qaiser Mehmood"
+              onerror="this.src='https://ui-avatars.com/api/?name=Qaiser+Mehmood&background=1E2D5A&color=fff&size=200'" />
+            <div class="consultant-overlay">
+              <div class="consultant-social">
+                <a href="tel:+971521110944" title="Call"><i class="fa fa-phone"></i></a>
+                <a href="mailto:Qaiser@homekeys.ae" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/971521110944" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-info">
+            <h4>Qaiser Mehmood</h4>
+            <span>Property Consultant</span>
+            <div class="consultant-spec"><i class="fa fa-warehouse mr-1 text-primary"></i>Staff Accommodation</div>
+            <div class="consultant-langs"><i class="fa fa-language mr-1"></i>English · Urdu</div>
+            <div class="consultant-contacts">
+              <a href="tel:+971521110944"><i class="fa fa-phone text-primary"></i></a>
+              <a href="mailto:Qaiser@homekeys.ae"><i class="fa fa-envelope text-primary"></i></a>
+              <a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp text-primary"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Zeeshan Ismail -->
+        <div class="consultant-card">
+          <div class="consultant-photo-wrap">
+            <img src="assets/z-ismail-pf-2048x2048.png" alt="Zeeshan Ismail"
+              onerror="this.src='https://ui-avatars.com/api/?name=Zeeshan+Ismail&background=E05A2B&color=fff&size=200'" />
+            <div class="consultant-overlay">
+              <div class="consultant-social">
+                <a href="tel:+971521110944" title="Call"><i class="fa fa-phone"></i></a>
+                <a href="mailto:zeeshanismail@homekeys.ae" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/971521110944" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-info">
+            <h4>Zeeshan Ismail</h4>
+            <span>Property Consultant</span>
+            <div class="consultant-spec"><i class="fa fa-warehouse mr-1 text-primary"></i>Warehouses & Commercial</div>
+            <div class="consultant-langs"><i class="fa fa-language mr-1"></i>English · Urdu</div>
+            <div class="consultant-contacts">
+              <a href="tel:+971521110944"><i class="fa fa-phone text-primary"></i></a>
+              <a href="mailto:zeeshanismail@homekeys.ae"><i class="fa fa-envelope text-primary"></i></a>
+              <a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp text-primary"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Ayaz Ahmed -->
+        <div class="consultant-card">
+          <div class="consultant-photo-wrap">
+            <img src="assets/ayaz-ahmad.jpg" alt="Ayaz Ahmed"
+              onerror="this.src='https://ui-avatars.com/api/?name=Ayaz+Ahmed&background=1E2D5A&color=fff&size=200'" />
+            <div class="consultant-overlay">
+              <div class="consultant-social">
+                <a href="tel:+971521110944" title="Call"><i class="fa fa-phone"></i></a>
+                <a href="mailto:Ayazahmed@homekeys.ae" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/971521110944" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-info">
+            <h4>Ayaz Ahmed</h4>
+            <span>Property Consultant</span>
+            <div class="consultant-spec"><i class="fa fa-building mr-1 text-primary"></i>Labour Camps · Sonapur</div>
+            <div class="consultant-langs"><i class="fa fa-language mr-1"></i>English · Urdu</div>
+            <div class="consultant-contacts">
+              <a href="tel:+97145693313"><i class="fa fa-phone text-primary"></i></a>
+              <a href="mailto:Ayazahmed@homekeys.ae"><i class="fa fa-envelope text-primary"></i></a>
+              <a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp text-primary"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Nazar Hussain -->
+        <div class="consultant-card">
+          <div class="consultant-photo-wrap">
+            <img src="assets/nazar-hussain.jpg" alt="Nazar Hussain"
+              onerror="this.src='https://ui-avatars.com/api/?name=Nazar+Hussain&background=E05A2B&color=fff&size=200'" />
+            <div class="consultant-overlay">
+              <div class="consultant-social">
+                <a href="tel:+97145693313" title="Call"><i class="fa fa-phone"></i></a>
+                <a href="mailto:info@homekeys.ae" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://wa.me/971521110944" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="consultant-info">
+            <h4>Nazar Hussain</h4>
+            <span>Property Consultant</span>
+            <div class="consultant-spec"><i class="fa fa-warehouse mr-1 text-primary"></i>Warehouses · Al Qouz</div>
+            <div class="consultant-langs"><i class="fa fa-language mr-1"></i>English · Urdu</div>
+            <div class="consultant-contacts">
+              <a href="tel:+97145693313"><i class="fa fa-phone text-primary"></i></a>
+              <a href="mailto:info@homekeys.ae"><i class="fa fa-envelope text-primary"></i></a>
+              <a href="https://wa.me/971521110944" target="_blank"><i class="fab fa-whatsapp text-primary"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  

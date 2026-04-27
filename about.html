@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – HomeKeys Real Estate UAE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="about.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E05A2B',
+            'primary-dark': '#C44A1F',
+            'primary-light': '#F07348',
+            navy: '#1E2D5A',
+            'navy-light': '#2B3875',
+            'navy-dark': '#141E3C',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Raleway', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="font-body bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="./index.html" class="flex items-center">
+          <img id="logo-transparent" src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate"
+            style="height:60px;width:auto;object-fit:contain;transition:all 0.4s ease;" />
+          <img id="logo-scrolled" src="assets/HomeKeys logo-1 PNG.png" alt="HomeKeys Real Estate"
+            style="height:105px;width:auto;object-fit:contain;transition:all 0.4s ease;display:none;" />
+        </a>
+
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="./sproperties.html" class="nav-link">Properties</a>
+          <a href="./developers.html" class="nav-link">Developers</a>
+          <a href="./blog.html" class="nav-link">Blog</a>
+          <a href="./about.html" class="nav-link active-page">About Us</a>
+          <a href="./contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="./index.html#contact" class="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+            <i class="fa fa-phone-alt text-xs"></i> Get In Touch
+          </a>
+          <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line w-4"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu lg:hidden hidden">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="./index.html" class="mobile-nav-link">Home</a>
+        <a href="./sproperties.html" class="mobile-nav-link">Properties</a>
+        <a href="./developers.html" class="mobile-nav-link">Developers</a>
+        <a href="./blog.html" class="mobile-nav-link">Blog</a>
+        <a href="./about.html" class="mobile-nav-link active-page">About Us</a>
+        <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        <a href="./contact.html" class="btn-primary text-center mt-2">Get In Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="about-hero">
+    <div class="about-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80')"></div>
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-dots"></div>
+    <div class="about-hero-content">
+      <div class="about-breadcrumb">
+        <a href="./index.html"><i class="fa fa-home mr-1"></i>Home</a>
+        <i class="fa fa-chevron-right"></i>
+        <span>About Us</span>
+      </div>
+      <h1 class="about-hero-title">About <span class="text-primary">HomeKeys</span></h1>
+      <p class="about-hero-desc">Meet the people behind UAE's most trusted real estate agency — a passionate team dedicated to turning property dreams into reality</p>
+      <div class="about-hero-stats">
+        <div class="about-hstat"><strong>15+</strong><span>Years Experience</span></div>
+        <div class="about-hstat-div"></div>
+        <div class="about-hstat"><strong>2,500+</strong><span>Properties Sold</span></div>
+        <div class="about-hstat-div"></div>
+        <div class="about-hstat"><strong>20+</strong><span>Team Members</span></div>
+        <div class="about-hstat-div"></div>
+        <div class="about-hstat"><strong>5★</strong><span>Client Rating</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT INTRO ===== -->
+  <section class="about-intro-section">
+    <div class="about-container">
+      <div class="about-intro-grid">
+        <div class="about-intro-text">
+          <span class="section-tag">Who We Are</span>
+          <h2 class="section-title text-left mt-3">Where Excellence Leads <br><span class="text-primary">Every Step</span></h2>
+          <p>At Home Keys, we aim to help people make smart and confident real estate decisions. Whether you're a buyer, investor, or property owner, our goal is to give you the clearest picture of the market.</p>
+          <p>Our expert research team works daily to produce detailed, high-quality reports about real estate investments and market trends — providing valuable insights to guide important decisions across both commercial and residential markets.</p>
+          <div class="about-intro-values">
+            <div class="about-value">
+              <div class="about-value-icon"><i class="fa fa-shield-alt"></i></div>
+              <div><h4>Trust & Integrity</h4><p>Every deal closed with full transparency and legal compliance.</p></div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon"><i class="fa fa-chart-line"></i></div>
+              <div><h4>Market Excellence</h4><p>Data-driven insights and real-time market intelligence.</p></div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon"><i class="fa fa-handshake"></i></div>
+              <div><h4>Client First</h4><p>Personalized service from first inquiry to final keys.</p></div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon"><i class="fa fa-globe"></i></div>
+              <div><h4>UAE-Wide Coverage</h4><p>Properties across Dubai, Abu Dhabi, Sharjah & RAK.</p></div>
+            </div>
+          </div>
+          <div class="flex gap-4 mt-8 flex-wrap">
+            <a href="./contact.html" class="btn-primary">Contact Us Today</a>
+            <a href="https://drive.google.com/file/d/1_-eUsqI6ocqseZuACVo3kR1G6D6JpFRe/view?usp=sharing" target="_blank" class="btn-ghost">
+              <i class="fa fa-download mr-2"></i>Company Profile
+            </a>
+          </div>
+        </div>
+        <div class="about-intro-image">
+          <div class="about-img-main">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=700&q=80" alt="HomeKeys Office" />
+          </div>
+          <div class="about-img-badge">
+            <i class="fa fa-award text-primary text-2xl mb-2"></i>
+            <strong>RERA</strong>
+            <span>Registered Agency</span>
+          </div>
+          <div class="about-img-accent">
+            <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=400&q=80" alt="Team" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CEO SECTION ===== -->
+  <section class="ceo-section">
+    <div class="about-container">
+      <div class="section-header">
+        <span class="section-tag">Leadership</span>
+        <h2 class="section-title">Meet Our <span class="text-primary">CEO</span></h2>
+        <p class="section-desc">Visionary leadership driving excellence across UAE's most dynamic real estate markets.</p>
+      </div>
+
+      <div class="ceo-card-wrap">
+        <div class="ceo-card">
+          <!-- Photo -->
+          <div class="ceo-photo-wrap">
+            <div class="ceo-photo-frame">
+              <img src="assets/abubakar-dp2-scaled.png" alt="Muhammad Abubakar Imtiaz"
+                onerror="this.src='https://ui-avatars.com/api/?name=Muhammad+Abubakar&background=1E2D5A&color=fff&size=300'" />
+            </div>
+            <div class="ceo-photo-decor"></div>
+            <div class="ceo-exp-badge">
+              <strong>CEO</strong>
+              <span>HomeKeys UAE</span>
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="ceo-info">
+            <div class="ceo-title-row">
+              <div>
+                <span class="ceo-role-tag"><i class="fa fa-star mr-1"></i>Chief Executive Officer</span>
+                <h2 class="ceo-name">Muhammad Abubakar Imtiaz</h2>
+              </div>
+            </div>
+            <p class="ceo-bio">Mr. Abubakar Imtiaz is the CEO of a leading group of companies in the UAE, known for his strong leadership, innovative vision, and dedication to business excellence. Under his guidance, the group has achieved remarkable growth and continues to expand across multiple sectors.</p>
+            <div class="ceo-contact-row">
+              <a href="tel:+971529747995" class="ceo-contact-item">
+                <div class="ceo-contact-icon"><i class="fa fa-phone"></i></div>
+                <div>
+                  <span>Phone</span>
+                  <strong>+971 52 974 7995</strong>
+                </div>
+              </a>
+              <a href="mailto:CEO@homekeys.ae" class="ceo-contact-item">
+                <div class="ceo-contact-icon"><i class="fa fa-envelope"></i></div>
+                <div>
+                  <span>Email</span>
+                  <strong>CEO@homekeys.ae</strong>
+                </div>
+              </a>
+            </div>
+            <div class="ceo-social">
+              <a href="https://www.facebook.com/HomeKeysRealEstate" target="_blank" class="ceo-social-btn"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/homekeysrealestate" target="_blank" class="ceo-social-btn"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" class="ceo-social-btn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://wa.me/971529747995" target="_blank" class="ceo-social-btn whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <a href="https://drive.google.com/file/d/1_-eUsqI6ocqseZuACVo3kR1G6D6JpFRe/view?usp=sharing" target="_blank" class="ceo-profile-btn">
+              <i class="fa fa-download mr-2"></i>Download Company Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MANAGEMENT SECTION ===== -->
+  <section class="management-section">
+    <div class="about-container">
+      <div class="section-header">
+        <span class="section-tag">Leadership Team</span>
+        <h2 class="section-title">Meet The <span class="text-primary">Management</span></h2>
+        <p class="section-desc">The bridge between vision and execution — our management team leads with clarity, motivates with purpose, and delivers with excellence.</p>
+      </div>
+
+      <div class="mgmt-grid">
+
+        <!-- 1. Zeeshan Zahoor -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="team-photo">
+              <img src="assets/zeeshan-pf2-2048x2048.png" alt="Zeeshan Zahoor"
+                onerror="this.src='https://ui-avatars.com/api/?name=Zeeshan+Zahoor&background=1E2D5A&color=fff&size=200'" />
+              <div class="team-photo-overlay">
+                <div class="team-social-links">
+                  <a href="tel:+97145693313"><i class="fa fa-phone"></i></a>
+                  <a href="mailto:zeeshan@homekeys.ae"><i class="fa fa-envelope"></i></a>
+                  <a href="https://wa.me/97145693313" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-role-badge mgmt-badge">Sales Manager</div>
+          </div>
+          <div class="team-card-body">
+            <h3>Zeeshan Zahoor</h3>
+            <span class="team-dept"><i class="fa fa-building mr-1 text-primary"></i>Residential</span>
+            <p>Office Manager & Residential Manager. Fluent in English and Urdu with excellent communication and leadership skills managing daily operations.</p>
+            <div class="team-contact">
+              <a href="tel:+97145693313"><i class="fa fa-phone text-primary mr-1"></i>+971 4 569 3313</a>
+              <a href="mailto:zeeshan@homekeys.ae"><i class="fa fa-envelope text-primary mr-1"></i>zeeshan@homekeys.ae</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Umar Bilal -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="team-photo">
+              <img src="assets/umer-bilal.jpg" alt="Umar Bilal"
+                onerror="this.src='https://ui-avatars.com/api/?name=Umar+Bilal&background=E05A2B&color=fff&size=200'" />
+              <div class="team-photo-overlay">
+                <div class="team-social-links">
+                  <a href="tel:+97145693313"><i class="fa fa-phone"></i></a>
+                  <a href="mailto:info@homekeys.ae"><i class="fa fa-envelope"></i></a>
+                  <a href="https://wa.me/97145693313" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-role-badge mgmt-badge">Commercial Manager</div>
+          </div>
+          <div class="team-card-body">
+            <h3>Umar Bilal</h3>
+            <span class="team-dept"><i class="fa fa-briefcase mr-1 text-primary"></i>Commercial</span>
+            <p>Specializes in managing and developing commercial property portfolios with a strong focus on client satisfaction and business growth.</p>
+            <div class="team-contact">
+              <a href="tel:+97145693313"><i class="fa fa-phone text-primary mr-1"></i>+971 4 569 3313</a>
+              <a href="mailto:info@homekeys.ae"><i class="fa fa-envelope text-primary mr-1"></i>info@homekeys.ae</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Nayyab Shoaib -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="team-photo">
+              <img src="assets/nayyab-pf2-2048x2048.png" alt="Nayyab Shoaib"
+                onerror="this.src='https://ui-avatars.com/api/?name=Nayyab+Shoaib&background=1E2D5A&color=fff&size=200'" />
+              <div class="team-photo-overlay">
+                <div class="team-social-links">
+                  <a href="tel:+97145693313"><i class="fa fa-phone"></i></a>
+                  <a href="mailto:info@homekeys.ae"><i class="fa fa-envelope"></i></a>
+                  <a href="https://wa.me/97145693313" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-role-badge mgmt-badge">Off-Plan Manager</div>
+          </div>
+          <div class="team-card-body">
+            <h3>Nayyab Shoaib</h3>
+            <span class="team-dept"><i class="fa fa-city mr-1 text-primary"></i>Off-Plan</span>
+            <p>Skilled in client relationship management, property listings, viewings, negotiation and deal closing. Proficient in CRM systems and lead follow-up.</p>
+            <div class="team-contact">
+              <a href="tel:+97145693313"><i class="fa fa-phone text-primary mr-1"></i>+971 4 569 3313</a>
+              <a href="mailto:info@homekeys.ae"><i class="fa fa-envelope text-primary mr-1"></i>info@homekeys.ae</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Muhammad Bilal -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="team-photo">
+              <img src="assets/temp-bilal-dp-2048x2048.png" alt="Muhammad Bilal"
+                onerror="this.src='https://ui-avatars.com/api/?name=Muhammad+Bilal&background=E05A2B&color=fff&size=200'" />
+              <div class="team-photo-overlay">
+                <div class="team-social-links">
+                  <a href="tel:+97145693313"><i class="fa fa-phone"></i></a>
+                  <a href="mailto:info@homekeys.ae"><i class="fa fa-envelope"></i></a>
+                  <a href="https://wa.me/97145693313" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-role-badge mgmt-badge">Account Manager</div>
+          </div>
+          <div class="team-card-body">
+            <h3>Muhammad Bilal</h3>
+            <span class="team-dept"><i class="fa fa-calculator mr-1 text-primary"></i>Accounts</span>
+            <p>Manages financial accounts and ensures accurate reporting across all HomeKeys Real Estate operations and transactions.</p>
+            <div class="team-contact">
+              <a href="tel:+97145693313"><i class="fa fa-phone text-primary mr-1"></i>+971 4 569 3313</a>
+              <a href="mailto:info@homekeys.ae"><i class="fa fa-envelope text-primary mr-1"></i>info@homekeys.ae</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Abdussamad -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="team-photo">
+              <img src="assets/samad-pf-2048x2048.webp" alt="Abdussamad"
+                onerror="this.src='https://ui-avatars.com/api/?name=Abdussamad&background=1E2D5A&color=fff&size=200'" />
+              <div class="team-photo-overlay">
+                <div class="team-social-links">
+                  <a href="tel:+9711110944"><i class="fa fa-phone"></i></a>
+                  <a href="mailto:abdussamad@homekeys.ae"><i class="fa fa-envelope"></i></a>
+                  <a href="https://wa.me/9711110944" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-role-badge mgmt-badge">IT & Marketing Manager</div>
+          </div>
+          <div class="team-card-body">
+            <h3>Abdussamad</h3>
+            <span class="team-dept"><i class="fa fa-laptop-code mr-1 text-primary"></i>IT & Marketing</span>
+            <p>Leads all technology and marketing operations at HomeKeys. Manages digital infrastructure, online presence and marketing campaigns.</p>
+            <div class="team-contact">
+              <a href="tel:+9711110944"><i class="fa fa-phone text-primary mr-1"></i>+971 1 111 0944</a>
+              <a href="mailto:abdussamad@homekeys.ae"><i class="fa fa-envelope text-primary mr-1"></i>abdussamad@homekeys.ae</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Farman Haider -->
+        <div class="team-card">
+          <div class="team-card-top">
+            <div class="team-photo">
+              <img src="assets/farman-dp-2048x2048.webp" alt="Farman Haider"
+                onerror="this.src='https://ui-avatars.com/api/?name=Farman+Haider&background=E05A2B&color=fff&size=200'" />
+              <div class="team-photo-overlay">
+                <div class="team-social-links">
+                  <a href="tel:+97145693313"><i class="fa fa-phone"></i></a>
+                  <a href="mailto:info@homekeys.ae"><i class="fa fa-envelope"></i></a>
+                  <a href="https://wa.me/97145693313" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-role-badge mgmt-badge">Digital Marketing Specialist</div>
+          </div>
+          <div class="team-card-body">
+            <h3>Farman Haider</h3>
+            <span class="team-dept"><i class="fa fa-bullhorn mr-1 text-primary"></i>Digital Marketing</span>
+            <p>Expert in SEO, Google Ads, Meta Ads and analytics. Manages digital campaigns to enhance brand visibility and generate quality leads.</p>
+            <div class="team-contact">
+              <a href="tel:+97145693313"><i class="fa fa-phone text-primary mr-1"></i>+971 4 569 3313</a>
+              <a href="mailto:info@homekeys.ae"><i class="fa fa-envelope text-primary mr-1"></i>info@homekeys.ae</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- ===== JOIN US CTA ===== -->
+  <section class="join-cta-section">
+    <div class="join-cta-bg" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&q=80')"></div>
+    <div class="join-cta-overlay"></div>
+    <div class="about-container relative z-10 text-center text-white">
+      <span class="section-tag section-tag-white">Join Our Team</span>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold mt-4 mb-5">Be Part of Something <span class="text-primary">Extraordinary</span></h2>
+      <p class="text-white/75 text-lg max-w-2xl mx-auto mb-10">We're always looking for talented, driven individuals to join the HomeKeys family. Grow your career in UAE's most exciting real estate market.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="./contact.html" class="btn-primary btn-lg"><i class="fa fa-paper-plane mr-2"></i>Apply Now</a>
+        <a href="./contact.html" class="btn-white btn-lg"><i class="fa fa-phone mr-2"></i>Talk to HR</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-section bg-navy-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-1">
+          <div class="footer-logo mb-6">
+            <img src="assets/home-keys whiete.webp" alt="HomeKeys Real Estate" style="height:100px;width:auto;object-fit:contain;" />
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-6">UAE's trusted real estate agency with a passionate team dedicated to your property journey.</p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/HomeKeysRealEstate" target="_blank" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/@homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./secondary-properties.html">Secondary Properties</a></li>
+            <li><a href="./developers.html">Developers</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="./sproperties.html">Residential Sales</a></li>
+            <li><a href="./sproperties.html">Commercial Properties</a></li>
+            <li><a href="./sproperties.html">Off-Plan Projects</a></li>
+            <li><a href="./sproperties.html">Property Management</a></li>
+            <li><a href="./sproperties.html">Investment Advisory</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="text-white/60 text-sm mb-5">Subscribe for latest listings and market insights.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+          </form>
+          <div class="footer-rera mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p class="text-xs text-white/50 mb-1">RERA Registered Agency</p>
+            <p class="text-sm font-bold text-white">Reg. No: 12345-UAE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm">© 2026 HomeKeys Real Estate. All Rights Reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/40 hover:text-primary text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+  <a href="https://wa.me/971521110944" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
+  <script src="about.js"></script>
+</body>
+</html>
