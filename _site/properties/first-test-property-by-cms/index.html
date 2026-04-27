@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> – HomeKeys Real Estate UAE</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/secondary-properties.css" />
+  <link rel="stylesheet" href="/property-detail.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E05A2B', 'primary-dark': '#C44A1F',
+            navy: '#1E2D5A', 'navy-light': '#2B3875', 'navy-dark': '#141E3C',
+          },
+          fontFamily: { display: ['Playfair Display', 'serif'], body: ['Raleway', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="font-body bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center">
+          <img id="logo-transparent" src="/assets/home-keys whiete.webp" alt="HomeKeys" style="height:60px;width:auto;object-fit:contain;display:block;" />
+          <img id="logo-scrolled" src="/assets/HomeKeys logo-1 PNG.png" alt="HomeKeys" style="height:105px;width:auto;object-fit:contain;display:none;" />
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/sproperties.html" class="nav-link">Properties</a>
+          <a href="/developers.html" class="nav-link">Developers</a>
+          <a href="/blog.html" class="nav-link">Blog</a>
+          <a href="/about.html" class="nav-link">About Us</a>
+          <a href="/contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="/contact.html" class="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg hover:-translate-y-0.5">
+            <i class="fa fa-phone-alt text-xs"></i> Get In Touch
+          </a>
+          <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2">
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line w-4"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden hidden">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="/" class="mobile-nav-link">Home</a>
+        <a href="/sproperties.html" class="nav-link">Properties</a>
+        <a href="/developers.html" class="mobile-nav-link">Developers</a>
+        <a href="/blog.html" class="mobile-nav-link">Blog</a>
+        <a href="/about.html" class="mobile-nav-link">About Us</a>
+        <a href="/contact.html" class="mobile-nav-link">Contact</a>
+        <a href="/contact.html" class="btn-primary text-center mt-2">Get In Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  
+
+<link rel="stylesheet" href="/secondary-properties.css" />
+<link rel="stylesheet" href="/property-detail.css" />
+
+
+
+
+<!-- HERO -->
+<section class="pd-hero">
+  <div class="pd-hero-bg" style="background-image:url('https://cdn.sanity.io/images/imnhlgw5/production/986b95e1fd0ef7a435e8fcd922eed8bead8de512-871x581.heif')"></div>
+  <div class="pd-hero-overlay"></div>
+  <div class="pd-hero-content">
+
+    <div class="pd-hero-breadcrumb">
+      <a href="/"><i class="fa fa-home mr-1"></i>Home</a>
+      <i class="fa fa-chevron-right"></i>
+      <a href="/sproperties.html">Properties</a>
+      <i class="fa fa-chevron-right"></i>
+      <span>First Test Property by CMS</span>
+    </div>
+
+    <div class="pd-hero-badges">
+      <span class="sp-badge sp-badge-sale">
+        For Sale
+      </span>
+      
+      <span class="pd-hero-devbadge">DAMAC</span>
+    </div>
+
+    <h1 class="pd-hero-title">First Test Property by CMS</h1>
+    <p class="pd-hero-location">
+      <i class="fa fa-map-marker-alt mr-2 text-primary"></i>
+      Splendor Building Barsha Heights
+    </p>
+
+    <div class="pd-hero-stats">
+      <div class="pd-hstat"><strong>345,000</strong><span>Price</span></div>
+      <div class="pd-hstat-div"></div>
+      <div class="pd-hstat"><strong>studio</strong><span>Bedrooms</span></div>
+      <div class="pd-hstat-div"></div>
+      <div class="pd-hstat"><strong>4</strong><span>Sq Ft</span></div>
+      <div class="pd-hstat-div"></div>
+      <div class="pd-hstat"><strong>Ready to Move</strong><span>Status</span></div>
+      <div class="pd-hstat-div"></div>
+      <div class="pd-hstat"><strong>hk-98-003</strong><span>Ref No.</span></div>
+    </div>
+
+    <div class="pd-hero-actions">
+      <button class="pd-hero-action-btn" id="wishlistTopBtn" onclick="toggleWishlist()">
+        <i class="fa fa-heart mr-2"></i>Save
+      </button>
+      <button class="pd-hero-action-btn" onclick="shareProperty()">
+        <i class="fa fa-share-alt mr-2"></i>Share
+      </button>
+      <a href="/sproperties.html" class="pd-hero-action-btn">
+        <i class="fa fa-arrow-left mr-2"></i>Back
+      </a>
+      <a href="#gallery" class="pd-hero-action-btn pd-hero-photos-btn">
+        <i class="fa fa-images mr-2"></i>View Photos
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="pd-gallery-section" id="gallery">
+  <div class="pd-gallery-header">
+    <h2 class="pd-gallery-title">
+      <i class="fa fa-images text-primary mr-2"></i>Property Gallery
+      <span class="pd-gallery-count">2 Photos</span>
+    </h2>
+  </div>
+
+  <div class="pd-slider-wrap">
+    <div class="pd-slider-track" id="sliderTrack">
+      
+      <div class="pd-slide">
+        <img src="https://cdn.sanity.io/images/imnhlgw5/production/9a32fc4d0838a17af35a446b6c7cec671fd6ef73-1500x1500.png" alt="First Test Property by CMS" loading="lazy" />
+      </div>
+      
+      <div class="pd-slide">
+        <img src="https://cdn.sanity.io/images/imnhlgw5/production/29be0cfc9946388536281e392e376c82965c12a5-500x500.png" alt="First Test Property by CMS" loading="lazy" />
+      </div>
+      
+    </div>
+    <button class="pd-slider-arrow pd-slider-prev" id="sliderPrev"><i class="fa fa-chevron-left"></i></button>
+    <button class="pd-slider-arrow pd-slider-next" id="sliderNext"><i class="fa fa-chevron-right"></i></button>
+    <div class="pd-slider-counter" id="sliderCounter">1 / 2</div>
+    <button class="pd-slider-expand" onclick="openLightbox(currentSlide)"><i class="fa fa-expand-alt"></i></button>
+  </div>
+  <div class="pd-slider-dots" id="sliderDots"></div>
+  <div class="pd-thumb-strip" id="thumbStrip"></div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="pd-lightbox" id="lightbox">
+  <button class="pd-lb-close" onclick="closeLightbox()"><i class="fa fa-times"></i></button>
+  <button class="pd-lb-prev" onclick="lbNav(-1)"><i class="fa fa-chevron-left"></i></button>
+  <button class="pd-lb-next" onclick="lbNav(1)"><i class="fa fa-chevron-right"></i></button>
+  <div class="pd-lb-content">
+    <img id="lbImg" src="" alt="Gallery" />
+    <div class="pd-lb-counter" id="lbCounter"></div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="pd-main">
+  <div class="pd-container">
+    <div class="pd-layout">
+
+      <!-- LEFT COLUMN -->
+      <div class="pd-info-col">
+
+        <!-- Title Block -->
+        <div class="pd-title-block">
+          <div class="pd-title-top">
+            <div class="pd-prop-type">
+              <i class="fa fa-home mr-1"></i>Apartment · Barsha
+            </div>
+            <div class="pd-ref">Ref: hk-98-003</div>
+          </div>
+          <h1 class="pd-title">First Test Property by CMS</h1>
+          <div class="pd-location">
+            <i class="fa fa-map-marker-alt text-primary mr-2"></i>
+            Splendor Building Barsha Heights
+          </div>
+          <div class="pd-price-row">
+            <div class="pd-price">345,000</div>
+            <div class="pd-price-sub">4 sqft · AED 86250 / sqft</div>
+          </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="pd-quick-stats">
+          <div class="pd-qs-item"><i class="fa fa-bed pd-qs-icon"></i><strong>studio</strong><span>Bedrooms</span></div>
+          <div class="pd-qs-div"></div>
+          <div class="pd-qs-item"><i class="fa fa-bath pd-qs-icon"></i><strong>2</strong><span>Bathrooms</span></div>
+          <div class="pd-qs-div"></div>
+          <div class="pd-qs-item"><i class="fa fa-vector-square pd-qs-icon"></i><strong>4</strong><span>sqft</span></div>
+          <div class="pd-qs-div"></div>
+          <div class="pd-qs-item"><i class="fa fa-car pd-qs-icon"></i><strong>2</strong><span>Parking</span></div>
+          <div class="pd-qs-div"></div>
+          <div class="pd-qs-item"><i class="fa fa-layer-group pd-qs-icon"></i><strong>G+4</strong><span>Floors</span></div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="pd-tabs-nav">
+          <button class="pd-tab-btn active" data-tab="overview">Overview</button>
+          <button class="pd-tab-btn" data-tab="features">Features</button>
+          <button class="pd-tab-btn" data-tab="location">Location</button>
+        </div>
+
+        <!-- TAB: OVERVIEW -->
+        <div class="pd-tab-content active" id="tab-overview">
+
+          <div class="pd-section">
+            <h2 class="pd-section-title"><span class="pd-section-dot"></span>About This Property</h2>
+            <div class="pd-description">
+              <p>Hello THis is property no1 </p>
+            </div>
+          </div>
+
+          <div class="pd-section">
+            <h2 class="pd-section-title"><span class="pd-section-dot"></span>Property Details</h2>
+            <div class="pd-details-grid">
+              <div class="pd-detail-row"><span>Property Type</span><strong>Apartment</strong></div>
+              <div class="pd-detail-row"><span>Status</span><strong class="text-primary">For Sale</strong></div>
+              <div class="pd-detail-row"><span>Developer</span><strong>DAMAC</strong></div>
+              <div class="pd-detail-row"><span>Community</span><strong>Barsha</strong></div>
+              <div class="pd-detail-row"><span>Bedrooms</span><strong>studio</strong></div>
+              <div class="pd-detail-row"><span>Bathrooms</span><strong>2</strong></div>
+              <div class="pd-detail-row"><span>Total Area</span><strong>4 sqft</strong></div>
+              <div class="pd-detail-row"><span>Parking</span><strong>2</strong></div>
+              <div class="pd-detail-row"><span>Furnishing</span><strong>Unfurnished</strong></div>
+              <div class="pd-detail-row"><span>Completion</span><strong>Ready to Move</strong></div>
+              <div class="pd-detail-row"><span>View</span><strong>no view</strong></div>
+              <div class="pd-detail-row"><span>Ownership</span><strong>Freehold</strong></div>
+              <div class="pd-detail-row"><span>Service Charges</span><strong>18 </strong></div>
+              <div class="pd-detail-row"><span>Reference</span><strong>hk-98-003</strong></div>
+              
+            </div>
+          </div>
+
+          
+
+          <!-- Investment Snapshot -->
+          
+          <div class="pd-section">
+            <h2 class="pd-section-title"><span class="pd-section-dot"></span>Investment Snapshot</h2>
+            <div class="pd-roi-grid">
+              <div class="pd-roi-card pd-roi-primary">
+                <i class="fa fa-chart-line"></i>
+                <strong>2.5%</strong>
+                <span>Est. Gross Yield</span>
+              </div>
+              
+              <div class="pd-roi-card">
+                <i class="fa fa-money-bill-wave"></i>
+                <strong>1000</strong>
+                <span>Est. Annual Rent</span>
+              </div>
+              
+              
+              <div class="pd-roi-card">
+                <i class="fa fa-arrow-trend-up"></i>
+                <strong>18%</strong>
+                <span>Capital Growth</span>
+              </div>
+              
+              
+            </div>
+          </div>
+          
+
+        </div>
+
+        <!-- TAB: FEATURES -->
+        <div class="pd-tab-content" id="tab-features">
+          
+          <div class="pd-section">
+            <h2 class="pd-section-title"><span class="pd-section-dot"></span>Amenities & Features</h2>
+            <div class="pd-amenity-list">
+              
+              <div class="pd-amenity"><i class="fa fa-check"></i>Home furniture </div>
+              
+              <div class="pd-amenity"><i class="fa fa-check"></i>Decor </div>
+              
+              <div class="pd-amenity"><i class="fa fa-check"></i>Good building</div>
+              
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- TAB: LOCATION -->
+        <div class="pd-tab-content" id="tab-location">
+          <div class="pd-section">
+            <h2 class="pd-section-title"><span class="pd-section-dot"></span>Location</h2>
+            <div class="pd-map-wrap">
+              <iframe
+  src="https://maps.google.com/maps?q=Splendor%20Building%20Barsha%20Heights,UAE&output=embed&z=15"
+  width="100%" height="320"
+  style="border:0;border-radius:12px;"
+  allowfullscreen="" loading="lazy">
+</iframe>
+            </div>
+            <p style="font-size:0.8rem;color:var(--gray-400);margin-top:8px;">
+              <i class="fa fa-map-marker-alt text-primary mr-1"></i>
+              Splendor Building Barsha Heights
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside class="pd-sidebar">
+
+        <!-- Price & Contact Card -->
+        <div class="pd-price-card">
+          <div class="pd-pc-price">345,000</div>
+          <div class="pd-pc-sub">
+            Ready to Move
+          </div>
+          <div class="pd-pc-divider"></div>
+
+          <div class="pd-company-row">
+            <div class="pd-company-logo-wrap">
+              <img src="/assets/HomeKeys logo-1 PNG.png" alt="HomeKeys" class="pd-company-logo" />
+            </div>
+            <div class="pd-company-info">
+              <strong>HomeKeys Real Estate</strong>
+              <span>RERA Registered · Reg. No: 12345-UAE</span>
+              <div class="pd-company-location">
+                <i class="fa fa-map-marker-alt mr-1 text-primary"></i>Dubai, UAE
+              </div>
+            </div>
+          </div>
+
+          <div class="pd-cta-btns">
+            <a href="tel:+97145693313" class="pd-cta-primary">
+              <i class="fa fa-phone mr-2"></i>+971 4 569 3313
+            </a>
+            <a href="https://wa.me/97145693313?text=Hi, I'm interested in First%20Test%20Property%20by%20CMS (Ref: hk-98-003)" target="_blank" class="pd-cta-wa">
+              <i class="fab fa-whatsapp mr-2"></i>WhatsApp Us
+            </a>
+            <a href="mailto:info@homekeys.ae?subject=Enquiry: First Test Property by CMS" class="pd-cta-email">
+              <i class="fa fa-envelope mr-2"></i>info@homekeys.ae
+            </a>
+          </div>
+
+          <div class="pd-office-hours">
+            <i class="fa fa-clock text-primary mr-2"></i>
+            <span>Mon–Sat: 9:00 AM – 9:00 PM</span>
+          </div>
+        </div>
+
+        <!-- Enquiry Form -->
+        <div class="pd-enquiry-card">
+          <h4 class="pd-enquiry-title">
+            <i class="fa fa-comment-dots text-primary mr-2"></i>Send Enquiry
+          </h4>
+          <form id="enquiryForm" class="pd-enquiry-form">
+            <input type="hidden" name="property" value="First Test Property by CMS" />
+            <input type="hidden" name="ref" value="hk-98-003" />
+            <div class="pd-form-group">
+              <input type="text" placeholder="Your Full Name *" required />
+            </div>
+            <div class="pd-form-group">
+              <input type="email" placeholder="Email Address *" required />
+            </div>
+            <div class="pd-form-group">
+              <input type="tel" placeholder="Phone Number *" required />
+            </div>
+            <div class="pd-form-group">
+              <select>
+                <option value="">I'm interested in...</option>
+                <option>Buying this property</option>
+                <option>Getting more info</option>
+                <option>Arranging a viewing</option>
+                <option>Making an offer</option>
+              </select>
+            </div>
+            <div class="pd-form-group">
+              <textarea placeholder="Your message (optional)" rows="3"></textarea>
+            </div>
+            <button type="submit" class="pd-enquiry-submit">
+              <i class="fa fa-paper-plane mr-2"></i>Send Message
+            </button>
+            <p class="pd-form-note">
+              <i class="fa fa-lock mr-1"></i>Your info is secure.
+            </p>
+          </form>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="pd-quick-actions">
+          <button class="pd-qa-btn" id="wishlistSideBtn" onclick="toggleWishlist()">
+            <i class="fa fa-heart mr-2"></i>Save to Wishlist
+          </button>
+          <button class="pd-qa-btn" onclick="shareProperty()">
+            <i class="fa fa-share-alt mr-2"></i>Share Property
+          </button>
+          <a href="/sproperties.html" class="pd-qa-btn">
+            <i class="fa fa-th-large mr-2"></i>All Properties
+          </a>
+        </div>
+
+        <!-- Mortgage Calculator -->
+        <div class="pd-mortgage-card">
+          <h4><i class="fa fa-calculator text-primary mr-2"></i>Mortgage Estimator</h4>
+          <div class="pd-mort-inputs">
+            <div class="pd-mort-row">
+              <label>Price (AED)</label>
+              <input type="number" id="mortPrice" value="345000" onchange="calcMortgage()" />
+            </div>
+            <div class="pd-mort-row">
+              <label>Down Payment (%)</label>
+              <input type="number" id="mortDown" value="20" min="5" max="90" onchange="calcMortgage()" />
+            </div>
+            <div class="pd-mort-row">
+              <label>Interest Rate (%)</label>
+              <input type="number" id="mortRate" value="4.5" step="0.1" onchange="calcMortgage()" />
+            </div>
+            <div class="pd-mort-row">
+              <label>Term (Years)</label>
+              <input type="number" id="mortTerm" value="25" min="5" max="30" onchange="calcMortgage()" />
+            </div>
+          </div>
+          <div class="pd-mort-result">
+            <div class="pd-mort-result-row">
+              <span>Loan Amount</span>
+              <strong id="mortLoan">Calculating...</strong>
+            </div>
+            <div class="pd-mort-result-row">
+              <span>Monthly Payment</span>
+              <strong id="mortMonthly" class="text-primary">Calculating...</strong>
+            </div>
+            <div class="pd-mort-result-row">
+              <span>Down Payment</span>
+              <strong id="mortDownAmt">Calculating...</strong>
+            </div>
+          </div>
+          <p class="pd-mort-note">* Indicative estimate only.</p>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</main>
+
+
+
+
+<script src="/property-detail.js"></script>
+
+
+  <!-- FOOTER -->
+  <footer class="footer-section bg-navy-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <img src="/assets/home-keys whiete.webp" alt="HomeKeys" style="height:100px;width:auto;object-fit:contain;margin-bottom:20px;" />
+          <p class="text-white/60 text-sm leading-relaxed mb-6">UAE's trusted real estate agency helping clients buy, sell, rent and invest in premium properties.</p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/HomeKeysRealEstate" target="_blank" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/home-keys-real-esate/" target="_blank" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/@homekeysrealestate" target="_blank" class="footer-social"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/sproperties.html/">Properties</a></li>
+            <li><a href="/developers.html">Developers</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Property Types</h5>
+          <ul class="footer-links">
+            <li><a href="/sproperties.html/">Apartments</a></li>
+            <li><a href="/sproperties.html/">Villas</a></li>
+            <li><a href="/sproperties.html/">Townhouses</a></li>
+            <li><a href="/sproperties.html/">Penthouses</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-heading">Contact Us</h5>
+          <ul class="footer-links">
+            <li><a href="tel:+97145693313"><i class="fa fa-phone mr-2 text-primary"></i>+971 4 569 3313</a></li>
+            <li><a href="mailto:info@homekeys.ae"><i class="fa fa-envelope mr-2 text-primary"></i>info@homekeys.ae</a></li>
+            <li><a href="https://wa.me/97145693313" target="_blank"><i class="fab fa-whatsapp mr-2 text-primary"></i>WhatsApp</a></li>
+          </ul>
+          <div class="mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p class="text-xs text-white/50 mb-1">RERA Registered Agency</p>
+            <p class="text-sm font-bold text-white">Reg. No: 12345-UAE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm">© 2026 HomeKeys Real Estate. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top"><i class="fa fa-arrow-up"></i></button>
+  <a href="https://wa.me/97145693313" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="/script.js"></script>
+  <script src="/secondary-properties.js"></script>
+  <script src="/property-detail.js"></script>
+
+</body>
+</html>

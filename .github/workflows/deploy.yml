@@ -8,17 +8,35 @@ on:
       - main
 
 jobs:
-  notify-server:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Notify server to pull and build
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fix permissions
+        run: chmod +x node_modules/.bin/eleventy
+
+      - name: Run Eleventy build
         env:
-          DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}
-          DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
+          SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
+          SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
+          SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
+        run: node_modules/.bin/eleventy
+
+      - name: Commit built files
         run: |
-          curl -X POST "$DEPLOY_URL" \
-            -H "Content-Type: application/json" \
-            -H "X-Deploy-Secret: $DEPLOY_SECRET" \
-            -d '{"action":"deploy"}' \
-            --max-time 30 || echo "Notification sent"
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add _site/
+          git diff --staged --quiet || git commit -m "Auto build: $(date)"
+          git push origin main || echo "Nothing to push"
