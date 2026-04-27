@@ -6,6 +6,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '_site/**'
 
 jobs:
   build-and-deploy:
@@ -14,6 +16,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -33,10 +37,9 @@ jobs:
           SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
         run: node_modules/.bin/eleventy
 
-      - name: Commit built files
+      - name: Commit and push built files
         run: |
-          git config --global user.name "GitHub Actions"
+          git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
-          git add _site/
-          git diff --staged --quiet || git commit -m "Auto build: $(date)"
-          git push origin main || echo "Nothing to push"
+          git add -f _site/
+          git diff --staged --quiet || (git commit -m "Auto build: $(date '+%Y-%m-%d %H:%M:%S')" && git push origin main)
