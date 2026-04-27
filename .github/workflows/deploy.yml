@@ -14,13 +14,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -30,22 +28,16 @@ jobs:
           SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
           SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
           SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
-        run: npm run build
+        run: npx eleventy
 
-      - name: Commit built files
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
-          git add _site/ -f
-          git diff --staged --quiet || git commit -m "Auto build from Sanity [skip ci]"
-          git push
-
-      - name: Trigger server deploy
+      - name: Notify server to deploy
         env:
-          DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
           DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}
+          DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
         run: |
           curl -X POST "$DEPLOY_URL" \
             -H "Content-Type: application/json" \
             -H "X-Deploy-Secret: $DEPLOY_SECRET" \
-            -d '{"action":"deploy"}'
+            -d '{"action":"deploy"}' \
+            --max-time 30 \
+            --retry 3 || echo "Deploy notification sent"
