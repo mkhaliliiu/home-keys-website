@@ -23,12 +23,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Fix permissions
+        run: chmod +x node_modules/.bin/eleventy
+
       - name: Run Eleventy build
         env:
           SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
           SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
           SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
-        run: npm run build
+        run: node_modules/.bin/eleventy
 
       - name: Notify server to deploy
         env:
